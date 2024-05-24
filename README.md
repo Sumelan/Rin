@@ -1,0 +1,3 @@
+# BathyScarfOS
+My NixOS dotfiles.
+
