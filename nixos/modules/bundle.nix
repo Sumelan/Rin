@@ -8,6 +8,7 @@
     ./nixvim/nixvim.nix
     ./services.nix
     ./sound.nix
+    ./systemd.nix
     ./thunar.nix
     ./trim.nix
     ./user.nix
