@@ -125,11 +125,15 @@
         "$mainMod, Return, exec, $terminal"
         "$mainMod, Q, killactive,"
         "$mainMod, M, exit,"
-        "$mainMod, E, exec, $fileManager"
         "$mainMod, F, togglefloating,"
-        "$mainMod, D, exec, wofi --show drun"
-        "$mainMod, P, pseudo, # dwindle"
         "$mainMod, J, togglesplit, # dwindle"
+
+        # File Manager
+        "$mainMod, E, exec, $fileManager"
+
+        # rofi App launcher
+        "$mainMod, D, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window"
+        "$mainMod, P, pseudo, # dwindle"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left,  movefocus, l"
