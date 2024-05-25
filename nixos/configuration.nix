@@ -1,20 +1,20 @@
 { config, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
+  imports = [
+  # Include the results of the hardware scan.
       ./hardware-configuration.nix
-　　　./packages.nix
+　　　 ./packages.nix
       ./modules/bundle.nix
       ./disko-config.nix
     ];
   
   disableModules = [
-    ./modules/xserver.nix
+      ./modules/xserver.nix
   ];
 
   # Define your hostname. 
-  networking.hostName = "BathyScarf";
+  networking.hostName = "BathyScarfOS";
 
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";
