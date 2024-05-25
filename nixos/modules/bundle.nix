@@ -7,6 +7,7 @@
     ./network.nix
     ./nixvim/nixvim.nix
     ./sound.nix
+    ./thunar.nix
     ./trim.nix
     ./user.nix
     ./virtmanager.nix
