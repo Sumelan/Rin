@@ -50,9 +50,8 @@
     options = "--delete-older-than 7d";
   };
 
-  
+  # Enableing flakes and optimize store.
   nix.settings = {
-# Enableing flakes.
     experimental-features = [ "nix-command" "flakes" ];
     auto-optimise-store = true;
   };
