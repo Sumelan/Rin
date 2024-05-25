@@ -28,7 +28,8 @@
     ffmpegthumbnailer
     file
     git     
-    glib #  for gsettings to work  
+    glib #  for gsettings to work
+    glxinfo
     htop
     libappindicator
     libnotify
