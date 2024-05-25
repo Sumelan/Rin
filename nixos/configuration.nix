@@ -43,6 +43,13 @@
   	rtkit.enable = true;
   };
 
+  # Automatic Garbage Collection
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+  };
+
   # Enableing flakes.
   nix.settings.experimental-features = ["nix-command" "flakes" ];
 
