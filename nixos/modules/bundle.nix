@@ -6,6 +6,7 @@
     ./hyprland.nix
     ./network.nix
     ./nixvim/nixvim.nix
+    ./services.nix
     ./sound.nix
     ./thunar.nix
     ./trim.nix
