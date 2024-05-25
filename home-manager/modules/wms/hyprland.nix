@@ -5,8 +5,8 @@
 
     settings = {
       "$mainMod" = "SUPER";
-      "$terminal"= "alacritty";
-      "$fileManager" = "thunar:;
+      "$term"= "alacritty";
+      "$file" = "thunar";
 
       monitor = ",preferred,auto,1";
 
@@ -122,18 +122,22 @@
       bind = [
         "$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
 
-        "$mainMod, Return, exec, $terminal"
+        "$mainMod, Return, exec, $term"
         "$mainMod, Q, killactive,"
         "$mainMod, M, exit,"
         "$mainMod, F, togglefloating,"
         "$mainMod, J, togglesplit, # dwindle"
 
         # File Manager
-        "$mainMod, E, exec, $fileManager"
+        "$mainMod, E, exec, $file"
 
         # rofi App launcher
         "$mainMod, D, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window"
+        "$mainMod, $mainMod_L, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window"
         "$mainMod, P, pseudo, # dwindle"
+
+        # ags overview
+        "Menu, exec, pkill rofi || true && ags -t 'overview'"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left,  movefocus, l"
@@ -182,15 +186,23 @@
         "$mainMod, mouse_up, workspace, e-1"
 
         # Keyboard backlight
-        "$mainMod, F3, exec, brightnessctl -d *::kbd_backlight set +33%"
-        "$mainMod, F2, exec, brightnessctl -d *::kbd_backlight set 33%-"
+        #"$mainMod, F3, exec, brightnessctl -d *::kbd_backlight set +33%"
+        #"$mainMod, F2, exec, brightnessctl -d *::kbd_backlight set 33%-"
 
-        # Volume and Media Control
+        # Volume and Mic
         ", XF86AudioRaiseVolume, exec, pamixer -i 5 "
         ", XF86AudioLowerVolume, exec, pamixer -d 5 "
         ", XF86AudioMute, exec, pamixer -t"
         ", XF86AudioMicMute, exec, pamixer --default-source -m"
         
+        # Media control
+        #", xf86AudioPlayPause, exec, $scriptsDir/MediaCtrl.sh --pause"
+        #", xf86AudioPause, exec, $scriptsDir/MediaCtrl.sh --pause"
+        #", xf86AudioPlay, exec, $scriptsDir/MediaCtrl.sh --pause"
+        #", xf86AudioNext, exec, $scriptsDir/MediaCtrl.sh --nxt"
+        #", xf86AudioPrev, exec, $scriptsDir/MediaCtrl.sh --prv"
+        #", xf86audiostop, exec, $scriptsDir/MediaCtrl.sh --stop"
+       
         # Brightness control
         ", XF86MonBrightnessDown, exec, brightnessctl set 5%- "
         ", XF86MonBrightnessUp, exec, brightnessctl set +5% "
@@ -198,8 +210,8 @@
         # Configuration files
         ''$mainMod SHIFT, N, exec, alacritty -e sh -c "rb"''
         ''$mainMod SHIFT, C, exec, alacritty -e sh -c "conf"''
-        ''$mainMod SHIFT, H, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/hyprland.nix"''
-        ''$mainMod SHIFT, W, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/waybar.nix''
+        ''$mainMod SHIFT, H, exec, alacritty -e sh -c "nvim ~/BathyScarfOS/home-manager/modules/wms/hyprland.nix"''
+        ''$mainMod SHIFT, W, exec, alacritty -e sh -c "nvim ~/BathyScarfOS/home-manager/modules/wms/waybar.nix"''
         '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
 
         # Waybar
@@ -207,7 +219,7 @@
         "$mainMod, W, exec, pkill -SIGUSR2 waybar"
 
         # Disable all effects
-        "$mainMod Shift, G, exec, ~/.config/hypr/gamemode.sh "
+        "$mainMod Shift, G, exec, ~/.config/hypr/gamemode.sh"
       ];
 
       # Move/resize windows with mainMod + LMB/RMB and dragging
