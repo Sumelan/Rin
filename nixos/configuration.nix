@@ -21,10 +21,20 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "ja_JP.UTF-8";
+
+  # Japanese input.
   i18n.inputMethod = {
    enabled = "fcitx5";
    fcitx5.addons = [pkgs.fcitx5-mozc];
   };
+
+  # don’t shutdown when power button is short-pressed.
+  services.logind.extraConfig = ''
+      HandlePowerKey = ignore
+    '';
+
+  # flatpak
+  services.flatpak.enable = true;
 
   # Enableing flakes.
   nix.settings.experimental-features = ["nix-command" "flakes" ];
@@ -33,4 +43,3 @@
   system.stateVersion = "23.11";
 
 }
-
