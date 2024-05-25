@@ -27,7 +27,13 @@
    fcitx5.addons = [pkgs.fcitx5-mozc];
   };
 
-  # don’t shutdown when power button is short-pressed.
+# Laptop Specifications
+  powerManagement = {
+	  enable = true;
+	  cpuFreqGovernor = "schedutil";
+  }; 
+
+# don’t shutdown when power button is short-pressed.
   services.logind.extraConfig = ''
       HandlePowerKey = ignore
     '';
