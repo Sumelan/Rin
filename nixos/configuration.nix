@@ -21,6 +21,10 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "ja_JP.UTF-8";
+  i18n.inputMethod = {
+   enabled = "fcitx5";
+   fcitx5.addons = [pkgs.fcitx5-mozc];
+  };
 
   # Enableing flakes.
   nix.settings.experimental-features = ["nix-command" "flakes" ];
