@@ -7,10 +7,5 @@ services = {
 	  dbus.enable = true;
 	  fwupd.enable = true;
 	  upower.enable = true;	
-
-# don’t shutdown when power button is short-pressed.
-    logind.extraConfig = ''
-      HandlePowerKey = ignore
-    '';
   };
 }
