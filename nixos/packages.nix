@@ -85,6 +85,7 @@
 
   # Others
     home-manager
+    qemu_kvm
 
  ]) ++ [
           inputs.wallust.packages.${pkgs.system}.wallust 
