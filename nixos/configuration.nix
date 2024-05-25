@@ -36,6 +36,13 @@
   # flatpak
   services.flatpak.enable = true;
 
+  # Security
+  security = {
+	  pam.services.swaylock.text = "auth include login";
+	  polkit.enable = true;
+  	rtkit.enable = true;
+  };
+
   # Enableing flakes.
   nix.settings.experimental-features = ["nix-command" "flakes" ];
 
