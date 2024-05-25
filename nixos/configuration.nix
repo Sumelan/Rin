@@ -27,7 +27,7 @@
    fcitx5.addons = [pkgs.fcitx5-mozc];
   };
 
-# Laptop Specifications
+# Power management.
   powerManagement = {
 	  enable = true;
 	  cpuFreqGovernor = "schedutil";
