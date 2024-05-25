@@ -1,28 +1,18 @@
-{ config, ... }: {
+{ config, ... }: 
+{
   programs.zsh = {
     enable = true;
-    enableCompletion = true;
-    # enableAutosuggestions = true;
-    autosuggestion.enable = true;
+    autocd = true;
+    enableCompletion = true; 
+    enableAutosuggestions = true;
     syntaxHighlighting.enable = true;
-
-    shellAliases =
-      let
-        flakeDir = "~/BathyScarfOS";
-      in {
-      rb = "sudo nixos-rebuild switch --flake ${flakeDir}";
-      upd = "nix flake update ${flakeDir}";
-      upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
-
-      hms = "home-manager switch --flake ${flakeDir}";
-
-      conf = "nvim ${flakeDir}/nixos/configuration.nix";
-      pkgs = "nvim ${flakeDir}/nixos/packages.nix";
-
-      ll = "ls -l";
-      v = "nvim";
-      se = "sudoedit";
-      ff = "fastfetch";
+    shellAliases = {
+      cat = "bat";
+      grep = "rg";
+      ls = "eza --icons always --classify always";
+      la = "eza --icons always --classify always --all ";
+      ll = "eza --icons always --long --all --git ";
+      tree = "eza --icons always --classify always --tree";
     };
 
     history.size = 10000;
