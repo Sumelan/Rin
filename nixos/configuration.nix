@@ -50,10 +50,13 @@
     options = "--delete-older-than 7d";
   };
 
-  # Enableing flakes.
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  
+  nix.settings = {
+# Enableing flakes.
+    experimental-features = [ "nix-command" "flakes" ];
+    auto-optimise-store = true;
+  };
 
   # Set system version.
   system.stateVersion = "23.11";
-
 }
