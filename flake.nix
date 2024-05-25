@@ -31,7 +31,12 @@
       gitUsername = "bathys";
       gitEmail = "nishimua7802@gmail.com";
       theme = "rose-pine";
-
+      pkgs = import nixpkgs {
+        inherit system;
+        config = {
+          allowUnfree = true;
+        };
+      };
     in {
 
       nixosConfigurations = {
