@@ -1,10 +1,10 @@
-{pkgs, ... }:
+{pkgs, inputs, config, ... }:
 {
   nixpkgs.config = {
     allowUnfree = true;
   };
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = (with pkgs; [
   # Desktop apps
     alacritty
     baobab
@@ -19,7 +19,6 @@
 
   # Coding stuff
     python3
-
 
   # CLI utils
     brightnessctl
@@ -90,8 +89,8 @@
     qemu_kvm
 
  ]) ++ [
-          inputs.wallust.packages.${pkgs.system}.wallust 
-         #inputs.ags.packages.${pkgs.system}.ags
+       inputs.wallust.packages.${pkgs.system}.wallust 
+      #inputs.ags.packages.${pkgs.system}.ags
  ];
 
   fonts = {
@@ -100,7 +99,7 @@
     noto-fonts-cjk
     noto-fonts-emoji
     fira-code
-    Jetbrains-mono
+    jetbrains-mono
     font-awesome
     terminus_font
     twemoji-color-font

@@ -1,7 +1,8 @@
+{pkgs, ... }:
 {
-  thunar = {
+  programs.thunar = {
     enable = true;
-	  plugins = with pkgs.xfce; [
+    plugins = with pkgs.xfce; [
 		  exo
 		  mousepad
 		  thunar-archive-plugin

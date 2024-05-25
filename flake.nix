@@ -5,12 +5,15 @@
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
-
+    disko.url = "github:nix-community/disko";
+    disko.inputs.nixpkgs.follows = "nixpkgs";
+    wallust.url = "git+https://codeberg.org/explosion-mental/wallust?ref=dev";
+   #hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1"; # unstable hyprland
+   #ags.url = "github:Aylur/ags"; 
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -35,6 +38,7 @@
       modules = [
         ./nixos/configuration.nix
         inputs.nixvim.nixosModules.nixvim
+        inputs.disko.nixosModules.disko
       ];
     };
 

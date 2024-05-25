@@ -10,4 +10,7 @@
     homeDirectory = "/home/bathys";
     stateVersion = "23.11";
   };
+  programs.starship = {
+    enable = true;
+  };
 }

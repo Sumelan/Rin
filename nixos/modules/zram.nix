@@ -4,6 +4,6 @@
     algorithm = "zstd";
     memoryPercent = 100;
     priority = 100;
-    swapDevice = 1;
+    swapDevices = 1;
   };
 }

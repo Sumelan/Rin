@@ -1,14 +1,14 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
       ./hardware-configuration.nix
-　　　 ./packages.nix
+      ./packages.nix
       ./modules/bundle.nix
       ./disko-config.nix
     ];
   
-  disableModules = [
+  disabledModules = [
       ./modules/xserver.nix
   ];
 
@@ -24,7 +24,9 @@
   # Japanese input.
   i18n.inputMethod = {
    enabled = "fcitx5";
-   fcitx5.addons = [pkgs.fcitx5-mozc];
+   fcitx5.addons = with pkgs; [
+     fcitx5-mozc
+   ];
   };
 
 # Power management.
