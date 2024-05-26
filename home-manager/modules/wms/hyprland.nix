@@ -157,7 +157,7 @@
           col.shadow = rgba(${theme.base02}ff)
         }
 
-        animation {
+        animations {
           enable = true
           bezier = myBezier, 0.05, 0.9, 0.1, 1.05
         # bezier = myBezier, 0.33, 0.82, 0.9, -0.08
