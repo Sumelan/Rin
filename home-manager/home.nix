@@ -15,14 +15,13 @@
   home = {
     username = "bathys";
     homeDirectory = "/home/bathys";
-    stateVersion = "23.11";
   };
-programs = {
+  programs = {
     home-manager.enable = true;
     starship = {
       enable = true;
     };
   };
 
-home.stateVersion = "23.11";
+  home.stateVersion = "23.11";
 }
