@@ -17,8 +17,15 @@
     homeDirectory = "/home/bathys";
     stateVersion = "23.11";
   };
-
-  programs.starship = {
-    enable = true;
+programs = {
+    home-manager.enable = true;
+    git = {
+      enable = true;
+      userName = "bathys";
+      userEmail = "68154148+bathys@users.noreply.github.com";
+    };
+    starship = {
+      enable = true;
+    };
   };
 }
