@@ -103,7 +103,7 @@
     font-awesome
     terminus_font
     twemoji-color-font
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    nerdfonts
     ];
     fontDir.enable = true;
     fontconfig = {
