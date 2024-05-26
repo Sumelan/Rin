@@ -1,232 +1,178 @@
 {
-  wayland.windowManager.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-
-    settings = {
-      "$mainMod" = "SUPER";
-      "$term"= "alacritty";
-      "$file" = "thunar";
-
-      monitor = ",preferred,auto,1";
-
-      env = [
-        "XDG_CURRENT_DESKTOP,Hyprland"
-        "XDG_SESSION_TYPE,wayland"
-        "XDG_SESSION_DESKTOP,Hyprland"
-        "XCURSOR_SIZE,36"
-        "QT_QPA_PLATFORM,wayland"
-        "XDG_SCREENSHOTS_DIR,~/Pictures/Screenshots"
+  let
+    theme = config.colorScheme.palette;
+    hyprplugins = inputs.hyprland-plugins.packages.${pkgs.system};
+  in
+  {  
+    wayland.windowManager.hyprland = {
+      enable = true;
+      xwayland.enable = true;
+      systemd.enable = true;
+      plugins = [
+      #shgnjk
       ];
+      extraConfig = ''
 
-      debug = {
-        disable_logs = false;
-        enable_stdout_logs = true;
-      };
+        $mainMod = SUPER
+        $terminal = alacritty
+        $fileManager = thunar
+        $menu = rofi -show drun
 
-      input = {
-        kb_layout = "us";
+      monitor = ",preferred,auto,1"
 
-        follow_mouse = 1;
+      env = XDG_CURRENT_DESKTOP,Hyprland
+      env = XDG_SESSION_TYPE,wayland
+      env = XDG_SESSION_DESKTOP,Hyprland
+      env = XCURSOR_SIZE,36
+      env = QT_QPA_PLATFORM,wayland
+      env = XDG_SCREENSHOTS_DIR,~/Pictures/Screenshots
+      
+      exec-once = swww init
+      exec-once = swww img ~/Downloads/nixos-chan.png
+      exec-once = waybar
+      exec-once = wl-paste --type text --watch cliphist store
+      exec-once = wl-paste --type image --watch cliphist store
+      exec-once = fcitx5
 
-        touchpad = {
-          natural_scroll = false;
-          middle_button_emulation = true;
-          clickfinger_behavior = true;
-        };
+      windowrule =  float, ^(imv)$
+      windowrule =  float, ^(mpv)$  
+
+      bindr = $mainMod, $mainMod_L, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window # Super Key to Launch rofi menu
+      bind = $mainMod, D, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window
+
+      bind = $mainMod, RETURN, exec, $terminal
+      bind = $mainMod, SPACE, exec, $menu
+      bind = $mainMod, T, exec, $fileManager
+      bind = $mainMod, C, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
+      bind = $mainMod, S, exec, grim -g "$(slurp -d)" - |swappy -f -
+
+      bind = $mainMod, Q, killactive
+      bind = $mainMod, ESC, exit
+      bind = $mainMod, V, togglefloating
+      bind = $mainMod, F, fullscreen
+      bind = $mainMod, P, pseudo, dwindle
+
+      bind = $mainMod, H, movefocus, l
+      bind = $mainMod, J, movefocus, d
+      bind = $mainMod, K, movefocus, u
+      bind = $mainMod, L, movefocus, r
+      bind = $mainMod SHIFT, H, movewindow, l
+      bind = $mainMod SHIFT, J, movewindow, d
+      bind = $mainMod SHIFT, K, movewindow, u
+      bind = $mainMod SHIFT, L, movewindow, r
+      bind = ALT, Tab, cyclenext
+      bind = ALT, Tab, bringactivetotop
+
+      bind = $mainMod, 1, workspace, 1
+      bind = $mainMod, 2, workspace, 2
+      bind = $mainMod, 3, workspace, 3
+      bind = $mainMod, 4, workspace, 4
+      bind = $mainMod, 5, workspace, 5
+      bind = $mainMod, 6, workspace, 6
+      bind = $mainMod, 7, workspace, 7
+      bind = $mainMod, 8, workspace, 8
+      bind = $mainMod, 9, workspace, 9
+      bind = $mainMod, 0, workspace, 10
+      bind = $mainMod SHIFT, 1, movetoworkspace, 1
+      bind = $mainMod SHIFT, 2, movetoworkspace, 2
+      bind = $mainMod SHIFT, 3, movetoworkspace, 3
+      bind = $mainMod SHIFT, 4, movetoworkspace, 4
+      bind = $mainMod SHIFT, 5, movetoworkspace, 5
+      bind = $mainMod SHIFT, 6, movetoworkspace, 6
+      bind = $mainMod SHIFT, 7, movetoworkspace, 7
+      bind = $mainMod SHIFT, 8, movetoworkspace, 8
+      bind = $mainMod SHIFT, 9, movetoworkspace, 9
+      bind = $mainMod SHIFT, 0, movetoworkspace, 10
+
+      bind = $mainMod, X, togglespecialworkspace, magic
+      bind = $mainMod, Z, togglespecialworkspace, scratch
+      bind = $mainMod SHIFT, X, movetoworkspace, special:magic
+      bind = $mainMod SHIFT, Z, movetoworkspace, special:scratch
+
+      bind = $mainMod, mouse_down, workspace, e+1
+      bind = $mainMod, mouse_up, workspace, e-1
+      bindm = $mainMod, mouse:272, movewindow
+      bindm = $mainMod, mouse:273, resizewindow
+
+      plugin  {
+
+      }
+      input  {
+        kb_layout = "us"
+
+        follow_mouse = 1
+
+        touchpad {
+          natural_scroll = false
+          middle_button_emulation = true
+          clickfinger_behavior = true
+        }
 
         sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
-      };
 
-      general = {
-        gaps_in = 5;
-        gaps_out = 20;
-        border_size = 3;
-        "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        "col.inactive_border" = "rgba(595959aa)";
+        gestures {
+          workspace_swipe = true
+          workspace_swipe_fingers = 3
+          workspace_swipe_invert = false
+          workspace_swipe_distance = 200
+          workspace_swipe_forever = true
+       }
 
-        layout = "dwindle";
-        no_cursor_warps = false;
-      };
+        general {
+          gaps_in = 5
+          gaps_out = 20
+          border_size = 3
+          "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg"
+          "col.inactive_border" = "rgba(595959aa)"
 
-      decoration = {
-        rounding = 10;
-        blur = {
-          enabled = true;
-          size = 16;
-          passes = 2;
-          new_optimizations = true;
-        };
+        layout = "dwindle"
+        no_cursor_warps = false
+      }
 
-        drop_shadow = true;
-        shadow_range = 4;
-        shadow_render_power = 3;
-        "col.shadow" = "rgba(1a1a1aee)";
-      };
+        decoration {
+          rounding = 10;
+          blur {
+            enabled = true
+            size = 16
+            passes = 2
+          new_optimizations = true
+          }
+          drop_shadow = true
+          shadow_range = 4
+          shadow_render_power = 3
+          "col.shadow" = "rgba(1a1a1aee)"
+        }
 
-      animations = {
-        enabled = true;
+        animation {
+          enable = true
+          bezier = myBezier, 0.05, 0.9, 0.1, 1.05
+        # bezier = myBezier, 0.33, 0.82, 0.9, -0.08
+          animation = windows,     1, 7,  myBezier
+          animation = windowsOut,  1, 7,  default, popin 80%
+          animation = border,      1, 10, default
+          animation = borderangle, 1, 8,  default
+          animation = fade,        1, 7,  default
+          animation = workspaces,  1, 6,  default
+        }
+      }
 
-        bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
-        # bezier = "myBezier, 0.33, 0.82, 0.9, -0.08";
+      dwindle {
+        pseudotile = true # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+        preserve_split = true # you probably want this
+      }
 
-        animation = [
-          "windows,     1, 7,  myBezier"
-          "windowsOut,  1, 7,  default, popin 80%"
-          "border,      1, 10, default"
-          "borderangle, 1, 8,  default"
-          "fade,        1, 7,  default"
-          "workspaces,  1, 6,  default"
-        ];
-      };
+      master {
+        new_is_master = true
+      }
 
-      dwindle = {
-        pseudotile = true; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-        preserve_split = true; # you probably want this
-      };
-
-      master = {
-        new_is_master = true;
-      };
-
-      gestures = {
-        workspace_swipe = true;
-        workspace_swipe_fingers = 3;
-        workspace_swipe_invert = false;
-        workspace_swipe_distance = 200;
-        workspace_swipe_forever = true;
-      };
-
-      misc = {
-        animate_manual_resizes = true;
-        animate_mouse_windowdragging = true;
-        enable_swallow = true;
-        render_ahead_of_time = false;
-        disable_hyprland_logo = true;
-      };
-
-      windowrule = [
-        "float, ^(imv)$"
-        "float, ^(mpv)$"
-      ];
-
-      exec-once = [
-        "swww init"
-        "swww img ~/Downloads/nixos-chan.png"
-        "waybar"
-        "wl-paste --type text --watch cliphist store"
-        "wl-paste --type image --watch cliphist store"
-        "fcitx5"
-      ];
-
-      bind = [
-        "$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
-
-        "$mainMod, Return, exec, $term"
-        "$mainMod, Q, killactive,"
-        "$mainMod, M, exit,"
-        "$mainMod, F, togglefloating,"
-        "$mainMod, J, togglesplit, # dwindle"
-
-        # File Manager
-        "$mainMod, E, exec, $file"
-
-        # rofi App launcher
-        "$mainMod, D, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window"
-        "$mainMod, $mainMod_L, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window"
-        "$mainMod, P, pseudo, # dwindle"
-
-        # ags overview
-        "Menu, exec, pkill rofi || true && ags -t 'overview'"
-
-        # Move focus with mainMod + arrow keys
-        "$mainMod, left,  movefocus, l"
-        "$mainMod, right, movefocus, r"
-        "$mainMod, up,    movefocus, u"
-        "$mainMod, down,  movefocus, d"
-
-        # Moving windows
-        "$mainMod SHIFT, left,  swapwindow, l"
-        "$mainMod SHIFT, right, swapwindow, r"
-        "$mainMod SHIFT, up,    swapwindow, u"
-        "$mainMod SHIFT, down,  swapwindow, d"
-
-        # Window resizing                     X  Y
-        "$mainMod CTRL, left,  resizeactive, -60 0"
-        "$mainMod CTRL, right, resizeactive,  60 0"
-        "$mainMod CTRL, up,    resizeactive,  0 -60"
-        "$mainMod CTRL, down,  resizeactive,  0  60"
-
-        # Switch workspaces with mainMod + [0-9]
-        "$mainMod, 1, workspace, 1"
-        "$mainMod, 2, workspace, 2"
-        "$mainMod, 3, workspace, 3"
-        "$mainMod, 4, workspace, 4"
-        "$mainMod, 5, workspace, 5"
-        "$mainMod, 6, workspace, 6"
-        "$mainMod, 7, workspace, 7"
-        "$mainMod, 8, workspace, 8"
-        "$mainMod, 9, workspace, 9"
-        "$mainMod, 0, workspace, 10"
-
-        # Move active window to a workspace with mainMod + SHIFT + [0-9]
-        "$mainMod SHIFT, 1, movetoworkspacesilent, 1"
-        "$mainMod SHIFT, 2, movetoworkspacesilent, 2"
-        "$mainMod SHIFT, 3, movetoworkspacesilent, 3"
-        "$mainMod SHIFT, 4, movetoworkspacesilent, 4"
-        "$mainMod SHIFT, 5, movetoworkspacesilent, 5"
-        "$mainMod SHIFT, 6, movetoworkspacesilent, 6"
-        "$mainMod SHIFT, 7, movetoworkspacesilent, 7"
-        "$mainMod SHIFT, 8, movetoworkspacesilent, 8"
-        "$mainMod SHIFT, 9, movetoworkspacesilent, 9"
-        "$mainMod SHIFT, 0, movetoworkspacesilent, 10"
-
-        # Scroll through existing workspaces with mainMod + scroll
-        "$mainMod, mouse_down, workspace, e+1"
-        "$mainMod, mouse_up, workspace, e-1"
-
-        # Keyboard backlight
-        #"$mainMod, F3, exec, brightnessctl -d *::kbd_backlight set +33%"
-        #"$mainMod, F2, exec, brightnessctl -d *::kbd_backlight set 33%-"
-
-        # Volume and Mic
-        ", XF86AudioRaiseVolume, exec, pamixer -i 5 "
-        ", XF86AudioLowerVolume, exec, pamixer -d 5 "
-        ", XF86AudioMute, exec, pamixer -t"
-        ", XF86AudioMicMute, exec, pamixer --default-source -m"
-        
-        # Media control
-        #", xf86AudioPlayPause, exec, $scriptsDir/MediaCtrl.sh --pause"
-        #", xf86AudioPause, exec, $scriptsDir/MediaCtrl.sh --pause"
-        #", xf86AudioPlay, exec, $scriptsDir/MediaCtrl.sh --pause"
-        #", xf86AudioNext, exec, $scriptsDir/MediaCtrl.sh --nxt"
-        #", xf86AudioPrev, exec, $scriptsDir/MediaCtrl.sh --prv"
-        #", xf86audiostop, exec, $scriptsDir/MediaCtrl.sh --stop"
-       
-        # Brightness control
-        ", XF86MonBrightnessDown, exec, brightnessctl set 5%- "
-        ", XF86MonBrightnessUp, exec, brightnessctl set +5% "
-
-        # Configuration files
-        ''$mainMod SHIFT, N, exec, alacritty -e sh -c "rb"''
-        ''$mainMod SHIFT, C, exec, alacritty -e sh -c "conf"''
-        ''$mainMod SHIFT, H, exec, alacritty -e sh -c "nvim ~/BathyScarfOS/home-manager/modules/wms/hyprland.nix"''
-        ''$mainMod SHIFT, W, exec, alacritty -e sh -c "nvim ~/BathyScarfOS/home-manager/modules/wms/waybar.nix"''
-        '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
-
-        # Waybar
-        "$mainMod, B, exec, pkill -SIGUSR1 waybar"
-        "$mainMod, W, exec, pkill -SIGUSR2 waybar"
-
-        # Disable all effects
-        "$mainMod Shift, G, exec, ~/.config/hypr/gamemode.sh"
-      ];
-
-      # Move/resize windows with mainMod + LMB/RMB and dragging
-      bindm = [
-        "$mainMod, mouse:272, movewindow"
-        "$mainMod, mouse:273, resizewindow"
-      ];
-    };
+      misc {
+        animate_manual_resizes = true
+        animate_mouse_windowdragging = true
+        enable_swallow = true
+        render_ahead_of_time = false
+        disable_hyprland_logo = true
+      }
+ '';
+      
   };
 }
