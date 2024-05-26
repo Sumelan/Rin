@@ -30,7 +30,7 @@
       hostname = "BathyScarfOS";
       username = "bathys";
       gitUsername = "bathys";
-      gitEmail = "nishimua7802@gmail.com";
+      gitEmail = "68154148+bathys@users.noreply.github.com";
       theme = "rose-pine";
       pkgs = import nixpkgs {
         inherit system;
