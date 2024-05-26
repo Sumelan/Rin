@@ -18,7 +18,7 @@
         $fileManager = thunar
         $menu = rofi -show drun
 
-      monitor = ",preferred,auto,1"
+      monitor = ,preferred,auto,1
 
       env = XDG_CURRENT_DESKTOP,Hyprland
       env = XDG_SESSION_TYPE,wayland
