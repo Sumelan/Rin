@@ -26,17 +26,27 @@
       env = XCURSOR_SIZE,24
       env = QT_QPA_PLATFORM,wayland
       env = XDG_SCREENSHOTS_DIR,~/Pictures/Screenshots
-      
-      exec-once = swww init
-      exec-once = swww img ~/Downloads/nixos-chan.png
+
+      exec-once = dbus-update-activation-environment --systemd --all
+      exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+      exec-once = swww-daemon & swww img ~/Downloads/nixos-chan.png
       exec-once = waybar
-      exec-once = wl-paste --type text --watch cliphist store
-      exec-once = wl-paste --type image --watch cliphist store
+      exec-once = nm-applet
+      exec-once = wl-paste --type text --watch cliphist store & wl-paste --type image --watch cliphist store & wl-paste --watch cliphist store
       exec-once = fcitx5
 
-      windowrule =  float, ^(imv)$
-      windowrule =  float, ^(mpv)$  
-
+      #opacity window rules
+      windowrule = opacity 1 0.84, vesktop
+      windowrule = opacity 0.8, Spotify
+      windowrule = opacity 0.9, neovide
+      windowrule = opacity 0.8, bottles
+      windowrule = opacity 0.8, fl64.exe
+      windowrulev2 = opacity 0.8, title:(FL Studio)
+      #workspaces window rules
+      windowrule = workspace 2, vesktop
+      windowrule = workspace 1, firefox
+      windowrule = workspace special:magic, Spotify
+      
       bindr = $mainMod, $mainMod_L, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window # Super Key to Launch rofi menu
       bind = $mainMod, D, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window
 
