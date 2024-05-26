@@ -5,6 +5,7 @@
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
+    nix-colors.url = "github:misterio77/nix-colors";
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
     wallust.url = "git+https://codeberg.org/explosion-mental/wallust?ref=dev";
