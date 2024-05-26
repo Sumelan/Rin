@@ -1,123 +1,156 @@
+{ config, lib, pkgs, ... }:
 {
   programs.waybar = {
     enable = true;
-    settings = {
-      mainBar = {
-        layer = "top";
-        position = "top";
-        margin = "9 13 -10 18";
-
-        modules-left = ["hyprland/workspaces" "hyprland/language" "keyboard-state" "hyprland/submap"];
-        modules-center = ["clock" "custom/weather"];
-        modules-right = ["pipewire" "custom/mem" "cpu" "backlight" "battery" "tray"];
-
+    systemd = {
+      enable = false; # disable it,autostart it in hyprland conf
+      target = "graphical-session.target";
+      settings = {
+        "layer" = "top";
+        "position" = "top";
+        modules-left = [ "custom/launcher" "hyprland/workspaces" "custom/wall" ];
+        modules-center = [ "clock" "hyprland/window" ];
+        modules-right = [ "wireplumber" "backlight" "memory" "cpu" "network" "temperature" "battery" "custom/powermenu" "tray" ];
+        "custom/launcher" = {
+          "format" = "󰫢 ";
+          #"on-click" = "pkill rofi || ~/.config/rofi/launcher.sh";
+          "tooltip" = false;
+        };
+        "hyprland/window" = {
+          max-length = 25;
+          separate-outputs = false;
+          rewrite = {
+            "" = "BathyScarfOS";
+          };
+        };
+        /*
+          "custom/wall" = {
+            "on-click" = ${sharedScripts.wallpaper_random}/bin/wallpaper_random";
+            "on-click-middle" = "${sharedScripts.default_wall}/bin/default_wall";
+            "on-click-right" = killall dynamic_wallpaper || ${sharedScripts.dynamic_wallpaper}/bin/dynamic_wallpaper &";
+            "format" = " 󰠖 ";
+            "tooltip" = false;
+          };
+        */
+        "custom/cava-internal" = {
+          "exec" = ""; # "sleep 1s && ${sharedScripts.cava-internal}/bin/cava-internal";
+          "tooltip" = false;
+        };
         "hyprland/workspaces" = {
-          disable-scroll = true;
+          "format" = "{name}";
+          "on-click" = "activate";
+          "on-scroll-up" = "hyprctl dispatch workspace e+1";
+          "on-scroll-down" = "hyprctl dispatch workspace e-1";
         };
-
-    "hyprland/language" = {
-        format-en = "US";
-        format-ja = "JP";
-	      min-length = 5;
-	      tooltip = false;
-    };
-
-    "keyboard-state" = {
-        #numlock = true;
-        capslock = true;
-        format = "{icon} ";
-        format-icons = {
-            locked = " ";
-            unlocked = "";
+        "backlight" = {
+          "device" = "intel_backlight";
+          "on-scroll-up" = "light -A 5";
+          "on-scroll-down" = "light -U 5";
+          "format" = "{icon} {percent}%";
+          "format-icons" = [
+            "󰃝"
+            "󰃞"
+            "󰃟"
+            "󰃠"
+          ];
         };
-    };
-
-    "clock" = {
-        # timezone = "Asia/Tokyo";
-        tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-        format = "{%x %H:%M}";
-    };
-
-    "custom/weather" = {
-        format = "{}";
-        tooltip = true;
-        interval = 1800;
-        exec = "$HOME/.config/waybar/scripts/wttr.py";
-        return-type = "json";
-    };
-
-    "pipewire" = {
-        # scroll-step = 1; # %, can be a float
-        reverse-scrolling = 1;
-        format = "{volume}% {icon} {format_source}";
-        format-bluetooth = "{volume}% {icon} {format_source}";
-        format-bluetooth-muted = " {icon} {format_source}";
-        format-muted = " {format_source}";
-        format-source = "{volume}% ";
-        format-source-muted = "";
-        format-icons = {
-            headphone = "";
-            hands-free = "";
-            headset = "";
-            phone = "";
-            portable = "";
-            car = "";
-            default = ["" "" ""];
+        "wireplumber" = {
+          "scroll-step" = 1;
+          "format" = "{icon} {volume}%";
+          "format-muted" = "󰖁 Muted";
+          "format-icons" = {
+            "default" = [
+              ""
+              ""
+              ""
+            ];
+          };
+          "on-click" = "pavucontrol";
+          "tooltip" = true;
         };
-        on-click = "pavucontrol";
-        min-length = 13;
-    };
-
-    "custom/mem" = {
-        format = "{} ";
-        interval = 3;
-        exec = "free -h | awk '/Mem:/{printf $3}'";
-        tooltip = false;
-    };
-
-    "cpu" = {
-      interval = 2;
-      format = "{usage}% ";
-      min-length = 6;
-    };
-
-    "temperature" = {
-        # thermal-zone = 2;
-        # hwmon-path = "/sys/class/hwmon/hwmon2/temp1_input";
-        critical-threshold = 80;
-        # format-critical = "{temperatureC}°C {icon}";
-        format = "{temperatureC}°C {icon}";
-        format-icons = ["" "" "" "" ""];
-        tooltip = false;
-    };
-
-    "backlight" = {
-        device = "intel_backlight";
-        format = "{percent}% {icon}";
-        format-icons = [""];
-        min-length = 7;
-    };
-
-    "battery" = {
-        states = {
-            warning = 30;
-            critical = 15;
+        "battery" = {
+          "interval" = 10;
+          "states" = {
+            "warning" = 20;
+            "critical" = 10;
+          };
+          "format" = "{icon} {capacity}%";
+          "format-icons" = [
+            "󰁺"
+            "󰁻"
+            "󰁼"
+            "󰁽"
+            "󰁾"
+            "󰁿"
+            "󰂀"
+            "󰂁"
+            "󰂂"
+            "󰁹"
+          ];
+          "format-full" = "{icon} {capacity}%";
+          "format-charging" = "󰂄 {capacity}%";
+          "tooltip" = false;
         };
-        format = "{capacity}% {icon}";
-        format-charging = "{capacity}% ";
-        format-plugged = "{capacity}% ";
-        format-alt = "{time} {icon}";
-        format-icons = ["" "" "" "" "" "" "" "" "" ""];
-	on-update = "$HOME/.config/waybar/scripts/check_battery.sh";
-    };
-
-    tray = {
-        icon-size = 16;
-        spacing = 0;
-    };
-
-      };
-    };
+        "clock" = {
+          "interval" = 1;
+          "format" = "{:%I:%M %p  %A %b %d}";
+          "tooltip" = true;
+          "tooltip-format"= "{=%A; %d %B %Y}\n<tt>{calendar}</tt>";
+        # "tooltip-format" = "上午：高数\n下午：Ps\n晚上：Golang\n<tt>{calendar}</tt>";
+        };
+        "memory" = {
+          "interval" = 1;
+          "format" = "󰍛 {percentage}%";
+          "states" = {
+            "warning" = 85;
+          };
+        };
+        "cpu" = {
+          "interval" = 1;
+          "format" = "󰻠 {usage}%";
+        };
+        /*
+          "mpd" = {
+            "max-length" = 25;
+            "format" = "<span foreground='#bb9af7'></span> {title}";
+            "format-paused" = " {title}";
+            "format-stopped" = "<span foreground='#bb9af7'></span>";
+            "format-disconnected" = "";
+            "on-click" = "mpc --quiet toggle";
+            "on-click-right" = "mpc update; mpc ls | mpc add";
+            "on-click-middle" = "kitty --class='ncmpcpp' ncmpcpp";
+            "on-scroll-up" = "mpc --quiet prev";
+            "on-scroll-down" = "mpc --quiet next";
+            "smooth-scrolling-threshold" = 5;
+            "tooltip-format" = "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})";
+          };
+        */
+        "network" = {
+          "format-disconnected" = "󰯡 Disconnected";
+          "format-ethernet" = " Wired";
+          "format-linked" = "󰖪 (No IP)";
+          "format-wifi" = "󰖩 ";
+          "interval" = 1;
+          "tooltip" = true;
+          "tooltip-format" = "󰖩  {essid} ({ipaddr})";
+          "on-click" = "nm-applet --indicator";
+        };
+        "temperature" = {
+          #"critical-threshold"= 80;
+          "tooltip" = false;
+          "format" = " {temperatureC}°C";
+        };
+        "custom/powermenu" = {
+          "format" = "";
+          "on-click" = "wlogout";
+          "tooltip" = false;
+        };
+        "tray" = {
+          "icon-size" = 15;
+          "spacing" = 5;
+        };
+      }
+    ];
   
     style = 
       ''
