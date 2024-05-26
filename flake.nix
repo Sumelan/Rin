@@ -21,7 +21,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, ... }@inputs:
+  outputs = { nixpkgs, home-manager, ... }@inputs:
 
     let
       system = "x86_64-linux";
@@ -32,14 +32,15 @@
       gitUsername = "bathys";
       gitEmail = "68154148+bathys@users.noreply.github.com";
       theme = "rose-pine";
+
       pkgs = import nixpkgs {
         inherit system;
         config = {
           allowUnfree = true;
         };
       };
-    in {
-
+    in
+    {
       nixosConfigurations = {
         "${hostname}" = nixpkgs.lib.nixosSystem {
           specialArgs = {
