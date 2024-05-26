@@ -23,7 +23,7 @@
       env = XDG_CURRENT_DESKTOP,Hyprland
       env = XDG_SESSION_TYPE,wayland
       env = XDG_SESSION_DESKTOP,Hyprland
-      env = XCURSOR_SIZE,36
+      env = XCURSOR_SIZE,24
       env = QT_QPA_PLATFORM,wayland
       env = XDG_SCREENSHOTS_DIR,~/Pictures/Screenshots
       
@@ -119,9 +119,9 @@
        }
 
         general {
-          gaps_in = 5
-          gaps_out = 20
-          border_size = 3
+          gaps_in = 4
+          gaps_out = 4
+          border_size = 2
           "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg"
           "col.inactive_border" = "rgba(595959aa)"
 
@@ -130,14 +130,14 @@
       }
 
         decoration {
-          rounding = 10;
+          rounding = 0;
           blur {
             enabled = true
-            size = 16
-            passes = 2
+            size = 2
+            passes = 3
           new_optimizations = true
           }
-          drop_shadow = true
+          drop_shadow = false
           shadow_range = 4
           shadow_render_power = 3
           "col.shadow" = "rgba(1a1a1aee)"
