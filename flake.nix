@@ -9,7 +9,10 @@
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
     wallust.url = "git+https://codeberg.org/explosion-mental/wallust?ref=dev";
-   #hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1"; # unstable hyprland
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1"; # unstable hyprland
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
    #ags.url = "github:Aylur/ags"; 
     home-manager = {
       url = "github:nix-community/home-manager";
