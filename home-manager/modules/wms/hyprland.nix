@@ -1,4 +1,4 @@
-{
+{pkgs, config, inputs, lib, host, ... }:
   let
     theme = config.colorScheme.palette;
     hyprplugins = inputs.hyprland-plugins.packages.${pkgs.system};
