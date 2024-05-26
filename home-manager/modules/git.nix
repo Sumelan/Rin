@@ -2,6 +2,6 @@
   programs.git = {
     enable = true;
     userName  = "bathys";
-    userEmail = "nishimura7802@gmail.com";
+    userEmail = "68154148+bathys@users.noreply.github.com";
   };
 }
