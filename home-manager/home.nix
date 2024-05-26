@@ -1,4 +1,6 @@
+{inputs, lib, config, pkgs, theme, gtkThemeFromScheme, ... }:
 {
+  colorScheme = inputs.nix-colors.colorSchemes."${theme}";
 
   imports = [
     ./zsh.nix
