@@ -226,7 +226,7 @@
         "clock" = {
           "interval" = 1;
           "format" = " {:%H:%M:%S}";
-          "format-alt" = " {:%H:%M |  %Y  %x}";
+          "format-alt" = " {:%H:%M |  %Y年 %m月 %d日}";
           "tooltip" = true;
           "tooltip-format"= "<tt><small>{calendar}</small></tt>";
           "calendar" = {
