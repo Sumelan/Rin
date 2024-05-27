@@ -28,7 +28,7 @@ in
       {
         "label" = "suspend";
         "action" = "sleep 1; systemctl suspend";
-        "text" = "Suspend";
+        "text" = "sleep";
         "keybind" = "u";
       }
       {
@@ -79,7 +79,7 @@ in
       #suspend {
       	margin: 10px;
       	border-radius: 20px;
-      	background-image: image(url("icons/suspend.png"));
+      	background-image: image(url("icons/sleep.png"));
       }
       #shutdown {
       	margin: 10px;
