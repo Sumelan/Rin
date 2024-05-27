@@ -28,7 +28,7 @@ in
       {
         "label" = "suspend";
         "action" = "sleep 1; systemctl suspend";
-        "text" = "sleep";
+        "text" = "Sleep";
         "keybind" = "u";
       }
       {
