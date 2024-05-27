@@ -47,8 +47,9 @@
       windowrulev2 = opacity 0.8, title:(FL Studio)
 
       #workspaces window rules
-      windowrule = workspace 2, thunderbird
-      windowrule = workspace 1, firefox
+      windowrule = workspace 3, Thunderbird
+      windowrule = workspace 2, Fifefox
+      windowrule = workspace 1, Alacritty
       windowrule = workspace special:magic, Spotify
       
     # rofi App launcher
