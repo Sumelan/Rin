@@ -32,8 +32,6 @@
       LC_TIME = "ja_JP.UTF-8";
     };
 
-
-
   # Japanese input.
   i18n.inputMethod = {
    enabled = "fcitx5";
@@ -47,6 +45,14 @@
 	  enable = true;
 	  cpuFreqGovernor = "schedutil";
   }; 
+
+# Sleep, Hibernate, etc.
+  systemd.sleep.extraConfig = ''
+    AllowSuspend=yes
+    AllowHibernation=yes
+    AllowHybridSleep=no
+    AllowSuspendThenHibernate=no
+'';
 
 # don’t shutdown when power button is short-pressed.
   services.logind.extraConfig = ''
