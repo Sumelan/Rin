@@ -14,7 +14,7 @@ in {
 
       enable = true;
       package = cfg.package;
-      terminal = "${pkgs.alacritty}/bin/alacrutty";
+      terminal = "${pkgs.alacritty}/bin/alacritty";
       font = "MonoLisa Nerd Font 12";
       extraConfig = {
         modi = "run,drun,window";
