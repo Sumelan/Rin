@@ -131,13 +131,14 @@
         "layer" = "top";
         "position" = "top";
         modules-left = [ "custom/launcher" "hyprland/workspaces" "custom/wall" ];
-        modules-center = [ "clock" "hyprland/window" ];
+        modules-center = [ "clock" "idle_inhibitor" ];
         modules-right = [ "wireplumber" "backlight" "memory" "cpu" "network" "temperature" "battery" "custom/powermenu" "tray" ];
         "custom/launcher" = {
           "format" = " ";
           #"on-click" = "pkill rofi || ~/.config/rofi/launcher.sh";
           "tooltip" = false;
         };
+     /*
         "hyprland/window" = {
           "format" = "{}";
         	"rewrite" = {
@@ -146,6 +147,7 @@
           	"Alacritty" = "󰞷 Alacritty";
 	         };
         };
+      */
         /*
           "custom/wall" = {
             "on-click" = ${sharedScripts.wallpaper_random}/bin/wallpaper_random";
@@ -224,7 +226,7 @@
         "clock" = {
           "interval" = 1;
           "format" = " {:%H:%M:%S}";
-          "format-alt" = " {:%H:%M   %Y | %m %d %A}";
+          "format-alt" = " {:%H:%M |  %Y  %x}";
           "tooltip" = true;
           "tooltip-format"= "<tt><small>{calendar}</small></tt>";
           "calendar" = {
@@ -241,6 +243,15 @@
 		};
            };
         };
+
+       "idle_inhibitor" = {
+	  "format" = "{icon}";
+	  "format-icons" = {
+		"activated" = " ";
+		"deactivated": " ";
+	  };
+        };
+
         "memory" = {
           "interval" = 1;
           "format" = "󰍛 {percentage}%";
