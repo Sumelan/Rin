@@ -20,7 +20,7 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "ja_JP.UTF-8";
-  extraLocaleSettings = {
+  i18n.extraLocaleSettings = {
       LC_ADDRESS = "ja_JP.UTF-8";
       LC_IDENTIFICATION = "ja_JP.UTF-8";
       LC_MEASUREMENT = "ja_JP.UTF-8";
