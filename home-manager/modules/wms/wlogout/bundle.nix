@@ -1,3 +1,4 @@
+{ pkgs, config, ... }:
 {
   imports = [
     ./layout.nix
