@@ -35,8 +35,8 @@ programs.hyprlock = {
              hide_input = false;
     
              position = "0, 200";
-             halign = center;
-             valign = bottom;
+             halign = "center";
+             valign = "bottom";
        }
        ];
       };
