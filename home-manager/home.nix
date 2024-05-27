@@ -25,5 +25,26 @@
     };
   };
 
+# Create XDG Dirs
+  xdg = {
+    userDirs = {
+      enable = true;
+      createDirectories = true;
+    };
+  };
+
+  dconf.settings = {
+    "org/virt-manager/virt-manager/connections" = {
+      autoconnect = [ "qemu:///system" ];
+      uris = [ "qemu:///system" ];
+    };
+  };
+
+# Place Files Inside Home Directory
+  home.file.".config/wlogout/icons" = {
+    source = ./modules/wlogout;
+    recursive = true;
+  };
+
   home.stateVersion = "23.11";
 }
