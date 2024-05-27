@@ -49,7 +49,7 @@
       #workspaces window rules
       windowrule = workspace 2, thunderbird
       windowrule = workspace 1, firefox
-      windowrule = workspace special:magic, Spotifyd
+      windowrule = workspace special:magic, Spotify
       
     # rofi App launcher
      #bindr = $mainMod, $mainMod_L, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window # Super Key to Launch rofi menu
