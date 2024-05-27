@@ -141,9 +141,9 @@
         "hyprland/window" = {
           "format" = "{}";
         	"rewrite" = {
-           	"(.*) — Mozilla Firefox": "󰈹 $1";
-          	"(.*) — Mozilla Thunderbird": "󰇮 $1";
-          	"Alacritty": "󰞷 Alacritty";
+           	"(.*) — Mozilla Firefox" = "󰈹 $1";
+          	"(.*) — Mozilla Thunderbird" = "󰇮 $1";
+          	"Alacritty" = "󰞷 Alacritty";
 	         };
         };
         /*
@@ -163,14 +163,14 @@
           "format" = " <b>{icon}</b> {windows} ";
         	"window-rewrite-default" = "";
 	        "window-rewrite" = {
-	          "firefox": "󰈹";
-        	  "Alacritty": "󰞷";
-	          "thunderbird": "󰇮";
-	          "spotify": "󰓇";
+	          "firefox" = "󰈹";
+        	  "Alacritty" = "󰞷";
+	          "thunderbird" = "󰇮";
+	          "spotify" = "󰓇";
 	        };
-        "on-scroll-up": "hyprctl dispatch workspace e+1";
-        "on-scroll-down": "hyprctl dispatch workspace e-1";
-        "on-click": "activate";
+        "on-scroll-up" = "hyprctl dispatch workspace e+1";
+        "on-scroll-down" = "hyprctl dispatch workspace e-1";
+        "on-click" = "activate";
         };
         "backlight" = {
           "device" = "intel_backlight";
