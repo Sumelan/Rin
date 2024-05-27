@@ -223,7 +223,7 @@
         };
         "clock" = {
           "interval" = 1;
-          "format" = "{:%c}";
+          "format" = "{:%I:%M %p  %A %b %d}";
           "tooltip" = true;
           "tooltip-format"= "{=%A; %d %B %Y}\n<tt>{calendar}</tt>";
         # "tooltip-format" = "上午：高数\n下午：Ps\n晚上：Golang\n<tt>{calendar}</tt>";
