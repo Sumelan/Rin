@@ -12,7 +12,7 @@
     firefox
     gparted
     (mpv.override {scripts = [mpvScripts.mpris];})  #with tray
-    spotify
+    spotifyd
     thunderbird
     vencord
     vesktop
