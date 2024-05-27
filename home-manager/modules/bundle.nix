@@ -8,6 +8,6 @@
 
     ./wms/hyprland.nix
     ./wms/waybar.nix
-    ./wms/wlogout/layout.nix
+    ./wms/wlogout/bundle.nix
   ];
 }
