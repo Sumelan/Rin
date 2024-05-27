@@ -10,26 +10,35 @@ programs.hyprlock = {
         };
         background = [
           {
-            path = "/home/bathys/Pictures/Wallpapers/nix-girl.png";
-            blur_passes = 3;
-            blur_size = 8;
+            path = "screenshot";
+            blur_passes = 2;
+            blur_size = 6;
+            noise = 0.0117;
+            contrast = 1.3000; # Vibrant!!!
+            brightness = 0.8000;
+            vibrancy = 0.2100;
+            vibrancy_darkness = 0.0;
           }
         ];
         input-field = [
-          {
-            size = "200, 50";
-            position = "0, -80";
-            monitor = "";
-            dots_center = true;
-            fade_on_empty = false;
-            font_color = "rgb(202, 211, 245)";
-            inner_color = "rgb(91, 96, 120)";
-            outer_color = "rgb(24, 25, 38)";
-            outline_thickness = 5;
-            placeholder_text = "Password...";
-            shadow_passes = 2;
-          }
-        ];
+        {    monitor = "";
+             size = 250, 50;
+             outline_thickness = 3;
+             dots_size = 0.33 # Scale of input-field height, 0.2 - 0.8;
+             dots_spacing = 0.15 # Scale of dots' absolute size, 0.0 - 1.0;
+             dots_center = true;
+             outer_color = "rgb(24, 25, 38)";
+             inner_color = "rgb(91, 96, 120)";
+             font_color = "rgb(202, 211, 245)";
+             fade_on_empty = true;
+             placeholder_text = <i>Password...</i>; # Text rendered in the input box when it's empty.
+             hide_input = false;
+    
+             position = 0, 200
+             halign = center
+             valign = bottom
+       }
+       ];
       };
     };
 }
