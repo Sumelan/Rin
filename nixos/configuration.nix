@@ -40,11 +40,16 @@
    ];
   };
 
+### Laptop Specifycation
 # Power management.
   powerManagement = {
 	  enable = true;
-	  cpuFreqGovernor = "schedutil";
   }; 
+
+services = {
+   thermald.enable = true;
+   tlp.enable = true;
+};
 
 # Sleep, Hibernate, etc.
   systemd.sleep.extraConfig = ''
