@@ -7,6 +7,7 @@
     ./qt.nix
 
     ./wms/hyprland.nix
+    ./wms/hyprlock.nix
     ./wms/waybar.nix
     ./wms/wlogout.nix
   ];
