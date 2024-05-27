@@ -36,7 +36,7 @@
       exec-once = fcitx5
       exec-once = firefox
       exec-once = thunderbird
-      exec-once = spotifyd
+      exec-once = spotify
 
       #opacity window rules
       windowrule = opacity 1 0.84, vesktop
