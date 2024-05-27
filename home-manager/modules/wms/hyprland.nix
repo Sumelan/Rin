@@ -36,7 +36,7 @@
       exec-once = fcitx5
       exec-once = firefox
       exec-once = thunderbird
-      exec-once = spotify
+      exec-once = spotifyd
 
       #opacity window rules
       windowrule = opacity 1 0.84, vesktop
@@ -49,7 +49,7 @@
       #workspaces window rules
       windowrule = workspace 2, thunderbird
       windowrule = workspace 1, firefox
-      windowrule = workspace special:magic, Spotify
+      windowrule = workspace special:magic, Spotifyd
       
     # rofi App launcher
      #bindr = $mainMod, $mainMod_L, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window # Super Key to Launch rofi menu
