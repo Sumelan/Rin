@@ -134,7 +134,7 @@
         modules-center = [ "clock" "hyprland/window" ];
         modules-right = [ "wireplumber" "backlight" "memory" "cpu" "network" "temperature" "battery" "custom/powermenu" "tray" ];
         "custom/launcher" = {
-          "format" = "󰫢 ";
+          "format" = "";
           #"on-click" = "pkill rofi || ~/.config/rofi/launcher.sh";
           "tooltip" = false;
         };
