@@ -101,21 +101,16 @@
       bind = $mainMod, G, togglegroup
       bind = ALT, tab, changegroupactive  #change focus to another window  
 
-    # Special Keys / Hot Keys
-      bind = , xf86audioraisevolume, exec, $scriptsDir/Volume.sh --inc #volume up
-      bind = , xf86audiolowervolume, exec, $scriptsDir/Volume.sh --dec #volume down
-      bind = , xf86AudioMicMute, exec, $scriptsDir/Volume.sh --toggle-mic #mute mic
-      bind = , xf86audiomute, exec, $scriptsDir/Volume.sh --toggle
-      bind = , xf86Sleep, exec, systemctl suspend  # sleep button 
-      bind = , xf86Rfkill, exec, $scriptsDir/AirplaneMode.sh #Airplane mode
-
-    # media controls using keyboards
-      bind = , xf86AudioPlayPause, exec, $scriptsDir/MediaCtrl.sh --pause
-      bind = , xf86AudioPause, exec, $scriptsDir/MediaCtrl.sh --pause
-      bind = , xf86AudioPlay, exec, $scriptsDir/MediaCtrl.sh --pause
-      bind = , xf86AudioNext, exec, $scriptsDir/MediaCtrl.sh --nxt
-      bind = , xf86AudioPrev, exec, $scriptsDir/MediaCtrl.sh --prv
-      bind = , xf86audiostop, exec, $scriptsDir/MediaCtrl.sh --stop
+    # Media Keys
+      bind = ,XF86AudioRaiseVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+      bind = ,XF86AudioLowerVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+      binde = ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+      bind = ,XF86AudioPlay, exec, playerctl play-pause
+      bind = ,XF86AudioPause, exec, playerctl play-pause
+      bind = ,XF86AudioNext, exec, playerctl next
+      bind = ,XF86AudioPrev, exec, playerctl previous
+      bind = ,XF86MonBrightnessDown,exec,brightnessctl set 5%-
+      bind = ,XF86MonBrightnessUp,exec,brightnessctl set +5%
 
     # Screenshot keybindings NOTE: You may need to press Fn key as well
       bind = $mainMod, Print, exec, $scriptsDir/ScreenShot.sh --now
