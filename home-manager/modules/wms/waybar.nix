@@ -85,6 +85,9 @@
       #clock {
       color: #E4E8EF;
       }
+      #idle_inhibitor {
+      color: #E4E8EF;
+      }
       #custom-wall {
       color: #B38DAC;
       }
