@@ -146,8 +146,8 @@
         "hyprland/window" = {
           "format" = "{}";
         	"rewrite" = {
-           	"Firefox" = "󰈹 $1";
-          	"Thunderbird" = "󰇮 $1";
+           	"(.*) — Mozilla Firefox" = "󰈹 $1";
+          	"(.*) — Mozilla Thunderbird" = "󰇮 $1";
           	"Alacritty" = "󰞷 Alacritty";
 	         };
         };
@@ -170,9 +170,9 @@
         	"window-rewrite-default" = " ";
 	        "window-rewrite" = {
                   "Alacritty" = "󰞷 ";
-	          "(.*) — Mozilla Firefox" = "󰈹 ";
-	          "(.*) — Mozilla Thunderbird" = "󰇮 ";
-	          "(.*) — Spotify" = "󰓇 ";
+	          "Firefox" = "󰈹 ";
+	          "Thunderbird" = "󰇮 ";
+	          "Spotify" = "󰓇 ";
 	        };
         "on-scroll-up" = "hyprctl dispatch workspace e+1";
         "on-scroll-down" = "hyprctl dispatch workspace e-1";
