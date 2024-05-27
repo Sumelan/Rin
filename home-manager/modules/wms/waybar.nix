@@ -299,7 +299,7 @@
           "format" = " {temperatureC}°C";
         };
         "custom/powermenu" = {
-          "format" = "";
+          "format" = " ";
           "on-click" = "wlogout";
           "tooltip" = false;
         };
