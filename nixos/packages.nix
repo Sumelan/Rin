@@ -33,6 +33,7 @@
     libappindicator
     libnotify
     openssl   # required by Rainbow borders
+    playerctl    
     ranger
     tree
     unar
