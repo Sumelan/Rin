@@ -146,8 +146,8 @@
         "hyprland/window" = {
           "format" = "{}";
         	"rewrite" = {
-           	"(.*) — Mozilla Firefox" = "󰈹 $1";
-          	"(.*) — Mozilla Thunderbird" = "󰇮 $1";
+           	"Firefox" = "󰈹 $1";
+          	"Thunderbird" = "󰇮 $1";
           	"Alacritty" = "󰞷 Alacritty";
 	         };
         };
