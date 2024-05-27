@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 with lib;
-with lib.bathys; let
+with lib.BathyScarfOS; let
   cfg = config.desktops.addons.rofi;
   inherit (config.colorScheme) palette;
 in {
