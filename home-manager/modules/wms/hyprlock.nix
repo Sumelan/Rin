@@ -31,7 +31,7 @@ programs.hyprlock = {
              inner_color = "rgb(91, 96, 120)";
              font_color = "rgb(202, 211, 245)";
              fade_on_empty = true;
-             placeholder_text = <i>Password...</i>; # Text rendered in the input box when it's empty.
+             placeholder_text = "Password..."; # Text rendered in the input box when it's empty.
              hide_input = false;
     
              position = 0, 200
