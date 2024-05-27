@@ -136,6 +136,7 @@
         modules-left = [ "custom/launcher" "hyprland/workspaces" "custom/wall" "tray" ];
         modules-center = [ "clock" "idle_inhibitor" ];
         modules-right = [ "wireplumber" "backlight" "memory" "cpu" "network" "temperature" "battery" "custom/powermenu" ];
+       
         "custom/launcher" = {
           "format" = " ";
           #"on-click" = "pkill rofi || ~/.config/rofi/launcher.sh";
@@ -169,7 +170,7 @@
         	"window-rewrite-default" = " ";
 	        "window-rewrite" = {
 	          "firefox" = "󰈹";
-        	  "Alacritty" = "󰞷";
+        	  "alacritty" = "󰞷";
 	          "thunderbird" = "󰇮";
 	          "spotify" = "󰓇";
 	        };
@@ -238,10 +239,10 @@
 		"weeks-pos" = ""; # display week number. right/left
 		"on-scroll" = 1;
 		"format" = {
-			"months" = "<span color='#ffead3'><b>{}</b></span>";
+			"months" = "<span color='#ffead3'><b>{:  }</b></span>";
 			"days" = "<span color='#ecc6d9'><b>{}</b></span>";
 			"weeks" = "<span color='#99ffdd'><b>W{}</b></span>";
-			"weekdays" =  "<span color='#ffcc66'><b>{}</b></span>";
+			"weekdays" = "<span color='#ffcc66'><b>{}</b></span>";
 			"today" = "<span color='#ff6699'><b><u>{}</u></b></span>";
 		};
            };
