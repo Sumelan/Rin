@@ -74,32 +74,32 @@ in
       #logout {
       	margin: 10px;
       	border-radius: 20px;
-      	background-image: image(url("icons/logout.png"));
+      	background-image: image(url("./icons/logout.png"));
       }
       #suspend {
       	margin: 10px;
       	border-radius: 20px;
-      	background-image: image(url("icons/suspend.png"));
+      	background-image: image(url("./icons/suspend.png"));
       }
       #shutdown {
       	margin: 10px;
       	border-radius: 20px;
-      	background-image: image(url("icons/shutdown.png"));
+      	background-image: image(url("./icons/shutdown.png"));
       }
       #reboot {
       	margin: 10px;
       	border-radius: 20px;
-      	background-image: image(url("icons/reboot.png"));
+      	background-image: image(url("./icons/reboot.png"));
       }
       #lock {
       	margin: 10px;
       	border-radius: 20px;
-      	background-image: image(url("icons/lock.png"));
+      	background-image: image(url("./icons/lock.png"));
       }
       #hibernate {
       	margin: 10px;
       	border-radius: 20px;
-      	background-image: image(url("icons/hibernate.png"));
+      	background-image: image(url("./icons/hibernate.png"));
       }
     '';
   };
