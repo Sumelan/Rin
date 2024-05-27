@@ -161,7 +161,7 @@
         };
         "hyprland/workspaces" = {
           "format" = " <b>{icon}</b> {windows} ";
-        	"window-rewrite-default" = "";
+        	"window-rewrite-default" = " ";
 	        "window-rewrite" = {
 	          "firefox" = "󰈹";
         	  "Alacritty" = "󰞷";
@@ -223,7 +223,7 @@
         };
         "clock" = {
           "interval" = 1;
-          "format" = "{:%x | %H:%M}";
+          "format" = "{:%c}";
           "tooltip" = true;
           "tooltip-format"= "{=%A; %d %B %Y}\n<tt>{calendar}</tt>";
         # "tooltip-format" = "上午：高数\n下午：Ps\n晚上：Golang\n<tt>{calendar}</tt>";
