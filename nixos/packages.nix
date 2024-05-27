@@ -14,8 +14,7 @@
     (mpv.override {scripts = [mpvScripts.mpris];})  #with tray
     spotifyd
     thunderbird
-    vencord
-    vesktop
+    (discord.override { withVencord = true; })
     vlc
 
   # Coding stuff
