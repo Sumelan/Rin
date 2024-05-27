@@ -1,6 +1,6 @@
-{ config, pkgs, lib, nixicle, ... }:
+{ config, pkgs, lib, ... }:
 with lib;
-with lib.nixicle; let
+with lib.bathys; let
   cfg = config.desktops.addons.rofi;
   inherit (config.colorScheme) palette;
 in {
