@@ -169,10 +169,10 @@
           "format" = " <b>{icon}</b> {windows} ";
         	"window-rewrite-default" = " ";
 	        "window-rewrite" = {
-                  "Alacritty" = "󰞷 $1";
-	          "(.*) — Mozilla Firefox" = "󰈹 $2";
-	          "(.*) — Mozilla Thunderbird" = "󰇮 $3";
-	          "(.*) — Spotify" = "󰓇 $4";
+                  "Alacritty" = "󰞷 ";
+	          "(.*) — Mozilla Firefox" = "󰈹 ";
+	          "(.*) — Mozilla Thunderbird" = "󰇮 ";
+	          "(.*) — Spotify" = "󰓇 ";
 	        };
         "on-scroll-up" = "hyprctl dispatch workspace e+1";
         "on-scroll-down" = "hyprctl dispatch workspace e-1";
