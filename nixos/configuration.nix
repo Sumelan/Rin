@@ -55,14 +55,16 @@ services = {
   systemd.sleep.extraConfig = ''
     AllowSuspend=yes
     AllowHibernation=yes
-    AllowHybridSleep=no
-    AllowSuspendThenHibernate=no
+    AllowHybridSleep=yes
+    AllowSuspendThenHibernate=yes
 '';
 
-# don’t shutdown when power button is short-pressed.
+# hybrid sleep when press power button
   services.logind.extraConfig = ''
-      HandlePowerKey = ignore
-    '';
+    HandlePowerKey=suspend
+    IdleAction=suspend
+    IdleActionSec=1m
+  '';
 
   # flatpak
   services.flatpak.enable = true;
