@@ -11,7 +11,6 @@ in {
   config = mkIf cfg.enable {
     programs.rofi = {
       # INFO: Cannot overwrite font atm.
-      catppuccin.enable = false;
 
       enable = true;
       package = cfg.package;
