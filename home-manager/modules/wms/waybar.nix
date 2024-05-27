@@ -223,10 +223,23 @@
         };
         "clock" = {
           "interval" = 1;
-          "format" = "{:%I:%M}";
+          "format" = " {:%H:%M:%S}";
+          "format-alt" = " {:%H:%M   %Y | %m %d %A}";
           "tooltip" = true;
-          "tooltip-format"= "{=%A; %d %B %Y}\n<tt>{calendar}</tt>";
-        # "tooltip-format" = "上午：高数\n下午：Ps\n晚上：Golang\n<tt>{calendar}</tt>";
+          "tooltip-format"= "<tt><small>{calendar}</small></tt>";
+          "calendar" = {
+		"mode" = "month";
+	       #"mode-mon-col" = 3;   # if you want to set "mode" = "year".
+		"weeks-pos" = ""; # display week number. right/left
+		"on-scroll" = 1;
+		"format" = {
+			"months" = "<span color='#ffead3'><b>{}</b></span>";
+			"days" = "<span color='#ecc6d9'><b>{}</b></span>";
+			"weeks" = "<span color='#99ffdd'><b>W{}</b></span>";
+			"weekdays" =  "<span color='#ffcc66'><b>{}</b></span>";
+			"today" = "<span color='#ff6699'><b><u>{}</u></b></span>";
+		};
+           };
         };
         "memory" = {
           "interval" = 1;
