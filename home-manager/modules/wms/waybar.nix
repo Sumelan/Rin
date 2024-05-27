@@ -133,9 +133,9 @@
       {
         "layer" = "top";
         "position" = "top";
-        modules-left = [ "custom/launcher" "hyprland/workspaces" "custom/wall" ];
+        modules-left = [ "custom/launcher" "hyprland/workspaces" "custom/wall" "tray" ];
         modules-center = [ "clock" "idle_inhibitor" ];
-        modules-right = [ "wireplumber" "backlight" "memory" "cpu" "network" "temperature" "battery" "custom/powermenu" "tray" ];
+        modules-right = [ "wireplumber" "backlight" "memory" "cpu" "network" "temperature" "battery" "custom/powermenu" ];
         "custom/launcher" = {
           "format" = " ";
           #"on-click" = "pkill rofi || ~/.config/rofi/launcher.sh";
