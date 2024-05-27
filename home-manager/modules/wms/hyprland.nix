@@ -34,6 +34,9 @@
       exec-once = nm-applet
       exec-once = wl-paste --type text --watch cliphist store & wl-paste --type image --watch cliphist store & wl-paste --watch cliphist store
       exec-once = fcitx5
+      exec-once = firefox
+      exec-once = thunderbird
+      exec-once = spotify
 
       #opacity window rules
       windowrule = opacity 1 0.84, vesktop
@@ -44,7 +47,7 @@
       windowrulev2 = opacity 0.8, title:(FL Studio)
 
       #workspaces window rules
-      windowrule = workspace 2, vesktop
+      windowrule = workspace 2, thunderbird
       windowrule = workspace 1, firefox
       windowrule = workspace special:magic, Spotify
       
