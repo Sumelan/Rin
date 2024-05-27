@@ -34,6 +34,7 @@
     libnotify
     openssl   # required by Rainbow borders
     ranger
+    spotify-tui
     tree
     unar
     unzip
