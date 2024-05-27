@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}:
+{ config, pkgs, lib, nixicle, ... }:
 with lib;
 with lib.nixicle; let
   cfg = config.desktops.addons.rofi;
