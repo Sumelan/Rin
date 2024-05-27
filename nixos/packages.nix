@@ -12,7 +12,7 @@
     firefox
     gparted
     (mpv.override {scripts = [mpvScripts.mpris];})  #with tray
-    spotifyd
+    spotify
     thunderbird
     (discord.override { withVencord = true; })
     vlc
@@ -34,7 +34,6 @@
     libnotify
     openssl   # required by Rainbow borders
     ranger
-    spotify-tui
     tree
     unar
     unzip
