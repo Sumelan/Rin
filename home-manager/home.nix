@@ -42,7 +42,7 @@
 
 # Place Files Inside Home Directory
   home.file.".config/wlogout/icons" = {
-    source = ./modules/wlogout;
+    source = ./modules/wms/wlogout;
     recursive = true;
   };
 
