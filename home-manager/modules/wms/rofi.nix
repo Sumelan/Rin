@@ -65,7 +65,7 @@ in {
         "location" = mkLiteral "center";
         "anchor" = mkLiteral "center";
         "fullscreen" = mkLiteral "false";
-        "width" = mkLiteral "420px";
+        "width" = mkLiteral "50%";
         "x-offset" = mkLiteral "0px";
         "y-offset" = mkLiteral "0px";
 
