@@ -107,7 +107,7 @@ in {
         "text-color" = mkLiteral "@foreground-colour";
         "orientation" = mkLiteral "horizontal";
         "children" = mkLiteral "[ entry, dummy, mode-switcher ]";
-    #    "background-image" = mkLiteral "url(wallpapers/nix-girl.png)";
+        "background-image" = mkLiteral "url(/home/bathys/.config/rofi/wallpapers/nix-girl.png)";
 
       };
       "prompt" = {
@@ -175,13 +175,13 @@ in {
          "width" = mkLiteral "5%";
          "padding" = mkLiteral "12px";
          "border-radius" = mkLiteral "12px";
-         "background-color" = mkLiteral "@text-selected";
+         "background-color" = mkLiteral "@background-alt";
          "text-color" = mkLiteral "@text-color";
          "cursor" = mkLiteral "pointer";
        };
        "button selected" = {
          "background-color" =  mkLiteral "@selected";
-         "text-color" = mkLiteral "@text-selected";
+         "text-color" = mkLiteral "@text-color";
        };
 
        # Scrollbar
