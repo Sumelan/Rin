@@ -25,7 +25,7 @@ in {
         window-format = "{w} · {c} · {t}";
       };
 
-      "*" = with colors; {
+      "*" = with palette; {
         font = "monospace bold 14";
         background = mkLiteral "#${base00}ff";
         background-alt = mkLiteral "#${base01}ff";
