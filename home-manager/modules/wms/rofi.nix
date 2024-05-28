@@ -81,6 +81,7 @@ in {
         "border-color" = mkLiteral "@border-color";
         "cursor" = "default";
         "background-color" = mkLiteral "@background-color";
+        "background-image" = mkLiteral "url(\"/home/bathys/.config/rofi/wallpapers/nix-girl.png\", width)";
       };
 
       # Main box
@@ -110,7 +111,6 @@ in {
         "text-color" = mkLiteral "@foreground-color";
         "orientation" = mkLiteral "horizontal";
         "children" = mkLiteral "[ entry, dummy, mode-switcher ]";
-        "background-image" = mkLiteral "url(\"/home/bathys/.config/rofi/wallpapers/nix-girl.png\", width)";
 
       };
       "prompt" = {
