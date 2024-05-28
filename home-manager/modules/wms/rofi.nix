@@ -172,7 +172,7 @@ in {
        "mode-switcher" = {
          "enabled" = mkLiteral "true";
          "spacing" = mkLiteral "10px";
-         "background-color" mkLiteral "transparent";
+         "background-color" = mkLiteral "transparent";
        };
        "button" = {
          "width" = mkLiteral "5%";
