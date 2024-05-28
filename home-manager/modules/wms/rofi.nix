@@ -110,7 +110,7 @@ in {
         "text-color" = mkLiteral "@foreground-colour";
         "orientation" = mkLiteral "horizontal";
         "children" = mkLiteral "[ entry, dummy, mode-switcher ]";
-        "background-image" = url("~/.config/rofi/.current_wallpaper", width);
+        "background-image" = url("~/.config/rofi/.current_wallpaper");
 
       };
       "prompt" = {
