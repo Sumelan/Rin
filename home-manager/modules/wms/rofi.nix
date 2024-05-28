@@ -100,7 +100,7 @@ in {
       # Inputbar
       "inputbar" = {
         "enabled" = mkLiteral "true";
-        "spacing" = mkLiteral "10px";
+        "spacing" = mkLiteral "0px";
         "margin" = mkLiteral "10px";
         "padding" = mkLiteral "10px 10px 100px 10px";
         "border" = mkLiteral "0px";
