@@ -184,7 +184,7 @@ in {
        };
        "button selected" = {
          "background-color" =  mkLiteral "@selected";
-         "text-color" = mkLiteral "@text-sellected";
+         "text-color" = mkLiteral "@text-selected";
        };
 
        # Scrollbar
