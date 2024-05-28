@@ -1,8 +1,5 @@
-{
-  config,
-  pkgs,
-  ...
-}: let
+{ config, pkgs, modulesPath, ... }: 
+let
   inherit (config.colorscheme) palette;
 in {
   programs.rofi = {
