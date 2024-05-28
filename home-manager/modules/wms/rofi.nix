@@ -110,7 +110,7 @@ in {
         "text-color" = mkLiteral "@foreground-colour";
         "orientation" = mkLiteral "horizontal";
         "children" = mkLiteral "[ entry, dummy, mode-switcher ]";
-        "background-image" = url("~/.config/rofi/.current_wallpaper");
+        "background-image" = url("~/.config/rofi/nix-girl.png");
 
       };
       "prompt" = {
