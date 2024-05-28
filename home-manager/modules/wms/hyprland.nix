@@ -114,7 +114,8 @@
       bind = $mainMod SHIFT, F, togglefloating,
       bind = $mainMod ALT, F, exec, hyprctl dispatch workspaceopt allfloat
       bind = CTRL ALT, L, exec, $scriptsDir/LockScreen.sh
-      bind = CTRL ALT, P, exec, $scriptsDir/Wlogout.sh
+      bind = CTRL ALT, P, exec, wlogput
+      bind = $mainMod, Return, exec, $terminal
 
     # FEATURES / EXTRAS
       bind = $mainMod, H, exec, $scriptsDir/KeyHints.sh # Small help file
