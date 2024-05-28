@@ -38,20 +38,70 @@
       exec-once = thunderbird
       exec-once = spotify
 
-      #opacity window rules
-      windowrule = opacity 1 0.84, vesktop
-      windowrule = opacity 0.8, Spotify
-      windowrule = opacity 0.9, neovide
-      windowrule = opacity 0.8, bottles
-      windowrule = opacity 0.8, fl64.exe
-      windowrulev2 = opacity 0.8, title:(FL Studio)
+      # windowrule v2 move to workspace
+      windowrulev2 = workspace 1, class:^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr)$
+      windowrulev2 = workspace 2, class:^([Tt]hunderbird)$
+      windowrulev2 = workspace 3, class:^([Aa]lacrityy)$
+      windowrulev2 = workspace special:magic, class:^([Ss]potify)$
 
-      #workspaces window rules
-      windowrule = workspace 3, Thunderbird
-      windowrule = workspace 2, Fifefox
-      windowrule = workspace 1, Alacritty
-      windowrule = workspace special:magic, Spotify
-      
+      # windowrule v2 - float
+      windowrulev2 = float, class:^(org.kde.polkit-kde-authentication-agent-1)$
+      windowrulev2 = float, class:([Zz]oom|onedriver|onedriver-launcher)$
+      windowrulev2 = float, class:([Tt]hunar), title:(File Operation Progress)
+      windowrulev2 = float, class:([Tt]hunar), title:(Confirm to replace files)
+      windowrulev2 = float, class:(xdg-desktop-portal-gtk)
+      windowrulev2 = float, class:(org.gnome.Calculator), title:(Calculator)
+      windowrulev2 = float, class:(codium|codium-url-handler|VSCodium), title:(Add Folder to Workspace)
+      windowrulev2 = float, class:^([Rr]ofi)$
+      windowrulev2 = float, class:^(eog)$
+      windowrulev2 = float, class:^(pavucontrol|org.pulseaudio.pavucontrol)$
+      windowrulev2 = float, class:^(nwg-look|qt5ct|qt6ct|mpv)$
+      windowrulev2 = float, class:^(nm-applet|nm-connection-editor|blueman-manager)$
+      windowrulev2 = float, class:^(gnome-system-monitor|org.gnome.SystemMonitor)$ # system monitor
+      windowrulev2 = float, class:^(yad)$ # icon browser
+      windowrulev2 = float, class:^(wihotspot-gui)$ # wifi hotspot
+      windowrulev2 = float, class:^(evince)$ # document viewer
+      windowrulev2 = float, class:^(file-roller|org.gnome.FileRoller)$ # archive manager
+      windowrulev2 = float, class:^([Bb]aobab|org.gnome.[Bb]aobab)$ # Disk usage analyzer
+      windowrulev2 = float, title:(Kvantum Manager)
+      windowrulev2 = float, class:^([Ss]team)$,title:^((?![Ss]team).*|[Ss]team [Ss]ettings)$
+      windowrulev2 = float, class:^([Qq]alculate-gtk)$
+
+      # windowrule v2 - position
+      windowrulev2 = center, class:([Tt]hunar), title:(File Operation Progress)
+      windowrulev2 = center, class:([Tt]hunar), title:(Confirm to replace files)
+
+      # windowrule v2 - opacity #enable as desired
+      windowrulev2 = opacity 0.9 0.6, class:^([Rr]ofi)$
+      windowrulev2 = opacity 0.9 0.7, class:^(Brave-browser(-beta|-dev)?)$
+      windowrulev2 = opacity 0.9 0.7, class:^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr)$
+      windowrulev2 = opacity 0.9 0.8, class:^([Mm]icrosoft-edge(-stable|-beta|-dev|-unstable)?)$
+      windowrulev2 = opacity 0.9 0.8, class:^(google-chrome(-beta|-dev|-unstable)?)$
+      windowrulev2 = opacity 0.94 0.86, class:^(chrome-.+-Default)$ # Chrome PWAs
+      windowrulev2 = opacity 0.9 0.8, class:^([Tt]hunar)$
+      windowrulev2 = opacity 0.8 0.6, class:^(pcmanfm-qt)$
+      windowrulev2 = opacity 0.8 0.7, class:^(gedit|org.gnome.TextEditor)$
+      windowrulev2 = opacity 0.9 0.8, class:^(deluge)$
+      windowrulev2 = opacity 0.9 0.8, class:^(Alacritty)$
+      windowrulev2 = opacity 0.9 0.8, class:^(kitty)$
+      windowrulev2 = opacity 0.9 0.7, class:^(mousepad)$
+      windowrulev2 = opacity 0.9 0.7, class:^(VSCodium|codium-url-handler)$
+      windowrulev2 = opacity 0.9 0.8, class:^(nwg-look|qt5ct|qt6ct|yad)$
+      windowrulev2 = opacity 0.9 0.8, title:(Kvantum Manager)
+      windowrulev2 = opacity 0.9 0.7, class:^(com.obsproject.Studio)$
+      windowrulev2 = opacity 0.9 0.7, class:^([Aa]udacious)$
+      windowrulev2 = opacity 0.9 0.8, class:^(org.gnome.Nautilus)$
+      windowrulev2 = opacity 0.9 0.8, class:^(VSCode|code-url-handler)$
+      windowrulev2 = opacity 0.9 0.8, class:^(jetbrains-.+)$ # JetBrains IDEs
+      windowrulev2 = opacity 0.94 0.86, class:^([Dd]iscord|[Vv]esktop)$
+      windowrulev2 = opacity 0.9 0.8, class:^(org.telegram.desktop|io.github.tdesktop_x64.TDesktop)$
+      windowrulev2 = opacity 0.94 0.86, class:^(gnome-disks|evince|wihotspot-gui|org.gnome.baobab)$
+      windowrulev2 = opacity 0.9 0.8, class:^(file-roller|org.gnome.FileRoller)$ # archive manager
+      windowrulev2 = opacity 0.8 0.7, class:^(app.drey.Warp)$ # Warp file transfer
+      windowrulev2 = opacity 0.9 0.8, class:^(seahorse)$ # gnome-keyring gui
+      windowrulev2 = opacity 0.82 0.75, class:^(gnome-system-monitor|org.gnome.SystemMonitor)$
+      windowrulev2 = opacity 0.9 0.8, class:^(xdg-desktop-portal-gtk)$ # gnome-keyring gui
+
     # rofi App launcher
      #bindr = $mainMod, $mainMod_L, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window # Super Key to Launch rofi menu
       bind = $mainMod, D, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window      
