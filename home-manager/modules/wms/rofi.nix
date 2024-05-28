@@ -1,4 +1,4 @@
-{ config, pkgs, modulesPath, ... }: 
+{ config, pkgs, ... }: 
 let
   inherit (config.colorscheme) palette;
 in {
@@ -107,7 +107,7 @@ in {
         "text-color" = mkLiteral "@foreground-colour";
         "orientation" = mkLiteral "horizontal";
         "children" = mkLiteral "[ entry, dummy, mode-switcher ]";
-        "background-image" = modulesPath "url("home/bathys/.config/rofi/wallpapers/nix-girl.png", width)";
+        "background-image" = "url("home/bathys/.config/rofi/wallpapers/nix-girl.png", width)";
 
       };
       "prompt" = {
