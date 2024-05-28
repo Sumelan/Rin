@@ -1,6 +1,6 @@
 { config, pkgs, ... }: 
 let
-  inherit (config.colorscheme) palette;
+  inherit (config.colorScheme) palette;
 in {
   programs.rofi = {
     enable = true;
