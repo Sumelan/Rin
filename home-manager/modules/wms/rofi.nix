@@ -81,7 +81,7 @@ in {
         "border-color" = mkLiteral "@border-color";
         "cursor" = "default";
         "background-color" = mkLiteral "@background-color";
-        "background-image" = mkLiteral "url(\"/home/bathys/.config/rofi/wallpapers/nix-girl.png\", width)";
+       # "background-image" = mkLiteral "url(\"/home/bathys/.config/rofi/wallpapers/nix-girl.png\", width)";
       };
 
       # Main box
