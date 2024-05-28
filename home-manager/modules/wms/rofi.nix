@@ -107,7 +107,7 @@ in {
         "text-color" = mkLiteral "@foreground-colour";
         "orientation" = mkLiteral "horizontal";
         "children" = mkLiteral "[ entry, dummy, mode-switcher ]";
-        "background-image" = mkLiteral "url("wallpapers/nix-girl.png")";
+        "background-image" = mkLiteral "url(wallpapers/nix-girl.png)";
 
       };
       "prompt" = {
@@ -177,7 +177,7 @@ in {
          "border-radius" = mkLiteral "12px";
          "background-color" = mkLiteral "@text-selected";
          "text-color" = mkLiteral "@text-color";
-        "cursor" = mkLiteral "pointer";
+         "cursor" = mkLiteral "pointer";
        };
        "button selected" = {
          "background-color" =  mkLiteral "@selected";
