@@ -26,7 +26,7 @@ in {
       };
 
       "*" = with palette; {
-        font = "monospace bold 14";
+        font = "monospace bold 12";
         background = mkLiteral "#${base00}ff";
         background-alt = mkLiteral "#${base01}ff";
         foreground = mkLiteral "#${base05}ff";
@@ -68,7 +68,7 @@ in {
         "location" = mkLiteral "center";
         "anchor" = mkLiteral "center";
         "fullscreen" = mkLiteral "false";
-        "width" = mkLiteral "50%";
+        "width" = mkLiteral "420px";
         "x-offset" = mkLiteral "0px";
         "y-offset" = mkLiteral "0px";
 
@@ -77,7 +77,7 @@ in {
         "margin" = mkLiteral "0px";
         "padding" = mkLiteral "0px";
         "border" = mkLiteral "2px solid";
-        "border-radius" = mkLiteral "30px";
+        "border-radius" = mkLiteral "0px";
         "border-color" = mkLiteral "@border-color";
         "cursor" = "default";
         "background-color" = mkLiteral "@background-color";
@@ -101,11 +101,11 @@ in {
       # Inputbar
       "inputbar" = {
         "enabled" = mkLiteral "true";
-        "spacing" = mkLiteral "0px";
-        "margin" = mkLiteral "10px";
-        "padding" = mkLiteral "10px 10px 100px 10px";
+        "spacing" = mkLiteral "10px";
+        "margin" = mkLiteral "0px";
+        "padding" = mkLiteral "0px 0px 0px 0px";
         "border" = mkLiteral "0px";
-        "border-radius" = mkLiteral "25px";
+        "border-radius" = mkLiteral "0px";
         "border-color" = mkLiteral "@border-color";
         "background-color" = mkLiteral "@background-color";
         "text-color" = mkLiteral "@foreground-color";
