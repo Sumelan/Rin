@@ -26,7 +26,7 @@ in {
       };
 
       "*" = with colors; {
-        font = "monospace bold ${builtins.toString config.gtk.font.size}";
+        font = "monospace bold 14";
         background = mkLiteral "#${base00}ff";
         background-alt = mkLiteral "#${base01}ff";
         foreground = mkLiteral "#${base05}ff";
