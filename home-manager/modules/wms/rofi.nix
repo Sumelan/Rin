@@ -179,7 +179,7 @@ in {
          "padding" = mkLiteral "12px";
          "border-radius" = mkLiteral "12px";
          "background-color" = mkLiteral "@background-alt";
-         "text-color" = mkLiteral "text-color@";
+         "text-color" = mkLiteral "@text-color";
          "cursor" = mkLiteral "pointer";
        };
        "button selected" = {
