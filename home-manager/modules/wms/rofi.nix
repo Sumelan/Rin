@@ -34,10 +34,10 @@ in {
         active = mkLiteral "#${base0B}ff";
         urgent = mkLiteral "#${base08}ff";
 
-        border-colour = mkLiteral "var(selected)";
-        handle-colour = mkLiteral "var(selected)";
-        background-colour = mkLiteral "var(background)";
-        foreground-colour = mkLiteral "var(foreground)";
+        border-color = mkLiteral "var(selected)";
+        handle-color = mkLiteral "var(selected)";
+        background-color = mkLiteral "var(background)";
+        foreground-color = mkLiteral "var(foreground)";
         alternate-background = mkLiteral "var(background-alt)";
         normal-background = mkLiteral "var(background-alt)";
         normal-foreground = mkLiteral "var(foreground)";
@@ -57,6 +57,9 @@ in {
         alternate-urgent-foreground = mkLiteral "var(background)";
         alternate-active-background = mkLiteral "var(active)";
         alternate-active-foreground = mkLiteral "var(background)";
+
+        text-selected = mkLiteral "var(background)";
+        text-color = mkLiteral "var(foreground)";
       };
 
       # Main window
@@ -75,9 +78,9 @@ in {
         "padding" = mkLiteral "0px";
         "border" = mkLiteral "2px solid";
         "border-radius" = mkLiteral "30px";
-        "border-color" = mkLiteral "@border-colour";
+        "border-color" = mkLiteral "@border-color";
         "cursor" = "default";
-        "background-color" = mkLiteral "@background-colour";
+        "background-color" = mkLiteral "@background-color";
       };
 
       # Main box
@@ -89,7 +92,7 @@ in {
         "padding" = mkLiteral "10px";
         "border" = mkLiteral "0px solid";
         "border-radius" = mkLiteral "0px 0px 0px 0px";
-        "border-color" = mkLiteral "@border-colour";
+        "border-color" = mkLiteral "@border-color";
         "background-color" = mkLiteral "transparent";
         "children" = mkLiteral "[ inputbar, listbox]";
       };
@@ -102,9 +105,9 @@ in {
         "padding" = mkLiteral "10px 10px 100px 10px";
         "border" = mkLiteral "0px";
         "border-radius" = mkLiteral "25px";
-        "border-color" = mkLiteral "@border-colour";
-        "background-color" = mkLiteral "@background-colour";
-        "text-color" = mkLiteral "@foreground-colour";
+        "border-color" = mkLiteral "@border-color";
+        "background-color" = mkLiteral "@background-color";
+        "text-color" = mkLiteral "@foreground-color";
         "orientation" = mkLiteral "horizontal";
         "children" = mkLiteral "[ entry, dummy, mode-switcher ]";
         "background-image" = mkLiteral "url(\"/home/bathys/.config/rofi/wallpapers/nix-girl.png\", width)";
@@ -153,9 +156,9 @@ in {
         "padding" = mkLiteral "0px";
         "border" = mkLiteral "0px solid";
         "border-radius" = mkLiteral "0px";
-        "border-color" = mkLiteral "@border-colour";
+        "border-color" = mkLiteral "@border-color";
         "background-color" = mkLiteral "transparent";
-        "text-color" = mkLiteral "@foreground-colour";
+        "text-color" = mkLiteral "@foreground-color";
         "cursor" = "default";
       };
 
@@ -176,12 +179,12 @@ in {
          "padding" = mkLiteral "12px";
          "border-radius" = mkLiteral "12px";
          "background-color" = mkLiteral "@background-alt";
-         "text-color" = mkLiteral "@text-color";
+         "text-color" = mkLiteral "text-color@";
          "cursor" = mkLiteral "pointer";
        };
        "button selected" = {
          "background-color" =  mkLiteral "@selected";
-         "text-color" = mkLiteral "@text-color";
+         "text-color" = mkLiteral "@text-sellected";
        };
 
        # Scrollbar
@@ -201,9 +204,9 @@ in {
         "padding" = mkLiteral "10px";
         "border" = mkLiteral "0px solid";
         "border-radius" = mkLiteral "12px";
-        "border-color" = mkLiteral "@border-colour";
+        "border-color" = mkLiteral "@border-color";
         "background-color" = mkLiteral "transparent";
-        "text-color" = mkLiteral "@foreground-colour";
+        "text-color" = mkLiteral "@foreground-color";
         "cursor" = mkLiteral "pointer";
       };
       "element normal.normal" = {
