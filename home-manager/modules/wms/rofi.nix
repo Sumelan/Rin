@@ -141,8 +141,8 @@ in {
       # Listview
       "listview" = {
         "enabled" = mkLiteral "true";
-        "columns" = mkLiteral "2";
-        "lines" = mkLiteral "6";
+        "columns" = mkLiteral "1";
+        "lines" = mkLiteral "4";
         "cycle" = mkLiteral "true";
         "dynamic" = mkLiteral "true";
         "scrollbar" = mkLiteral "true";
