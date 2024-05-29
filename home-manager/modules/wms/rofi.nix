@@ -68,7 +68,7 @@ in {
         "location" = mkLiteral "center";
         "anchor" = mkLiteral "center";
         "fullscreen" = mkLiteral "false";
-        "width" = mkLiteral "50%";
+        "width" = mkLiteral "40%";
         "x-offset" = mkLiteral "0px";
         "y-offset" = mkLiteral "0px";
 
@@ -142,7 +142,7 @@ in {
       "listview" = {
         "enabled" = mkLiteral "true";
         "columns" = mkLiteral "1";
-        "lines" = mkLiteral "4";
+        "lines" = mkLiteral "5";
         "cycle" = mkLiteral "true";
         "dynamic" = mkLiteral "true";
         "scrollbar" = mkLiteral "true";
