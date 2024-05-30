@@ -27,24 +27,39 @@
       env = QT_QPA_PLATFORM,wayland
       env = XDG_SCREENSHOTS_DIR,~/Pictures/Screenshots
 
+  ### Startup apps
+    # Desktop
       exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
       exec-once = swww-daemon & swww img ~/Pictures/Wallpapers/nixos-chan.png
-      exec-once = waybar &
-      exec-once = nm-applet
-      exec-once = wl-paste --type text --watch cliphist store & wl-paste --type image --watch cliphist store & wl-paste --watch cliphist store
-      exec-once = fcitx5
-      exec-once = firefox
-      exec-once = thunderbird
-      exec-once = spotify
 
-      # windowrule v2 move to workspace
+   # Apps
+      exec-once = waybar &
+      exec-once = nm-applet --indicator &
+      exec-once = swaync &
+      exec-once = firefox &
+      exec-once = thunderbird &
+      exec-once = spotify &
+
+    # clipboard manager
+      exec-once = wl-paste --type text --watch cliphist store 
+      exec-once = wl-paste --type image --watch cliphist store
+
+    # Starting hypridle to start hyprlock
+      exec-once = hypridle &
+
+    # Start pyprland daemon
+      exec-once = pypr &
+
+
+  ### Window and Workspace 
+    # windowrule v2 move to workspace
       windowrulev2 = workspace 1, class:^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr)$
       windowrulev2 = workspace 2, class:^([Tt]hunderbird)$
       windowrulev2 = workspace 3, class:^([Aa]lacrityy)$
       windowrulev2 = workspace special:magic, class:^([Ss]potify)$
 
-      # windowrule v2 - float
+    # windowrule v2 - float
       windowrulev2 = float, class:^(org.kde.polkit-kde-authentication-agent-1)$
       windowrulev2 = float, class:([Zz]oom|onedriver|onedriver-launcher)$
       windowrulev2 = float, class:([Tt]hunar), title:(File Operation Progress)
@@ -67,11 +82,11 @@
       windowrulev2 = float, class:^([Ss]team)$,title:^((?![Ss]team).*|[Ss]team [Ss]ettings)$
       windowrulev2 = float, class:^([Qq]alculate-gtk)$
 
-      # windowrule v2 - position
+    # windowrule v2 - position
       windowrulev2 = center, class:([Tt]hunar), title:(File Operation Progress)
       windowrulev2 = center, class:([Tt]hunar), title:(Confirm to replace files)
 
-      # windowrule v2 - opacity #enable as desired
+    # windowrule v2 - opacity #enable as desired
       windowrulev2 = opacity 0.9 0.6, class:^([Rr]ofi)$
       windowrulev2 = opacity 0.9 0.7, class:^(Brave-browser(-beta|-dev)?)$
       windowrulev2 = opacity 0.9 0.7, class:^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr)$
@@ -102,6 +117,7 @@
       windowrulev2 = opacity 0.82 0.75, class:^(gnome-system-monitor|org.gnome.SystemMonitor)$
       windowrulev2 = opacity 0.9 0.8, class:^(xdg-desktop-portal-gtk)$ # gnome-keyring gui
 
+### Key Bind
     # rofi App launcher
      #bindr = $mainMod, $mainMod_L, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window # Super Key to Launch rofi menu
       bind = $mainMod, D, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window      
@@ -199,41 +215,35 @@
       bind = $mainMod SHIFT, U, movetoworkspace, special
       bind = $mainMod, U, togglespecialworkspace,
 
+
+### Settings
       plugin  {
-
       }
-
       debug {
         disable_logs = false
         enable_stdout_logs = true
       }
-
       input {
         kb_layout = us
-
         follow_mouse = 1
         sensitivity = 0
         accel_profile = false
-
         touchpad {
           natural_scroll = true
           middle_button_emulation = true
           clickfinger_behavior = true
         }
       }
-
       gestures {
         workspace_swipe = true
         workspace_swipe_fingers = 3
       }
-
       general {
         gaps_in = 4
         gaps_out = 4
         border_size = 2
         col.active_border = rgba(${theme.base0A}ff)
         col.inactive_border = rgb();
-
         layout = dwindle
         allow_tearing = true
       }
@@ -252,7 +262,6 @@
         shadow_render_power = 3
         col.shadow = rgba(${theme.base02}ff)
       }
-
       animations {
         enabled = true
         bezier = myBezier, 0.05, 0.9, 0.1, 1.05
@@ -263,19 +272,16 @@
         animation = fade, 1, 7, default
         animation = workspaces, 1, 6, default
       }
-
       dwindle {
         pseudotile = true
         preserve_split = true
       }
-
       master {
         new_is_master = true
       }
-
       misc {
         force_default_wallpaper = -1
       }
- '';
+     '';
  };
 }
