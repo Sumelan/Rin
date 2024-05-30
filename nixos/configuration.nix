@@ -4,6 +4,7 @@
   imports = [
       ./hardware-configuration.nix
       ./packages.nix
+      ./intel-drivers.nix
       ./modules/bundle.nix
       ./disko-config.nix
     ];
