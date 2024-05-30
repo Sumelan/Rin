@@ -53,6 +53,14 @@
   };
 
 # Sleep, Hibernate, etc.
+ systemd = {
+   targets = {
+     sleep = {
+       enable = false;
+       unitConfig.DefaultDependencies = "no";
+	};
+     };
+  }; 
   systemd.sleep.extraConfig = ''
     AllowSuspend=yes
     AllowHibernation=yes
