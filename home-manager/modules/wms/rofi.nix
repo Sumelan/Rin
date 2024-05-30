@@ -120,7 +120,9 @@ in {
       };
       "entry" = {
         "enabled" = mkLiteral "true";
-        "margin" = mkLiteral "8px 0px 0px 14px";
+        "expand" = mkLiteral "false";
+        "width" = mkLiteral "20%";
+        "padding" = mkLiteral "10px";
         "background-color" = mkLiteral "inherit";
         "text-color" = mkLiteral "inherit";
         "cursor" = mkLiteral "text";
