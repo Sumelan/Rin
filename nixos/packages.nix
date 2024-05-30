@@ -37,6 +37,7 @@ with pkgs; [
     htop
     libappindicator
     libnotify
+    killall
     openssl   # required by Rainbow borders
     playerctl    
     ranger
