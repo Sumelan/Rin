@@ -75,13 +75,12 @@ in {
         # properties for all widgets
         "enabled" = mkLiteral "true";
         "margin" = mkLiteral "0px";
-        "padding" = mkLiteral "30px";
+        "padding" = mkLiteral "0px";
         "border" = mkLiteral "2px solid";
         "border-radius" = mkLiteral "0px";
         "border-color" = mkLiteral "@border-color";
         "cursor" = "default";
-        "background-color" = mkLiteral "@background-color";
-       # "background-image" = mkLiteral "url(\"/home/bathys/.config/rofi/wallpapers/nix-girl.png\", width)";
+        "background-color" = mkLiteral "transparent";
       };
 
       # Main box
@@ -111,7 +110,7 @@ in {
         "text-color" = mkLiteral "@foreground-color";
         "orientation" = mkLiteral "horizontal";
         "children" = mkLiteral "[ entry, dummy, mode-switcher ]";
-
+      # "background-image" = mkLiteral "url(\"/home/bathys/.config/rofi/wallpapers/nix-girl.png\", width)";
       };
       "prompt" = {
         "enabled" = mkLiteral "true";
