@@ -4,7 +4,12 @@
     allowUnfree = true;
   };
 
-  environment.systemPackages = (with pkgs; [
+  environment.systemPackages = 
+    let
+      sugar = pkgs.callPackage ../../pkgs/sddm-sugar-dark.nix { };
+      tokyo-night = pkgs.libsForQt5.callPackage ../../pkgs/sddm-tokyo-night.nix { };
+    in
+with pkgs; [
   # Desktop apps
     alacritty
     baobab
@@ -88,10 +93,9 @@
   # Others
     home-manager
     qemu_kvm
+    sugar.sddm-sugar-dark # Name: sugar-dark
+    tokyo-night # Name: tokyo-night-sddm
 
- ]) ++ [
-       inputs.wallust.packages.${pkgs.system}.wallust 
-      #inputs.ags.packages.${pkgs.system}.ags
  ];
 
 programs.thunar = {
