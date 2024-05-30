@@ -100,13 +100,13 @@ in {
       # Inputbar
       "inputbar" = {
         "enabled" = mkLiteral "true";
-        "spacing" = mkLiteral "10px";
+        "spacing" = mkLiteral "30px";
         "margin" = mkLiteral "0px";
         "padding" = mkLiteral "0px 0px 0px 0px";
         "border" = mkLiteral "0px";
         "border-radius" = mkLiteral "0px";
         "border-color" = mkLiteral "@border-color";
-        "background-color" = mkLiteral "transparent";
+        "background-color" = mkLiteral "@background-color";
         "text-color" = mkLiteral "@foreground-color";
         "orientation" = mkLiteral "horizontal";
         "children" = mkLiteral "[ entry, dummy, mode-switcher ]";
