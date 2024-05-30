@@ -95,7 +95,7 @@ with pkgs; [
     qemu_kvm
     sugar.sddm-sugar-dark # Name: sugar-dark
     tokyo-night # Name: tokyo-night-sddm
-
+    pkgs.libsForQt5.qt5.qtgraphicaleffects
  ];
 
 programs.thunar = {
