@@ -197,7 +197,7 @@ in {
           "padding" = mkLiteral "0px";
        };
 
-      # Element
+      # Elements
       "element" = {
         "enabled" = mkLiteral "true";
         "spacing" = mkLiteral "10px";
@@ -260,6 +260,26 @@ in {
         "vertical-align" = mkLiteral "0.5";
         "horizontal-align" = mkLiteral "0.0";
       };
+
+     # Message
+     "message" = {
+        "background-color" = mkLiteral "transparent";
+        "border": = mkLiteral "0px";
+      };
+      "textbox" = {
+         "padding" = mkLiteral "12px";
+         "border-radius" =  "10px";
+         "background-color" = "@background-alt";
+         "text-color" = "@background";
+         "vertical-align" = "0.5";
+         "horizontal-align" = "0.0";
+       }
+       "error-message" = {
+          "padding" = "12px";
+          "border-radius" = "0px";
+          "background-color" = "@background-alt";
+          "text-color" = "@background";
+        }
     };
   };
 }
