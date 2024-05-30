@@ -14,19 +14,16 @@ in {
       "configuration" = {
         modi = "drun, run, filebrower";
         show-icons = true;
-        display-drun = "Apps";
-        display-run = "Run";
-        display-filebrowser = "Files";
-        display-window = "Windows";
+        display-drun = "";
+        display-run = "";
+        display-filebrowser = "";
+        display-window = "";
         drun-display-format = "{name}";
-        hover-select = true;
-      	me-select-entry = "MouseSecondary";
-        me-accept-entry = "MousePrimary";
         window-format = "{w} · {c} · {t}";
       };
 
       "*" = with palette; {
-        font = "monospace bold 12";
+        font = "JetBrains Mono Nerd Font 10";
         background = mkLiteral "#${base00}ff";
         background-alt = mkLiteral "#${base01}ff";
         foreground = mkLiteral "#${base05}ff";
@@ -74,8 +71,6 @@ in {
 
         # properties for all widgets
         "enabled" = mkLiteral "true";
-        "margin" = mkLiteral "0px";
-        "padding" = mkLiteral "0px";
         "border" = mkLiteral "2px solid";
         "border-radius" = mkLiteral "0px";
         "border-color" = mkLiteral "@border-color";
@@ -109,9 +104,19 @@ in {
         "background-color" = mkLiteral "@background-color";
         "text-color" = mkLiteral "@foreground-color";
         "orientation" = mkLiteral "horizontal";
-        "children" = mkLiteral "[ entry, dummy, mode-switcher ]";
+        "children" = mkLiteral "[ textbox-prompt-colon, entry, dummy, mode-switcher ]";
       # "background-image" = mkLiteral "url(\"/home/bathys/.config/rofi/wallpapers/nix-girl.png\", width)";
       };
+
+      "textbox-prompt-colon" = {
+        "enabled" = mkLiteral "true";
+        "expand" = mkLiteral "false";
+        "str" = mkLiteral "";
+        "padding" = mkLiteral "12px 15px";
+        "border-radius" = mkLiteral "100%";
+        "background-color" = mkLiteral "background-alt";
+        "text-color" = mkLiteral "inherit";
+       };
 
       "entry" = {
         "enabled" = mkLiteral "true";
