@@ -28,7 +28,7 @@
     	tlp.enable = true;
   	logind.extraConfig = ''
     # don’t shutdown when power button is short-pressed
-    	HandlePowerKey=suspend
+    	HandlePowerKey=ignore
   	'';
   };
 }
