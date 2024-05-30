@@ -52,16 +52,6 @@
     tlp.enable = true;
   };
 
-# Sleep, Hibernate, etc.
- systemd = {
-   targets = {
-     sleep = {
-       enable = true;
-       unitConfig.DefaultDependencies = "no";
-	};
-     };
-  }; 
-
   services.logind.extraConfig = ''
     # don’t shutdown when power button is short-pressed
     HandlePowerKey=ignore
