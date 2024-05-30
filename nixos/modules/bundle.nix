@@ -14,7 +14,7 @@
     ./trim.nix
     ./user.nix
     ./virtmanager.nix
-    ./xp-pen-tablet
+    ./xp-pen-tablet.nix
     ./xserver.nix
     ./zram.nix
   ];
