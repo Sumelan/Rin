@@ -136,7 +136,7 @@ in {
         "padding" = mkLiteral "10px";
         "background-color" = mkLiteral "transparent";
         "orientation" = mkLiteral "vertical";
-        "children" = mkLiteral "[ listview ]";
+        "children" = mkLiteral "[ message, listview ]";
      };
 
       # Listview
