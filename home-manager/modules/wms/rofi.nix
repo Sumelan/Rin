@@ -100,7 +100,7 @@ in {
       # Inputbar
       "inputbar" = {
         "enabled" = mkLiteral "true";
-        "spacing" = mkLiteral "30px";
+        "spacing" = mkLiteral "10px";
         "margin" = mkLiteral "0px";
         "padding" = mkLiteral "0px 0px 0px 0px";
         "border" = mkLiteral "0px";
@@ -112,12 +112,12 @@ in {
         "children" = mkLiteral "[ entry, dummy, mode-switcher ]";
       # "background-image" = mkLiteral "url(\"/home/bathys/.config/rofi/wallpapers/nix-girl.png\", width)";
       };
-     # "prompt" = {
-      #  "enabled" = mkLiteral "true";
-       # "background-color" = mkLiteral "@background-alt";
-        #"padding" = mkLiteral "2px 14px 4px 14px";
-     #   "text-color" = mkLiteral "inherit";
-  #    };
+      "prompt" = {
+        "enabled" = mkLiteral "true";
+        "background-color" = mkLiteral "@background-alt";
+        "padding" = mkLiteral "2px 14px 4px 14px";
+        "text-color" = mkLiteral "inherit";
+      };
       "entry" = {
         "enabled" = mkLiteral "true";
         "margin" = mkLiteral "8px 0px 0px 14px";
@@ -129,13 +129,13 @@ in {
       };
 
      # Listbox
-      "listbox" = {
-        "spacing" = mkLiteral "10px";
-        "padding" = mkLiteral "10px";
-        "background-color" = mkLiteral "transparent";
-        "orientation" = mkLiteral "vertical";
-        "children" = mkLiteral "[ message, listview ]";
-     };
+    #  "listbox" = {
+   #     "spacing" = mkLiteral "10px";
+   #     "padding" = mkLiteral "10px";
+   #     "background-color" = mkLiteral "transparent";
+  #      "orientation" = mkLiteral "vertical";
+  #      "children" = mkLiteral "[ message, listview ]";
+ #    };
 
       # Listview
       "listview" = {
