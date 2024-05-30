@@ -27,7 +27,7 @@
       env = QT_QPA_PLATFORM,wayland
       env = XDG_SCREENSHOTS_DIR,~/Pictures/Screenshots
 
-      exec-once = dbus-update-activation-environment --systemd --all
+      exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
       exec-once = swww-daemon & swww img ~/Pictures/Wallpapers/nixos-chan.png
       exec-once = waybar &
