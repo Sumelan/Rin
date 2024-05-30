@@ -14,7 +14,7 @@
   ];
 
   # Define your hostname. 
-  networking.hostName = "BathyScarfOS";
+  networking.hostName = "BathyScarf";
 
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";
