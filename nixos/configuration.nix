@@ -87,22 +87,6 @@
     driSupport32Bit = true;
   };
 
-  services = {
-    displayManager.sddm = {
-        enable = true;
-        autoNumlock = true;
-        wayland.enable = true;
-        theme = "sugar-dark";
-      };
-    xserver = {
-      enable = true;
-      desktopManager.cinnamon.enable = false;
-        xkb = {
-          layout = "us";
-          variant = "";
-       };
-     };
-};
   # Enableing flakes and optimize store.
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];
