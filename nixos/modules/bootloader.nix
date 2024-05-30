@@ -1,6 +1,7 @@
 {pkgs, ... }:
 {
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelParams = [ "mem_sleep_default=deep" ];
   boot.loader = {
    #systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
