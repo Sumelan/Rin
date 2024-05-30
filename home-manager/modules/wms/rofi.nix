@@ -117,7 +117,7 @@ in {
        # "background-color" = mkLiteral "@background-alt";
         #"padding" = mkLiteral "2px 14px 4px 14px";
      #   "text-color" = mkLiteral "inherit";
-      };
+  #    };
       "entry" = {
         "enabled" = mkLiteral "true";
         "margin" = mkLiteral "8px 0px 0px 14px";
