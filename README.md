@@ -1,4 +1,4 @@
-# BathyScarfOS
+# BathyScarf
 My NixOS dotfiles.
 
 
