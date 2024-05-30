@@ -68,11 +68,9 @@
     AllowSuspendThenHibernate=yes
 '';
 
-# hybrid sleep when press power button
   services.logind.extraConfig = ''
-    HandlePowerKey=suspend
-    IdleAction=suspend
-    IdleActionSec=1m
+    # don’t shutdown when power button is short-pressed
+    HandlePowerKey=ignore
   '';
 
   # flatpak
