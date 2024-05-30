@@ -66,7 +66,6 @@ with pkgs; [
     nwg-look    # requires unstable channel
     nvtopPackages.full
     pyprland
-    polkit_gnome
     qt6.qtwayland
     qt6Packages.qtstyleplugin-kvantum  #kvantum
     libsForQt5.qtstyleplugin-kvantum   #kvantum
