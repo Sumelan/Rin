@@ -3,7 +3,7 @@
   programs.waybar = {
     enable = true;
     systemd = {
-      enable = true; # disable it,autostart it in hyprland conf
+      enable = false; # disable it,autostart it in hyprland conf
       target = "graphical-session.target";
     };
     style = ''
