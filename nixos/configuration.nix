@@ -41,6 +41,11 @@
    ];
   };
 
+# Power management.
+  powerManagement = {
+	  enable = true;
+  }; 
+
   # flatpak
   services.flatpak.enable = true;
 
