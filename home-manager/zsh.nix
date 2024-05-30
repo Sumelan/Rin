@@ -9,10 +9,10 @@
       let
         flakeDir = "~/BathyScarf";
       in {
-      rb = "sudo nixos-rebuild switch --flake ${flakeDir}";
-      upd = "nix flake update ${flakeDir}";
-      upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
-      gcclean = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
+      flake-rebuild = "sudo nixos-rebuild switch --flake ${flakeDir}";
+      flake-update = "nix flake update ${flakeDir}";
+      flake-upgrade = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
+      gcCleanup = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
 
       hms = "home-manager switch --flake ${flakeDir}";
 
