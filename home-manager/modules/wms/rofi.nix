@@ -264,7 +264,7 @@ in {
      # Message
      "message" = {
         "background-color" = mkLiteral "transparent";
-        "border": = mkLiteral "0px";
+        "border" = mkLiteral "0px";
       };
       "textbox" = {
          "padding" = mkLiteral "12px";
@@ -273,13 +273,13 @@ in {
          "text-color" = "@background";
          "vertical-align" = "0.5";
          "horizontal-align" = "0.0";
-       }
+       };
        "error-message" = {
           "padding" = "12px";
           "border-radius" = "0px";
           "background-color" = "@background-alt";
           "text-color" = "@background";
-        }
+        };
     };
   };
 }
