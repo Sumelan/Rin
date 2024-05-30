@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
 {
   programs.waybar = {
+    enable = true;
     style = ''
       * {
       font-family: "ShureTechMono Nerd Font";
