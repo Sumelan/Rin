@@ -68,7 +68,7 @@ in {
         "location" = mkLiteral "center";
         "anchor" = mkLiteral "center";
         "fullscreen" = mkLiteral "false";
-        "width" = mkLiteral "40%";
+        "width" = mkLiteral "50%";
         "x-offset" = mkLiteral "0px";
         "y-offset" = mkLiteral "0px";
 
@@ -112,12 +112,7 @@ in {
         "children" = mkLiteral "[ entry, dummy, mode-switcher ]";
       # "background-image" = mkLiteral "url(\"/home/bathys/.config/rofi/wallpapers/nix-girl.png\", width)";
       };
-   #   "prompt" = {
-    #    "enabled" = mkLiteral "true";
-     #   "background-color" = mkLiteral "@background-alt";
-      #  "padding" = mkLiteral "2px 14px 4px 14px";
-       # "text-color" = mkLiteral "inherit";
-    #  };
+
       "entry" = {
         "enabled" = mkLiteral "true";
         "expand" = mkLiteral "false";
