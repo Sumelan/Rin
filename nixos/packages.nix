@@ -98,11 +98,6 @@ with pkgs; [
     pkgs.libsForQt5.qt5.qtgraphicaleffects
  ];
 
-programs.thunar = {
-      enable = true;
-      plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman ];
-};
-
   fonts = {
     packages = with pkgs; [
     noto-fonts
