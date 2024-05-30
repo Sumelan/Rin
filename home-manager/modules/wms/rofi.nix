@@ -101,6 +101,7 @@ in {
         "spacing" =                       mkLiteral "10px";
         "padding" =                       mkLiteral "80px 60px";
         "background-color" =              mkLiteral "transparent";
+        "background-image" =              mkLiteral "url(\"/home/bathys/.config/rofi/wallpapers/nix-girl.png\", width)";
         "text-color" =                    mkLiteral "@foreground-color";
         "orientation" =                   mkLiteral "horizontal";
         "children" =                      mkLiteral "[ textbox-prompt-colon, entry, dummy, mode-switcher ]";
