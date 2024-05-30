@@ -46,10 +46,13 @@
 	  enable = true;
   }; 
 
-services = {
-   thermald.enable = true;
-   tlp.enable = true;
-};
+  services = {
+    thermald.enable = true;
+    tlp.enable = true;
+    udev.extraRules = ''
+      ACTION=="add", SUBSYSTEM=="pci", DRIVER=="pcieport", ATTR{power/wakeup}="disabled"
+    '';
+  };
 
 # Sleep, Hibernate, etc.
   systemd.sleep.extraConfig = ''
