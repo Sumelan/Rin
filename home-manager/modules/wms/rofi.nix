@@ -128,7 +128,7 @@ in {
         "placeholder-color" = mkLiteral "inherit";
       };
 
-      Listbox
+     # Listbox
       "listbox" = {
         "spacing" = mkLiteral "10px";
         "padding" = mkLiteral "10px";
