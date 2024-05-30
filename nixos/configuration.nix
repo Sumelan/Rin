@@ -72,11 +72,27 @@
   # flatpak
   services.flatpak.enable = true;
 
-  # Security
+  # Security / Polkit
   security = {
     pam.services.swaylock.text = "auth include login";
-    polkit.enable = true;
     rtkit.enable = true;
+    polkit.enable = true;
+    polkit.extraConfig = ''
+    polkit.addRule(function(action, subject) {
+      if (
+        subject.isInGroup("users")
+          && (
+            action.id == "org.freedesktop.login1.reboot" ||
+            action.id == "org.freedesktop.login1.reboot-multiple-sessions" ||
+            action.id == "org.freedesktop.login1.power-off" ||
+            action.id == "org.freedesktop.login1.power-off-multiple-sessions"
+          )
+        )
+      {
+        return polkit.Result.YES;
+      }
+    })
+  '';
   };
 
   # Automatic Garbage Collection
@@ -84,6 +100,13 @@
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 7d";
+  };
+
+ # OpenGL
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
   };
 
   # Enableing flakes and optimize store.
