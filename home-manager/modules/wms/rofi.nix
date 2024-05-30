@@ -128,14 +128,14 @@ in {
         "placeholder-color" = mkLiteral "inherit";
       };
 
-     # Listbox
-    #  "listbox" = {
-   #     "spacing" = mkLiteral "10px";
-   #     "padding" = mkLiteral "10px";
-   #     "background-color" = mkLiteral "transparent";
-  #      "orientation" = mkLiteral "vertical";
-  #      "children" = mkLiteral "[ message, listview ]";
- #    };
+      Listbox
+      "listbox" = {
+        "spacing" = mkLiteral "10px";
+        "padding" = mkLiteral "10px";
+        "background-color" = mkLiteral "transparent";
+        "orientation" = mkLiteral "vertical";
+        "children" = mkLiteral "[ message, listview ]";
+     };
 
       # Listview
       "listview" = {
