@@ -99,7 +99,7 @@ in {
       "inputbar" = {
         "enabled" =                       mkLiteral "true";
         "spacing" =                       mkLiteral "10px";
-        "padding" =                       mkLiteral "80px 60pxpx";
+        "padding" =                       mkLiteral "80px 60px";
         "background-color" =              mkLiteral "transparent";
         "text-color" =                    mkLiteral "@foreground-color";
         "orientation" =                   mkLiteral "horizontal";
