@@ -49,30 +49,6 @@
   # flatpak
   services.flatpak.enable = true;
 
-  # Security / Polkit
-  security = {
-    pam.services.swaylock.text = "auth include login";
-    rtkit.enable = true;
-    polkit.enable = true;
-    polkit.extraConfig = ''
-    polkit.addRule(function(action, subject) {
-      if (
-        subject.isInGroup("users")
-          && (
-            action.id == "org.freedesktop.login1.reboot" ||
-            action.id == "org.freedesktop.login1.reboot-multiple-sessions" ||
-            action.id == "org.freedesktop.login1.power-off" ||
-            action.id == "org.freedesktop.login1.power-off-multiple-sessions"
-          )
-        )
-      {
-        return polkit.Result.YES;
-      }
-    })
-  '';
-    sudo.wheelNeedsPassword = false;
-  };
-
   # Automatic Garbage Collection
   nix.gc = {
     automatic = true;
