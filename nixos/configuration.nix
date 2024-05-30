@@ -41,22 +41,6 @@
    ];
   };
 
-### Laptop Specifycation
-# Power management.
-  powerManagement = {
-	  enable = true;
-  }; 
-
-  services = {
-    thermald.enable = true;
-    tlp.enable = true;
-  };
-
-  services.logind.extraConfig = ''
-    # don’t shutdown when power button is short-pressed
-    HandlePowerKey=ignore
-  '';
-
   # flatpak
   services.flatpak.enable = true;
 
