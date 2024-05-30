@@ -145,7 +145,7 @@ in {
          "border-radius" =                 mkLiteral "100%";
          "background-color" =              mkLiteral "@background-alt";
          "text-color" =                    mkLiteral "@text-color";
-         "cursor" =                                  "pointer";
+         "cursor" =                        mkLiteral "pointer";
        };
        "button selected" = {
          "background-color" =              mkLiteral "@selected";
