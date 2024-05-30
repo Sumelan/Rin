@@ -111,7 +111,7 @@ in {
         "str" =                                      "";
         "padding" =                        mkLiteral "12px 15px";
         "border-radius" =                  mkLiteral "100%";
-        "background-color" =               mkLiteral "background-alt";
+        "background-color" =               mkLiteral "@background-alt";
         "text-color" =                     mkLiteral "inherit";
        };
       "entry" = {
