@@ -106,7 +106,7 @@ in {
         "border" = mkLiteral "0px";
         "border-radius" = mkLiteral "0px";
         "border-color" = mkLiteral "@border-color";
-        "background-color" = mkLiteral "@background-color";
+        "background-color" = mkLiteral "transparent";
         "text-color" = mkLiteral "@foreground-color";
         "orientation" = mkLiteral "horizontal";
         "children" = mkLiteral "[ entry, dummy, mode-switcher ]";
