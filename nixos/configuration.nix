@@ -61,12 +61,6 @@
 	};
      };
   }; 
-  systemd.sleep.extraConfig = ''
-    AllowSuspend=yes
-    AllowHibernation=yes
-    AllowHybridSleep=yes
-    AllowSuspendThenHibernate=yes
-'';
 
   services.logind.extraConfig = ''
     # don’t shutdown when power button is short-pressed
