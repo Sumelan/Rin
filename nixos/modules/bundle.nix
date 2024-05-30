@@ -6,6 +6,7 @@
     ./hyprland.nix
     ./network.nix
     ./nixvim/nixvim.nix
+    ./security.nix
     ./services.nix
     ./sound.nix
     ./systemd.nix
