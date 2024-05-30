@@ -121,7 +121,7 @@
         variant = "";
       };
     };
-
+};
   # Enableing flakes and optimize store.
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];
