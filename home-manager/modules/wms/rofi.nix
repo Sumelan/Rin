@@ -68,14 +68,14 @@ in {
         "location" = mkLiteral "center";
         "anchor" = mkLiteral "center";
         "fullscreen" = mkLiteral "false";
-        "width" = mkLiteral "30%";
+        "width" = mkLiteral "40%";
         "x-offset" = mkLiteral "0px";
         "y-offset" = mkLiteral "0px";
 
         # properties for all widgets
         "enabled" = mkLiteral "true";
         "margin" = mkLiteral "0px";
-        "padding" = mkLiteral "0px";
+        "padding" = mkLiteral "30px";
         "border" = mkLiteral "2px solid";
         "border-radius" = mkLiteral "0px";
         "border-color" = mkLiteral "@border-color";
