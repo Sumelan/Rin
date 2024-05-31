@@ -31,7 +31,7 @@
       system = "x86_64-linux";
 
       # User Variables
-      hostname = "BathyScarf";
+      hostname = "Rin";
       username = "bathys";
       gitUsername = "bathys";
       gitEmail = "68154148+bathys@users.noreply.github.com";

@@ -1,4 +1,4 @@
-{inputs, lib, config, pkgs, theme, gtkThemeFromScheme, ... }:
+{inputs, theme, ... }:
 {
   colorScheme = inputs.nix-colors.colorSchemes."${theme}";
 

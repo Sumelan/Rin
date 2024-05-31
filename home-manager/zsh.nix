@@ -7,7 +7,7 @@
 
     shellAliases =
       let
-        flakeDir = "~/BathyScarf";
+        flakeDir = "~/Rin";
       in {
       flake-rebuild = "sudo nixos-rebuild switch --flake ${flakeDir}";
       flake-update = "nix flake update ${flakeDir}";
