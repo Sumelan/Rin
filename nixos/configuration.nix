@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -14,7 +14,7 @@
   ];
 
   # Define your hostname. 
-  networking.hostName = "BathyScarf";
+  networking.hostName = "Rin";
 
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";
