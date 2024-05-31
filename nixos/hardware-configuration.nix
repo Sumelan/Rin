@@ -14,12 +14,18 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device =lib.mkDefault "UUID=699d5f20-89a1-4ed2-b92d-60c191386b78";
+    { device = "UUID=699d5f20-89a1-4ed2-b92d-60c191386b78";
       fsType = "bcachefs";
     };
 
+  fileSystems."/bin" =
+    { device = "/usr/bin";
+      fsType = "none";
+      options = [ "bind" ];
+    };
+
   fileSystems."/boot" =
-    { device =lib.mkDefault "/dev/disk/by-uuid/5492-956A";
+    { device = "/dev/disk/by-uuid/5492-956A";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };

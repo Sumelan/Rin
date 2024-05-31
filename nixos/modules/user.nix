@@ -1,4 +1,4 @@
-{ pkgs, config, ... }: 
+{ pkgs, ... }: 
 {
   programs.zsh.enable = true;
 
@@ -7,7 +7,6 @@
       isNormalUser = true;
       description = "Bathys Scarf";
       extraGroups = [ "networkmanager" "wheel" "input" "libvirtd" ];
-      packages = with pkgs; [];
     };
     defaultUserShell = pkgs.zsh;
   };

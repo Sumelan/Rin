@@ -4,15 +4,11 @@
   imports = [
       ./hardware-configuration.nix
       ./packages.nix
-      ./intel-drivers.nix
+      ./amd-drivers.nix
       ./modules/bundle.nix
       ./disko-config.nix
     ];
   
-  disabledModules = [
-      ./modules/xserver.nix
-  ];
-
   # Define your hostname. 
   networking.hostName = "Rin";
 

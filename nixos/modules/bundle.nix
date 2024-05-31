@@ -16,7 +16,6 @@
     ./trim.nix
     ./user.nix
     ./virtmanager.nix
-    ./xserver.nix
     ./zram.nix
   ];
 }
