@@ -1,5 +1,6 @@
 # BathyScarf
-My NixOS dotfiles.
+My NixOS dotfiles.  
+Acer Laptop.  
 
 
 
