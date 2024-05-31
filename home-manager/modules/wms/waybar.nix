@@ -1,4 +1,3 @@
-{ config, lib, pkgs, ... }:
 {
   programs.waybar = {
     enable = true;
@@ -163,7 +162,7 @@
         };
         "hyprland/workspaces" = {
           "format" = " <b>{icon}</b> {windows} ";
-        	"window-rewrite-default" = " ";
+        	"window-rewrite-default" = "";
 	        "window-rewrite" = {
                   "Alacritty" = "󰞷 ";
 	          "Firefox" = "󰈹 ";

@@ -1,4 +1,4 @@
-{pkgs, config, inputs, lib, host, ... }:
+{pkgs, config, inputs, ... }:
   let
     theme = config.colorScheme.palette;
     hyprplugins = inputs.hyprland-plugins.packages.${pkgs.system};
@@ -14,7 +14,7 @@
       extraConfig = ''
 
         $mainMod = SUPER
-        $terminal = alacritty
+        $terminal = Alacritty
         $fileManager = thunar
         $menu = rofi -show drun
 
@@ -33,7 +33,7 @@
       exec-once = dbus-update-activation-environment --systemd --all
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
       exec-once = killall -q swww;sleep .5 && swww init
-      exec-once = pkill waybar;sleep .5 && waybar
+      exec-once = killall -q waybar;sleep .5 && waybar
       exec-once = killall -q swaync;sleep .5 && swaync
       exec-once = lxqt-policykit-agent
       exec-once = nm-applet --indicator &
