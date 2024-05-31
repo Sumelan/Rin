@@ -4,6 +4,8 @@
   imports = [
       ./hardware-configuration.nix
       ./packages.nix
+      ./sddm-sugar-dark.nix
+      ./sddm-tokyo-night.nix
       ./amd-drivers.nix
       ./modules/bundle.nix
       ./disko-config.nix

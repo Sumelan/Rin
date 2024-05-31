@@ -6,8 +6,8 @@
 
   environment.systemPackages = 
     let
-      sugar = pkgs.callPackage ./modules/sddm/sddm-sugar-dar.nix { };
-      tokyo-night = pkgs.libsForQt5.callPackage ./modules/sddm/sddm-tokyo-night.nix { };
+      sugar = pkgs.callPackage ./sddm-sugar-dar.nix { };
+      tokyo-night = pkgs.libsForQt5.callPackage ./sddm-tokyo-night.nix { };
     in
 with pkgs; [
   # Desktop apps

@@ -6,8 +6,6 @@
     ./hyprland.nix
     ./network.nix
     ./nixvim/nixvim.nix
-    ./sddm/sddm-sugar-dark.nix
-    ./sddm/sddm-tokyo-night.nix
     ./security.nix
     ./services.nix
     ./sound.nix
