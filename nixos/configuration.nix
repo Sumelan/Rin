@@ -10,7 +10,12 @@
       ./modules/bundle.nix
       ./disko-config.nix
     ];
-  
+
+  disabledModules = [
+      ./modules/xserver.nix
+  ];
+
+ 
   # Define your hostname. 
   networking.hostName = "Rin";
 
