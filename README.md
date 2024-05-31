@@ -1,6 +1,6 @@
 # BathyScarf
 My NixOS dotfiles.  
-Acer Laptop.  
+Minisforum mini PC.  
 
 
 
