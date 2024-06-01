@@ -39,8 +39,8 @@
 
    # Apps
       exec-once = firefox &
-      exec-once = thunderbird &
-      exec-once = spotify &
+      exec-once = Alacritty&
+      exec-once = fcitx5
 
     # clipboard manager
       exec-once = wl-paste --type text --watch cliphist store 
@@ -55,9 +55,11 @@
   ### Window and Workspace 
     # windowrule v2 move to workspace
       windowrulev2 = workspace 1, class:^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr)$
-      windowrulev2 = workspace 2, class:^([Tt]hunderbird)$
-      windowrulev2 = workspace 3, class:^([Aa]lacrityy)$
-      windowrulev2 = workspace special:magic, class:^([Ss]potify)$
+      windowrulev2 = workspace 2, class:^([Aa]lacrityy)$
+      windowrulev2 = workspace 3, class:^([Ss]team)$
+     #wundowrulev2 = workspace 4, class:^([])$
+      windowrulev2 = workspace 5, class:^([Dd]iscord)$
+      windowrulev2 = workspace 6, class:^([Ss]potify)$
 
     # windowrule v2 - float
       windowrulev2 = float, class:^(org.kde.polkit-kde-authentication-agent-1)$
