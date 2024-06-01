@@ -36,7 +36,6 @@
     # Desktop
 	      exec-once = dbus-update-activation-environment --systemd --all
 	      exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-	      exec-once = killall -q waybar;sleep .5 && waybar
 	      exec-once = killall -q swww;sleep .5 && swww init
 	      exec-once = killall -q swaync;sleep .5 && swaync
 	      exec-once = lxqt-policykit-agent
@@ -58,12 +57,12 @@
 
   ### Window and Workspace 
     # windowrule v2 move to workspace
-        windowrulev2 = workspace 1, class:^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr)$
-        windowrulev2 = workspace 2, class:^(kitty)$
-        windowrulev2 = workspace 3, class:^([Ss]team)$
-      # windowrulev2 = workspace 4, class:^([])$
-        windowrulev2 = workspace 5, class:^([Dd]iscord)$
-        windowrulev2 = workspace 6, class:^(spotify)$
+        windowrulev2 = workspace 1, firefox
+        windowrulev2 = workspace 2, kitty
+        windowrulev2 = workspace 3, steam
+      # windowrulev2 = workspace 4, 
+        windowrulev2 = workspace 5, discord
+        windowrulev2 = workspace 6, 
 
     # windowrule v2 - float
         windowrulev2 = float, class:^(org.kde.polkit-kde-authentication-agent-1)$
