@@ -45,10 +45,14 @@
     source = ./modules/wms/wlogout;
     recursive = true;
   };
- home.file.".config/rofi/wallpapers" = {
-   source = ./modules/wms/rofi;
-   recursive = true;
- };
+  home.file.".config/rofi/wallpapers" = {
+    source = ./modules/wms/rofi;
+    recursive = true;
+  };
+  home.file.".config/waybar" = {
+    source = ./modules/wms/waybar;
+    recursive = true;
+  };
 
   home.stateVersion = "23.11";
 }

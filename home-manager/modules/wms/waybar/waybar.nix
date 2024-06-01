@@ -249,7 +249,7 @@
 	        };
 
 	        "network" = {
-    		    "interface" = "wlp2s0";
+    		    "interface" = "en01";
     		    "interval" = 2;
     		    "format-icons" = ["󰤯" "󰤟" "󰤢" "󰤥" "󰤨"];
     		    "format" = "Error";
