@@ -1,7 +1,6 @@
-{pkgs, config, inputs, ... }:
+{ config, ... }:
   let
     theme = config.colorScheme.palette;
-    hyprplugins = inputs.hyprland-plugins.packages.${pkgs.system};
   in
   {  
     wayland.windowManager.hyprland = {
@@ -13,10 +12,10 @@
       ];
       extraConfig = ''
 
-        $mainMod = SUPER
-        $terminal = Alacritty
-        $fileManager = thunar
-        $menu = rofi -show drun
+      $mainMod = SUPER
+      $terminal = Alacritty
+      $fileManager = thunar
+      $menu = rofi -show drun
 
       monitor = ,preferred,auto,1
 
@@ -29,7 +28,6 @@
 
   ### Startup apps
     # Desktop
-
       exec-once = dbus-update-activation-environment --systemd --all
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
       exec-once = killall -q swww;sleep .5 && swww init
@@ -53,7 +51,6 @@
 
     # Start pyprland daemon
       exec-once = pypr &
-
 
   ### Window and Workspace 
     # windowrule v2 move to workspace
