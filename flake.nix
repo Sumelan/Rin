@@ -2,7 +2,6 @@
   description = "My system configuration";
 
   inputs = {
-
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
     nix-colors.url = "github:misterio77/nix-colors";
@@ -23,8 +22,11 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    spicetify-nix = {
+      url = "github:the-argus/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-
   outputs = { nixpkgs, home-manager, ... }@inputs:
 
     let
@@ -59,6 +61,7 @@
             ./nixos/configuration.nix
             inputs.nixvim.nixosModules.nixvim
             inputs.disko.nixosModules.disko
+            inputs.spicetify-nix.nixosModules.default
             home-manager.nixosModules.home-manager
             {
               home-manager.extraSpecialArgs = {

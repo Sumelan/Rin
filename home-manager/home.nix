@@ -7,6 +7,7 @@
     inputs.nix-colors.homeManagerModules.default
     inputs.nixvim.homeManagerModules.nixvim
     inputs.hyprland.homeManagerModules.default
+    inputs.spicetify-nix.homeManagerModules.default
     ./modules/bundle.nix
   ];
 

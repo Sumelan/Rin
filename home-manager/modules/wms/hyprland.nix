@@ -63,7 +63,7 @@
         windowrulev2 = workspace 3, class:^([Ss]team)$
       # windowrulev2 = workspace 4, class:^([])$
         windowrulev2 = workspace 5, class:^([Dd]iscord)$
-        windowrulev2 = workspace 6, class:^([Ss]potify)$
+        windowrulev2 = workspace 6, class:^(spotify)$
 
     # windowrule v2 - float
         windowrulev2 = float, class:^(org.kde.polkit-kde-authentication-agent-1)$

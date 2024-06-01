@@ -4,6 +4,7 @@
     ./git.nix
     ./htop.nix
     ./kitty.nix
+    ./spicetify.nix
     ./qt.nix
 
     ./wms/hyprland.nix
