@@ -8,8 +8,7 @@
 
     ./wms/hyprland.nix
     ./wms/hyprlock.nix
-    ./wms/rofi.nix
-    ./wms/waybar.nix
-    ./wms/wlogout.nix
+    ./wms/rofi/rofi.nix
+    ./wms/waybar/waybar.nix
   ];
 }
