@@ -24,7 +24,7 @@
     };
     spicetify-nix.url = "github:the-argus/spicetify-nix";
   };
-  outputs = { nixpkgs, home-manager, ... }@inputs:
+  outputs = { nixpkgs, home-manager, spicetify-nix, ... }@inputs:
 
     let
       system = "x86_64-linux";
@@ -58,7 +58,6 @@
             ./nixos/configuration.nix
             inputs.nixvim.nixosModules.nixvim
             inputs.disko.nixosModules.disko
-            inputs.spicetify-nix.nixosModules.default
             home-manager.nixosModules.home-manager
             {
               home-manager.extraSpecialArgs = {
@@ -68,6 +67,7 @@
                 inherit gitUsername;
                 inherit theme;
                 inherit (inputs.nix-colors.lib-contrib { inherit pkgs; }) gtkThemeFromScheme;
+                inherit spicetify-nix;
               };
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;

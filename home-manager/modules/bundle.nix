@@ -4,9 +4,8 @@
     ./git.nix
     ./htop.nix
     ./kitty.nix
-    ./spicetify.nix
     ./qt.nix
-
+    ./spicetify.nix
     ./wms/hyprland.nix
     ./wms/hyprlock.nix
     ./wms/rofi/rofi.nix
