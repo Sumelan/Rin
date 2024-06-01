@@ -264,7 +264,7 @@
 	        };
 
 	        "network" = {
-    		    "interface" = "wlo1";
+    		    "interface" = "eno1";
     		    "interval" = 2;
     		    "format-icons" = ["󰤯" "󰤟" "󰤢" "󰤥" "󰤨"];
     		    "format" = "Error";
