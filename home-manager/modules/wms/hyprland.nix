@@ -59,7 +59,7 @@
   ### Window and Workspace 
     # windowrule v2 move to workspace
         windowrulev2 = workspace 1, class:^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr)$
-        windowrulev2 = workspace 2, class:^([Kk]itty)$
+        windowrulev2 = workspace 2, class:^(kitty)$
         windowrulev2 = workspace 3, class:^([Ss]team)$
       # windowrulev2 = workspace 4, class:^([])$
         windowrulev2 = workspace 5, class:^([Dd]iscord)$
