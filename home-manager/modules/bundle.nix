@@ -3,7 +3,7 @@
     ./cursor.nix
     ./git.nix
     ./htop.nix
-    ./alacritty.nix
+    ./kitty.nix
     ./qt.nix
 
     ./wms/hyprland.nix

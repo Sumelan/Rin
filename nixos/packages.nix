@@ -11,11 +11,11 @@
     in
 with pkgs; [
   # Desktop apps
-    alacritty
     baobab
     cpufrequtils
     firefox
     gparted
+    kitty
     (mpv.override {scripts = [mpvScripts.mpris];})  #with tray
     spotify
     thunderbird
@@ -41,6 +41,7 @@ with pkgs; [
     openssl   # required by Rainbow borders
     playerctl    
     ranger
+    spicetify-cli
     tree
     unar
     unzip
