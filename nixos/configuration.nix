@@ -4,10 +4,11 @@
   imports = [
       ./hardware-configuration.nix
       ./packages.nix
+      ./fonts/fonts.nix
       ./amd-drivers.nix
       ./modules/bundle.nix
       ./disko-config.nix
-    ];
+  ];
 
   disabledModules = [
       ./modules/xserver.nix

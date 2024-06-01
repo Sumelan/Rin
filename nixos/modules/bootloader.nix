@@ -14,6 +14,6 @@
         extraGrubInstallArgs = [ "--bootloader-id=NixOS" ];
         configurationName = "NixOS";
     };
-    timeout = 1;
+    timeout = 5;
   };
 }

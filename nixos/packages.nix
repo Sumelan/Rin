@@ -17,8 +17,8 @@
       gparted
       kitty
       (mpv.override {scripts = [mpvScripts.mpris];})  #with tray
+      strawberry
       spotify
-      steam
       thunderbird
       (discord.override { withVencord = true; })
       vlc
@@ -98,47 +98,4 @@
       tokyo-night # Name: tokyo-night-sddm
       pkgs.libsForQt5.qt5.qtgraphicaleffects
   ];
-
-  fonts = {
-    packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    fira-code
-    jetbrains-mono
-    font-awesome
-    terminus_font
-    twemoji-color-font
-    nerdfonts
-    migu
-    ];
-    fontDir.enable = true;
-    fontconfig = {
-      defaultFonts = {
-         serif = ["Noto Serif CJK JP" "Noto Color Emoji"];
-         sansSerif = ["Noto Sans CJK JP" "Noto Color Emoji"];
-         monospace = ["JetBrainsMono Nerd Font" "Noto Color Emoji"];
-         emoji = ["Noto Color Emoji"];
-      };
-
-      localConf = ''
-       <?xml version="1.0"?>
-       <!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
-       <fontconfig>
-         <description>Change default fonts for Steam client</description>
-         <match>
-           <test name="prgname">
-             <string>steamwebhelper</string>
-           </test>
-           <test name="family" qual="any">
-             <string>sans-serif</string>
-           </test>
-           <edit mode="prepend" name="family">
-             <string>Migu 1P</string>
-           </edit>
-         </match>
-       </fontconfig>
-     '';
-    };
-  };
 }
