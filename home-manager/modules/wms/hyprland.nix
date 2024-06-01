@@ -31,7 +31,6 @@
       exec-once = dbus-update-activation-environment --systemd --all
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
       exec-once = killall -q swww;sleep .5 && swww init
-      exec-once = killall -q waybar;sleep .5 && waybar
       exec-once = killall -q swaync;sleep .5 && swaync
       exec-once = lxqt-policykit-agent
       exec-once = nm-applet --indicator &
@@ -39,7 +38,7 @@
 
    # Apps
       exec-once = firefox &
-      exec-once = Alacritty&
+      exec-once = alacritty&
       exec-once = fcitx5
 
     # clipboard manager
@@ -55,7 +54,7 @@
   ### Window and Workspace 
     # windowrule v2 move to workspace
       windowrulev2 = workspace 1, class:^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr)$
-      windowrulev2 = workspace 2, class:^([Aa]lacrityy)$
+      windowrulev2 = workspace 2, class:^(alacrityy)$
       windowrulev2 = workspace 3, class:^([Ss]team)$
      #wundowrulev2 = workspace 4, class:^([])$
       windowrulev2 = workspace 5, class:^([Dd]iscord)$
