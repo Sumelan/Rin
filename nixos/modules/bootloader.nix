@@ -3,7 +3,7 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [  ];
   boot.loader = {
-   #systemd-boot.enable = true;
+   # systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
     grub = {
       enable = true;
