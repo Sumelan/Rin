@@ -3,7 +3,7 @@ let
   palette = config.colorScheme.palette;
 in
 {
-	kitty = {
+	programs.kitty = {
       		enable = true;
       		package = pkgs.kitty;
       		font.name = "JetBrainsMono Nerd Font";
