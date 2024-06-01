@@ -11,12 +11,12 @@
     		background-color: rgba(0,0,0,0);
     		font-size: 1.2rem;
     		border-radius: 0.5rem;
-	}
+	    }
 
 	    tooltip {
     		font-family: "JetBrains Mono NerdFont";
     		font-size: 0.8rem;
-	}
+	    }
 
       .modules-left {
       	background: linear-gradient(315deg, rgba(145, 0, 135, 0.4), rgba(79, 0, 116, 0.6));
@@ -64,7 +64,7 @@
       }
 
       #workspaces button.urgent {
-    	  color: red;
+    	  color: #ff0000;
       }
 
       #window, #waybar-media {
@@ -115,23 +115,23 @@
       }
 
       #battery {
-    	  color: lightgreen;
+    	  color: #90ee90;
       }
 
       #memory {
-    	  color: lightpink;
+    	  color: #ffb6c1;
       }
 
       #disk {
-    	  color: lightskyblue;
+    	  color: #87cefa;
       }
 
       #cpu {
-    	  color: lightgoldenrodyellow;
+    	  color: #fafad2;
       }
 
       #temperature {
-    	  color: lightslategray;
+    	  color: #778899;
       }
     '';
 
@@ -152,7 +152,6 @@
 	        "image#powermenu"  
           "hyprland/workspaces" 
           "network" 
-          "custom/lights"
           "wireplumber"
           "custom/lightdarkmode"
         ];
@@ -189,14 +188,14 @@
     		  "tooltip-format" = "Power Menu";
     		  "path" = "/home/bathys/.config/waybar/power.png";
     		  "size" = 16;
-    		  "on-click" = "rofi -show powermenu -modes \"powermenu:/home/bathys/.config/waybar/scripts/powerrofi.sh\"";
+    		  "on-click" = "wlogout";
   	    };
 
 	      "custom/lights" = {
     		  "tooltip" = true;
 		      "tooltip-format" = "Light Control";
 	    	  "format" = "󰌵";
-    		  "on-click" = "rofi -modes mymenu:\"/home/bathys/.config/waybar/.venv/bin/python .config/waybar/scripts/hue.py\" -show mymenu -show-icons";
+    		  "on-click" = "";
       	};
 
  	      "custom/space" = {

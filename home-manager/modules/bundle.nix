@@ -10,5 +10,6 @@
     ./wms/hyprlock.nix
     ./wms/rofi/rofi.nix
     ./wms/waybar/waybar.nix
+    ./wms/wlogout/wlogout.nix
   ];
 }

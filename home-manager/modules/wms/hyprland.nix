@@ -57,12 +57,12 @@
 
   ### Window and Workspace 
     # windowrule v2 move to workspace
-        windowrulev2 = workspace 1, firefox
-        windowrulev2 = workspace 2, kitty
-        windowrulev2 = workspace 3, steam
-      # windowrulev2 = workspace 4, 
-        windowrulev2 = workspace 5, discord
-        windowrulev2 = workspace 6, 
+        windowrulev2 = workspace 1, class:^([Ff]irefox)$
+        windowrulev2 = workspace 2, class:^([Kk]itty)$
+        windowrulev2 = workspace 3, class:^([Ss]team)$
+      # windowrulev2 = workspace 4, class:^([])$
+        windowrulev2 = workspace 5, class:^([Dd]iscord)$
+        windowrulev2 = workspace 6, class:^([])$
 
     # windowrule v2 - float
         windowrulev2 = float, class:^(org.kde.polkit-kde-authentication-agent-1)$
