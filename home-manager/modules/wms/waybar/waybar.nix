@@ -6,12 +6,18 @@
       target = "graphical-session.target";
     };
     style = ''
-      * {
-        font-family: "JetBrains Mono NerdFont";
-        font-size: 12pt;
-        border-radius: 5px;
-        background-color: rgba(0, 0, 0, 0);
-      }
+	    window#waybar {
+    		font-family: "JetBrains Mono NerdFont";
+    		background-color: rgba(0,0,0,0);
+    		font-size: 1.2rem;
+    		border-radius: 0.5rem;
+	}
+
+	    tooltip {
+    		font-family: "JetBrains Mono NerdFont";
+    		font-size: 0.8rem;
+	}
+
       .modules-left {
       	background: linear-gradient(315deg, rgba(145, 0, 135, 0.4), rgba(79, 0, 116, 0.6));
  	      border-radius: 0.5rem;
@@ -19,38 +25,38 @@
       }
       .modules-center {
     	  background: linear-gradient(180deg, rgba(145, 0, 135, 0.4), rgba(79, 0, 116, 0.6));
-    	  border-radius: 5px;
+    	  border-radius: 0.5rem;
     	  padding: 3px;
       }
       .modules-right {
     	  background: linear-gradient(45deg, rgba(145, 0, 135, 0.4), rgba(79, 0, 116, 0.6));
-    	  border-radius: 5px;
+    	  border-radius: 0.5rem;
     	  padding: 3px;
       }
 
       #image.powermenu {
     	  background-color: rgba(0,0,0,0.3);
-    	  border-radius: 5px;
+    	  border-radius: 0.5rem;
     	  padding: 0px 10px;
     	  border-left: 10px;
       }
 
       #workspaces {
     	  background-color: rgba(0,0,0,0.7);
-    	  border-radius: 0.5px;
+    	  border-radius: 0.5rem;
     	  margin-left: 3px;
     	  margin-right: 3px;
     	  padding: 0 5px;
       }
 
       #workspaces button {
-    	  font-size: 12px;
-    	  padding: 0 3px 0 0;
+    	  font-size: 1.2rem;
+    	  padding: 0 0.3rem 0 0;
       }
 
       #workspaces button.special {
-    	  font-size: 12px;
-    	  padding: 0 3px 0 0;
+    	  font-size: 1.2rem;
+    	  padding: 0 0.3rem 0 0;
       }
 
       #workspaces button.active {
@@ -63,7 +69,7 @@
 
       #window, #waybar-media {
 	      background-color: rgba(0,0,0,0.3);
-	      border-radius: 5px;
+	      border-radius: 0.5rem;
 	      padding: 2px 5px;
       }
 
@@ -73,13 +79,13 @@
 
       #custom-media {
     	  background-color: rgba(0,0,0,0.3);
-    	  border-radius: 5px;
+    	  border-radius: 0.5rem;
     	  padding: 2px 5px;
       }
 
       #tray{
     	  background-color: rgba(0, 0, 0, 0.118);
-    	  border-radius: 10px;
+    	  border-radius: 1rem;
     	  padding: 2px 5px;
       }
 
