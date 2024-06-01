@@ -137,8 +137,17 @@
 
   settings = [
       {
-        "layer" = "top";
-        "position" = "top";
+	      "name" = "bar0";
+	      "layer" = "top";
+	      "position" = "top";
+	      "height" = 40;
+	      "margin-top" = 10;
+	      "margin-left" = 18;
+	      "margin-right" = 18;
+	      "margin-bottom" = 0;
+	      "spacing" = 3;
+	      "reload_style_on_change" = true;
+
         modules-left = [
 	        "image#powermenu"  
           "hyprland/workspaces" 
@@ -178,7 +187,7 @@
 	      "image#powermenu" = {
     		  "tooltip" = true;
     		  "tooltip-format" = "Power Menu";
-    		  "path" = "~/.config/waybar/power.png";
+    		  "path" = "/home/bathys/.config/waybar/power.png";
     		  "size" = 16;
     		  "on-click" = "rofi -show powermenu -modes \"powermenu:/home/bathys/.config/waybar/scripts/powerrofi.sh\"";
   	    };
