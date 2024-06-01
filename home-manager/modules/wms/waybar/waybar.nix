@@ -156,9 +156,9 @@
         ];
        
         "custom/lightdarkmode" = {
-          "exec" = "python ~/.config/waybar/scripts/darklightmode/getmode.py";
+          "exec" = "python /home/bathys/.config/waybar/scripts/darklightmode/getmode.py";
           "interval" = 1;
-          "on-click" = "sleep 0.1 && python ~/.config/waybar/scripts/darklightmode/togglemode.py";
+          "on-click" = "sleep 0.1 && python /home/bathys/.config/waybar/scripts/darklightmode/togglemode.py";
           "tooltip" = false;
           "tooltip-format" = "Toggle Mode";
  	      };
@@ -174,14 +174,14 @@
     		  "tooltip-format" = "Power Menu";
     		  "path" = "~/.config/waybar/power.png";
     		  "size" = 16;
-    		  "on-click" = "rofi -show powermenu -modes \"powermenu:~/.config/waybar/scripts/powerrofi.sh\"";
+    		  "on-click" = "rofi -show powermenu -modes \"powermenu:/home/bathys/.config/waybar/scripts/powerrofi.sh\"";
   	    };
 
 	      "custom/lights" = {
     		  "tooltip" = true;
 		      "tooltip-format" = "Light Control";
 	    	  "format" = "󰌵";
-    		  "on-click" = "rofi -modes mymenu:\"~/.config/waybar/.venv/bin/python .config/waybar/scripts/hue.py\" -show mymenu -show-icons";
+    		  "on-click" = "rofi -modes mymenu:\"/home/bathys/.config/waybar/.venv/bin/python .config/waybar/scripts/hue.py\" -show mymenu -show-icons";
       	};
 
  	      "custom/space" = {
@@ -249,7 +249,7 @@
 	        };
 
 	        "network" = {
-    		    "interface" = "en01";
+    		    "interface" = "wlo1";
     		    "interval" = 2;
     		    "format-icons" = ["󰤯" "󰤟" "󰤢" "󰤥" "󰤨"];
     		    "format" = "Error";
@@ -301,7 +301,7 @@
     		    "smooth-scrolling-threshold" = 0;
     		    "on-scroll-up" = "playerctl next";
     		    "on-scroll-down" = "playerctl previous";
-    		    "exec" = "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null";
+    		    "exec" = "/home/bathys/.config/waybar/scripts/mediaplayer.py 2> /dev/null";
           };
   
   	      "hyprland/workspaces" = {
