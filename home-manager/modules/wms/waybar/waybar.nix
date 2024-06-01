@@ -99,15 +99,15 @@
       }
 
       #wireplumber{
-    	  font-size: 16;
+    	  font-size: 1.6rem;
       }
 
       #custom-seperator{
-    	  font-size: 30;
+    	  font-size: 3rem;
       }
 
       #custom-space{
-    	  font-size: 10;
+    	  font-size: 1rem;
       }
 
       #network {
