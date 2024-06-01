@@ -41,7 +41,6 @@ with pkgs; [
     openssl   # required by Rainbow borders
     playerctl    
     ranger
-    spicetify-cli
     tree
     unar
     unzip
