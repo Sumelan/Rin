@@ -11,7 +11,7 @@
     terminus_font
     twemoji-color-font
     nerdfonts
-    (pkgs.callPackage ./azukifontB.nix { })
+    (pkgs.callPackage ./azuki_fontB.nix { })
     (pkgs.callPackage ./azuki_font.nix { })
     ];
     fontDir.enable = true;
