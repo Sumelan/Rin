@@ -7,7 +7,6 @@
     ./qt.nix
     ./spicetify.nix
     ./wms/hyprland.nix
-    ./wms/hyprlock.nix
     ./wms/rofi/rofi.nix
     ./wms/swappy.nix
     ./wms/waybar/waybar.nix
