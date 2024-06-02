@@ -1,4 +1,4 @@
-{pkgs, inputs, theme, ... }:
+{ inputs, theme, ... }:
 {
   colorScheme = inputs.nix-colors.colorSchemes."${theme}";
 
@@ -41,11 +41,18 @@
   };
 
 # Place Files Inside Home Directory
-  home.file.".config/wlogout/icons" = {
+  home.file.".config/wlogout" = {
     source = ./modules/wms/wlogout;
     recursive = true;
   };
-
+  home.file.".config/rofi" = {
+    source = ./modules/wms/rofi;
+    recursive = true;
+  };
+  home.file.".config/waybar" = {
+    source = ./modules/wms/waybar;
+    recursive = true;
+  };
 
   home.stateVersion = "23.11";
 }
