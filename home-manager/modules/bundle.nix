@@ -7,9 +7,9 @@
     ./qt.nix
     ./spicetify.nix
     ./wms/hyprland.nix
-    ./wms/rofi/rofi.nix
+    ./wms/rofi.nix
     ./wms/swappy.nix
-    ./wms/waybar/waybar.nix
+    ./wms/waybar.nix
     ./wms/wlogout/wlogout.nix
   ];
 }

@@ -45,19 +45,7 @@
     source = ./modules/wms/wlogout;
     recursive = true;
   };
-  home.file.".config/rofi/wallpapers" = {
-    source = ./modules/wms/rofi;
-    recursive = true;
-  };
-  home.file.".config/waybar" = {
-    source = ./modules/wms/waybar;
-    recursive = true;
-  };
 
-# Scripts
-  home.packages = [
-    (import ../scripts/web-search.nix { inherit pkgs; })
-  ];
 
   home.stateVersion = "23.11";
 }
