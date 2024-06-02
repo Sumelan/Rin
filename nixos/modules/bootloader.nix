@@ -4,16 +4,24 @@
   boot.kernelParams = [  ];
   boot.loader = {
    # systemd-boot.enable = true;
+    timeout = 5;
+    efi.efiSysMountPoint = "/boot";
     efi.canTouchEfiVariables = true;
     grub = {
       enable = true;
-      devices = [ "nodev" ];
+      version = 2;
       efiSupport = true;
-      gfxmodeBios = "auto";
-        memtest86.enable = true;
-        extraGrubInstallArgs = [ "--bootloader-id=NixOS" ];
-        configurationName = "NixOS";
+      efiInstallAsRemovable = true;
+      devices = [ "nodev" ];
+      extraEntriesBeforeNixOS = true;
+      extraEntries = ''
+        menuentry = "Reboot" {
+          reboot
+        }
+        menuentry = "Poweroff" {
+          halt
+        }
+        '';
     };
-    timeout = 5;
   };
 }
