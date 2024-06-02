@@ -1,7 +1,7 @@
-{ pkgs, config, inputs, lib, host, ... }:
+{ config, ... }:
 let
   theme = config.colorScheme.palette;
-  hyprplugins = inputs.hyprland-plugins.packages.${pkgs.system};
+ #hyprplugins = inputs.hyprland-plugins.packages.${pkgs.system};
 in
 {
   wayland.windowManager.hyprland = {
@@ -17,7 +17,8 @@ in
       $mainMod = SUPER
       $terminal = kitty
       $fileManager = thunar
-      $menu = rofi -show drun
+      $browser = firefox
+      $menu = rofi
 
       #monitors
       monitor=, preferred, auto, 1
@@ -31,7 +32,7 @@ in
       exec-once = dbus-update-activation-environment --systemd --all
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
       exec-once = swww-daemon & swww img ~/Pictures/Wallpapers/kobato.png
-      exec-once = waybar
+     #exec-once = waybar
       exec-once = nm-applet
       exec-once = wl-paste --type text --watch cliphist store & wl-paste --type image --watch cliphist store & wl-paste --watch cliphist store
       exec-once = spotify
@@ -48,18 +49,21 @@ in
       windowrule = opacity 0.8, fl64.exe
       windowrule = opacity 0.8, strawberry
       windowrulev2 = opacity 0.8, title:(FL Studio)
+      #float window rules
+      windowrulev2 = float, class:^([Rr]ofi)$
       #workspaces window rules
       windowrule = workspace 10, Discord
       windowrule = workspace 1, firefox
       windowrule = workspace special:magic, Spotify
       windowrule = workspace special:magic, strawberry
       #workspace rules
-      workspace=10, monitor:HDMI-A-1, default:true
+      #workspace=10, monitor:HDMI-A-1, default:true
 
       #keybindings
       bind = $mainMod, RETURN, exec, $terminal
-      bind = $mainMod, SPACE, exec, $menu
+      bind = $mainMod, SPACE, exec, $menu 
       bind = $mainMod, T, exec, $fileManager
+      bind = $mainMod, W, exec, $browser
       bind = $mainMod, C, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
       bind = $mainMod, S, exec, grim -g "$(slurp -d)" - |swappy -f -
 
@@ -68,6 +72,17 @@ in
       bind = $mainMod, V, togglefloating
       bind = $mainMod, F, fullscreen
       bind = $mainMod, P, pseudo, dwindle
+      
+      bind = ,XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ 
+      bind = ,XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+      binde = ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+      bind = ,XF86AudioPlay, exec, playerctl play-pause
+      bind = ,XF86AudioNext, exec, playerctl next
+      bind = ,XF86AudioPrev, exec, playerctl previous
+      bind = ,XF86MonBrightnessUp, exec, brightnessctl set +5%
+      bind = ,XF86MonBrightnessDown, exec, brightnessctl set -5%
+      bind = ,Print, exec, grim -g "$(slurp -d)" - |swappy -f -
+      bind = ,XF86Search, exec, web-search
 
       bind = $mainMod, H, movefocus, l
       bind = $mainMod, J, movefocus, d

@@ -9,14 +9,14 @@
     grub = {
       enable = true;
       efiSupport = true;
-      efiInstallAsRemovable = true;
+      efiInstallAsRemovable = true; #Otherwise /boot/EFI/BOOT/BOOTX64.EFI isn't generate.
       devices = [ "nodev" ];
       extraEntriesBeforeNixOS = true;
       extraEntries = ''
-        menuentry = "Reboot" {
+        menuentry "Reboot" {
           reboot
         }
-        menuentry = "Poweroff" {
+        menuentry "Poweroff" {
           halt
         }
         '';

@@ -17,7 +17,7 @@
       gparted
       kitty
       (mpv.override {scripts = [mpvScripts.mpris];})  #with tray
-      strawberry
+      strawberry-qt6
       spotify
       thunderbird
       (discord.override { withVencord = true; })

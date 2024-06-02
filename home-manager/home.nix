@@ -1,4 +1,4 @@
-{inputs, theme, ... }:
+{pkgs, inputs, theme, ... }:
 {
   colorScheme = inputs.nix-colors.colorSchemes."${theme}";
 
@@ -53,6 +53,11 @@
     source = ./modules/wms/waybar;
     recursive = true;
   };
+
+# Scripts
+  home.packages = [
+    (import ../scripts/web-search.nix { inherit pkgs; })
+  ];
 
   home.stateVersion = "23.11";
 }
