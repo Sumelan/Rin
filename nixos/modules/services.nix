@@ -25,6 +25,5 @@
        logind.extraConfig = ''
        HandlePowerKey=suspend
        '';
-        
   };
 }
