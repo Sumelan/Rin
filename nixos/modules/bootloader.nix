@@ -6,10 +6,8 @@
    # systemd-boot.enable = true;
     timeout = 5;
     efi.efiSysMountPoint = "/boot";
-    efi.canTouchEfiVariables = true;
     grub = {
       enable = true;
-      version = 2;
       efiSupport = true;
       efiInstallAsRemovable = true;
       devices = [ "nodev" ];
