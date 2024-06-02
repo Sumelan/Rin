@@ -18,11 +18,11 @@ in
       $terminal = kitty
       $fileManager = thunar
       $browser = firefox
-      $menu = rofi
+      $menu = rofi -show drun
 
       #monitors
       monitor=, preferred, auto, 1
-      
+
       #env variables
       env = XCURSOR_SIZE,24
       env = QT_QPA_PLATFORMTHEME,qt6ct # change to qt6ct if you have that
@@ -32,7 +32,7 @@ in
       exec-once = dbus-update-activation-environment --systemd --all
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
       exec-once = swww-daemon & swww img ~/Pictures/Wallpapers/kobato.png
-     #exec-once = waybar
+      exec-once = waybar
       exec-once = nm-applet
       exec-once = wl-paste --type text --watch cliphist store & wl-paste --type image --watch cliphist store & wl-paste --watch cliphist store
       exec-once = spotify
