@@ -288,6 +288,7 @@ in
           "on-click" = "nm-applet --indicator";
         };
           "temperature" = {
+            "hwmon-path" = "/sys/class/hwmon/hwmon1/temp1_input";
             #"critical-threshold"= 80;
             "tooltip" = false;
             "format" = "⋆.˚ {temperatureC}°C";
