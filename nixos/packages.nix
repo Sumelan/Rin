@@ -4,7 +4,7 @@
     allowUnfree = true;
   };
 
-  environment.systemPackages = 
+  environment.systemPackages =
     let
       sugar = pkgs.callPackage ./sddm-sugar-dark.nix { };
       tokyo-night = pkgs.libsForQt5.callPackage ./sddm-tokyo-night.nix { };
@@ -24,7 +24,14 @@
       vlc
 
   # Coding stuff
+      libsForQt5.qt5.qtwayland
+      meson
+      ninja
+      nixfmt-rfc-style
+      nodejs
+      pkg-config
       python3
+      v4l-utils
 
   # CLI utils
       brightnessctl
@@ -32,7 +39,7 @@
       ffmpeg
       ffmpegthumbnailer
       file
-      git     
+      git
       glib #  for gsettings to work
       glxinfo
       htop
@@ -40,7 +47,7 @@
       libnotify
       killall
       openssl   # required by Rainbow borders
-      playerctl    
+      playerctl
       ranger
       tree
       unar

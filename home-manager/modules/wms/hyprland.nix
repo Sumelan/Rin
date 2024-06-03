@@ -18,10 +18,10 @@ in
       $terminal = kitty
       $fileManager = thunar
       $browser = firefox
-      $menu = rofi -show drun
 
       #monitors
-      monitor=, preferred, auto, 1
+      monitor = HDMI-A-1, 1920x1080@60, 0x0, 1
+      monitor = HDMI-A-2, 2560x1600@60, 1920x0, 1
 
       #env variables
       env = XCURSOR_SIZE,24
@@ -32,7 +32,7 @@ in
       exec-once = dbus-update-activation-environment --systemd --all
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
       exec-once = swww-daemon & swww img ~/Pictures/Wallpapers/kobato.png
-      exec-once = waybar
+      exec-once = pkill waybar && sleep .5 && waybar
       exec-once = nm-applet
       exec-once = wl-paste --type text --watch cliphist store & wl-paste --type image --watch cliphist store & wl-paste --watch cliphist store
       exec-once = spotify
@@ -57,11 +57,11 @@ in
       windowrule = workspace special:magic, Spotify
       windowrule = workspace special:magic, strawberry
       #workspace rules
-      #workspace=10, monitor:HDMI-A-1, default:true
+      workspace=10, monitor:HDMI-A-2, default:true
 
       #keybindings
       bind = $mainMod, RETURN, exec, $terminal
-      bind = $mainMod, SPACE, exec, $menu 
+      bind = $mainMod, D, exec, pkill rofi || rofi -show drun -modi drun,run,filebrowser,window
       bind = $mainMod, T, exec, $fileManager
       bind = $mainMod, W, exec, $browser
       bind = $mainMod, C, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy

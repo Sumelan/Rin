@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: 
+{ config, pkgs, ... }:
 let
   inherit (config.colorScheme) palette;
 in {
@@ -12,7 +12,7 @@ in {
       inherit (config.lib.formats.rasi) mkLiteral;
     in {
       "configuration" = {
-        modi = "drun, run, filebrower";
+        modi = "drun, run, filebrowser, window";
         show-icons = true;
         display-drun = "";
         display-run = "";
