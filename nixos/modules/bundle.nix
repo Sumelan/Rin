@@ -5,6 +5,7 @@
     ./env.nix
     ./hyprland.nix
     ./network.nix
+    ./nextcloud.nix
     ./nixvim/nixvim.nix
     ./security.nix
     ./services.nix
