@@ -23,7 +23,7 @@
 
     settings = let
       prot = "https"; #or https
-      host = "127.0.0.1";
+      host = "sakurairo.theworkpc.com";
       dir = "/nextcloud";
     in {
       overwriteprotocol = prot;
@@ -86,7 +86,7 @@
           proxy_set_header X-Real-IP $remote_addr;
           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
           proxy_set_header X-NginX-Proxy true;
-          proxy_set_header X-Forwarded-Proto http;
+          proxy_set_header X-Forwarded-Proto https;
           proxy_pass http://127.0.0.1:8080/; # tailing / is important!
           proxy_set_header Host $host;
           proxy_cache_bypass $http_upgrade;
