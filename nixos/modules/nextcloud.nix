@@ -60,7 +60,7 @@
       enableACME = true;
       listen = [{
         addr = "127.0.0.1";
-        port = 8443; # NOT an exposed port
+        port = 8080; # NOT an exposed port
       }];
     };
 	 "localhost".locations = {
@@ -86,10 +86,10 @@
           proxy_set_header X-Real-IP $remote_addr;
           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
           proxy_set_header X-NginX-Proxy true;
-          proxy_set_header X-Forwarded-Proto https;
-          proxy_pass https://127.0.0.1:8443/; # tailing / is important!
+          proxy_set_header X-Forwarded-Proto http;
+          proxy_pass http://127.0.0.1:8080/; # tailing / is important!
           proxy_set_header Host $host;
-          proxy_cache_bypass $https_upgrade;
+          proxy_cache_bypass $http_upgrade;
           proxy_redirect off;
         '';
       };
