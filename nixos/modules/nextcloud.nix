@@ -20,18 +20,9 @@
       # https://github.com/NixOS/nixpkgs/blob/master/pkgs/servers/nextcloud/packages/nextcloud-apps.json
       inherit calendar contacts mail notes;
     };
-/*
-    settings = let
-      prot = "https"; #or http
-      host = "127.0.0.1";
-      dir = "/nextcloud";
-    in {
-      overwriteprotocol = prot;
-      overwritehost = host;
-      overwritewebroot = dir;
-      overwrite.cli.url = "${prot}://${host}${dir}/";
-      htaccess.RewriteBase = dir;
-      defaultPhoneRegion = "JP";
+
+    settings = {
+      default_phone_region = "JP";
       enabledPreviewProviders = [
         "OC\\Preview\\BMP"
         "OC\\Preview\\GIF"
@@ -46,7 +37,7 @@
         "OC\\Preview\\HEIC"
       ];
     };
-*/
+
     config = {
       dbtype = "pgsql";
       adminuser = "bathys";
@@ -58,44 +49,7 @@
     ${config.services.nextcloud.hostName} = {
       forceSSL = true;
       enableACME = true;
-  #    listen = [{
-  #      addr = "127.0.0.1";
-  #      port = 8080; # NOT an exposed port
-  #    }];
     };
-/*
-	 "localhost".locations = {
- 		  "^~ /.well-known" = {
-        priority = 9000;
-        extraConfig = ''
-          absolute_redirect off;
-          location ~ ^/\\.well-known/(?:carddav|caldav)$ {
-            return 301 /nextcloud/remote.php/dav;
-          }
-          location ~ ^/\\.well-known/host-meta(?:\\.json)?$ {
-            return 301 /nextcloud/public.php?service=host-meta-json;
-          }
-          location ~ ^/\\.well-known/(?!acme-challenge|pki-validation) {
-            return 301 /nextcloud/index.php$request_uri;
-          }
-            try_files $uri $uri/ =404;
-          '';
-      };
-      "/nextcloud/" = {
-        priority = 9999;
-        extraConfig = ''
-          proxy_set_header X-Real-IP $remote_addr;
-          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-          proxy_set_header X-NginX-Proxy true;
-          proxy_set_header X-Forwarded-Proto http;
-          proxy_pass http://127.0.0.1:8080/; # tailing / is important!
-          proxy_set_header Host $host;
-          proxy_cache_bypass $http_upgrade;
-          proxy_redirect off;
-        '';
-      };
-    };
-*/
   };
 
   security.acme = {
