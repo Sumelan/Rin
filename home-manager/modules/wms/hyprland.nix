@@ -37,7 +37,6 @@ in
       exec-once = wl-paste --type text --watch cliphist store & wl-paste --type image --watch cliphist store & wl-paste --watch cliphist store
       exec-once = spotify
       exec-once = firefox
-      exec-once = strawberry
       exec-once = systemd
       exec-once = fcitx5
 
@@ -47,7 +46,6 @@ in
       windowrule = opacity 0.9, neovide
       windowrule = opacity 0.8, bottles
       windowrule = opacity 0.8, fl64.exe
-      windowrule = opacity 0.8, strawberry
       windowrulev2 = opacity 0.8, title:(FL Studio)
       #float window rules
       windowrulev2 = float, class:^([Rr]ofi)$
@@ -55,7 +53,6 @@ in
       windowrule = workspace 10, Discord
       windowrule = workspace 1, firefox
       windowrule = workspace special:magic, Spotify
-      windowrule = workspace special:magic, strawberry
       #workspace rules
       workspace=10, monitor:HDMI-A-2, default:true
 
@@ -82,7 +79,6 @@ in
       bind = ,XF86MonBrightnessUp, exec, brightnessctl set +5%
       bind = ,XF86MonBrightnessDown, exec, brightnessctl set -5%
       bind = ,Print, exec, grim -g "$(slurp -d)" - |swappy -f -
-      bind = ,XF86Search, exec, web-search
 
       bind = $mainMod, H, movefocus, l
       bind = $mainMod, J, movefocus, d
