@@ -2,7 +2,7 @@
 {
   services.nextcloud = {
     enable = true;
-    hostName = "sakurairo.giize.com";
+    hostName = "sakurairo.ddnsfree.com";
   ## Need to manually increment with every major upgrade.
     package = pkgs.nextcloud29;
   # Let NixOS install and configure the database automatically.
@@ -20,9 +20,9 @@
       # https://github.com/NixOS/nixpkgs/blob/master/pkgs/servers/nextcloud/packages/nextcloud-apps.json
       inherit calendar contacts mail notes;
     };
-
+/*
     settings = let
-      prot = "https"; #or https
+      prot = "https"; #or http
       host = "127.0.0.1";
       dir = "/nextcloud";
     in {
@@ -46,7 +46,7 @@
         "OC\\Preview\\HEIC"
       ];
     };
-
+*/
     config = {
       dbtype = "pgsql";
       adminuser = "bathys";
@@ -58,12 +58,12 @@
     ${config.services.nextcloud.hostName} = {
       forceSSL = true;
       enableACME = true;
-      listen = [{
-        addr = "127.0.0.1";
-        port = 8080; # NOT an exposed port
-      }];
+  #    listen = [{
+  #      addr = "127.0.0.1";
+  #      port = 8080; # NOT an exposed port
+  #    }];
     };
-
+/*
 	 "localhost".locations = {
  		  "^~ /.well-known" = {
         priority = 9000;
@@ -95,6 +95,7 @@
         '';
       };
     };
+*/
   };
 
   security.acme = {
