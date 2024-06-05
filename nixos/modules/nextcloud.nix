@@ -2,7 +2,7 @@
 {
   services.nextcloud = {
     enable = true;
-    hostName = "sakurairo.theworkpc.com";
+    hostName = "sakurairo.giize.com";
   ## Need to manually increment with every major upgrade.
     package = pkgs.nextcloud29;
   # Let NixOS install and configure the database automatically.
@@ -23,7 +23,7 @@
 
     settings = let
       prot = "https"; #or https
-      host = "sakurairo.theworkpc.com";
+      host = "127.0.0.1";
       dir = "/nextcloud";
     in {
       overwriteprotocol = prot;
@@ -63,6 +63,7 @@
         port = 8080; # NOT an exposed port
       }];
     };
+
 	 "localhost".locations = {
  		  "^~ /.well-known" = {
         priority = 9000;
@@ -86,7 +87,7 @@
           proxy_set_header X-Real-IP $remote_addr;
           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
           proxy_set_header X-NginX-Proxy true;
-          proxy_set_header X-Forwarded-Proto https;
+          proxy_set_header X-Forwarded-Proto http;
           proxy_pass http://127.0.0.1:8080/; # tailing / is important!
           proxy_set_header Host $host;
           proxy_cache_bypass $http_upgrade;
