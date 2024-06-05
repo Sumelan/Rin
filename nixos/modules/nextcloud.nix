@@ -12,7 +12,6 @@
   # Increase the maximum file upload size to avoid problems uploading vidoes.
     maxUploadSize = "16G";
     https = true;
-
     autoUpdateApps.enable = true;
     extraAppsEnable = true;
     extraApps = with config.services.nextcloud.package.packages.apps; {
@@ -20,8 +19,8 @@
       # https://github.com/NixOS/nixpkgs/blob/master/pkgs/servers/nextcloud/packages/nextcloud-apps.json
       inherit calendar contacts mail notes;
     };
-
     settings = {
+      log_type = "file";
       default_phone_region = "JP";
       enabledPreviewProviders = [
         "OC\\Preview\\BMP"
@@ -37,11 +36,13 @@
         "OC\\Preview\\HEIC"
       ];
     };
-
     config = {
       dbtype = "pgsql";
       adminuser = "bathys";
       adminpassFile = "/var/nextcloud-admin-pass";
+    };
+    phpOptions = {
+      "opcache.interned_strings_buffer" = "16";
     };
   };
 
