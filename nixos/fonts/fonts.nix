@@ -11,16 +11,14 @@
     terminus_font
     twemoji-color-font
     nerdfonts
-    (pkgs.callPackage ./azuki_fontB.nix { })
-    (pkgs.callPackage ./azuki_font.nix { })
     ];
     fontDir.enable = true;
     fontconfig = {
       defaultFonts = {
-         serif = [ "azukifontB"  ];
-         sansSerif = ["Noto Sans CJK JP" "Noto Color Emoji"];
-         monospace = ["ComicShannsMono Nerd Font" "Noto Color Emoji"];
-         emoji = ["Noto Color Emoji"];
+         serif = [ "Noto Serif CJK JP" "Noto Color Emoji" ];
+         sansSerif = [ "Noto Sans CJK JP" "Noto Color Emoji" ];
+         monospace = [ "ComicShannsMono Nerd Font" "Noto Color Emoji" ];
+         emoji = [ "Noto Color Emoji" ];
       };
     };
   };
