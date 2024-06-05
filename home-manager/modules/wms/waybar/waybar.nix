@@ -1,7 +1,4 @@
-{ config, ... }:
-let
-  palette = config.colorScheme.palette;
-in
+{ config, lib, pkgs, ... }:
 {
   programs.waybar = {
     enable = true;
@@ -11,8 +8,8 @@ in
     };
     style = ''
       * {
-      font-family: "azuki_font";
-      font-size: 15px;
+      font-family: "ShureTechMono Nerd Font";
+      font-size: 13pt;
       font-weight: bold;
       border-radius: 0px;
       transition-property: background-color;
@@ -35,7 +32,10 @@ in
       background-color: transparent;
       }
       window > box {
-      background-color: #FFFFFF;
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-top: 5px;
+      background-color: #191724;
       }
       #workspaces {
       padding-left: 0px;
@@ -46,69 +46,62 @@ in
       padding-bottom: 5px;
       padding-left: 6px;
       padding-right: 6px;
-      color:#${palette.base02};
+      color:#D8DEE9;
       }
       #workspaces button.active {
-      background-color: #FFFFFF;
-      color: #${palette.base07};
+      background-color: #ebbcba;
+      color: #191724;
       }
       #workspaces button.urgent {
       color: rgb(26, 24, 38);
       }
       #workspaces button:hover {
-      background-color:#${palette.base01};
-      color: #${palette.base03};
+      background-color:#e0def4;
+      color: #191724;
       }
       tooltip {
       /* background: rgb(250, 244, 252); */
-      background: #FFFFFF;
+      background: #3b4253;
       }
       tooltip label {
-      color: #${palette.base01};
+      color: #E4E8EF;
       }
       #custom-launcher {
       font-size: 20px;
-      padding-left: 2px;
-      padding-right: 0px;
-      color: #${palette.base02};
+      padding-left: 8px;
+      padding-right: 6px;
+      color: #ebbcba;
       }
-      #mode, #clock, #memory, #temperature,#cpu,#custom-wall, #temperature, #backlight,#wireplumber, #network, #battery, #custom-powermenu, #custom-cava-internal {
-      padding-left: 5px;
-      padding-right: 8px;
-      }
-      #mpris {
-      padding-left: 5px;
-      padding-right: 0px;
+      #mode, #clock, #memory, #temperature,#cpu,#custom-wall, #temperature, #backlight, #wireplumber, #network, #battery, #custom-powermenu, #custom-cava-internal {
+      padding-left: 10px;
+      padding-right: 10px;
       }
       #memory {
-      color: #${palette.base0B};
+      color: #8EBBBA;
       }
       #cpu {
-      color: #${palette.base0C};
+      color: #B38DAC;
       }
       #clock {
-      color: #${palette.base07};
+      color: #E4E8EF;
       }
-      #window{
-        color: #${palette.base02};
+      #idle_inhibitor {
+      color: #E4E8EF;
       }
       #custom-wall {
       color: #B38DAC;
       }
       #temperature {
-      color: #${palette.base09};
+      color: #80A0C0;
       }
       #backlight {
       color: #A2BD8B;
       }
-      #mpris {
-      color: #${palette.base02};
-      }
       #wireplumber {
-      color: #${palette.base02};
+      color: #E9C98A;
       }
       #network {
-      color: #${palette.base07};
+      color: #99CC99;
       }
 
       #network.disconnected {
@@ -121,56 +114,60 @@ in
       color: #D6DCE7;
       }
       #custom-powermenu {
-      color: #${palette.base0F};
+      color: #eb6f92;
       }
       #tray {
-      padding-right: 5px;
+      padding-right: 8px;
       padding-left: 10px;
       }
       #tray menu {
-      background: #FFFFFF;
-      color: #${palette.base01};
+      background: #191724;
+      color: #DEE2EA;
       }
       #custom-cava-internal{
       font-family: "Hack Nerd Font" ;
       }
     '';
-    settings = [
+
+  settings = [
       {
         "layer" = "top";
         "position" = "top";
-        modules-left = [
-          "custom/launcher"
-          "hyprland/workspaces"
-          "custom/wall"
-        ];
+        modules-left = [ 
+		"custom/launcher"
+		"hyprland/workspaces"
+		"custom/wall"
+		"tray" 
+	];
         modules-center = [
-          "clock"
-          "hyprland/window"
-        ];
-        modules-right = [
-          "mpris"
-          "wireplumber"
-          "backlight"
-          "memory"
-          "cpu"
-          "network"
-          "temperature"
-          "battery"
-          "tray"
-          "custom/powermenu"
-        ];
+		"clock"
+		"idle_inhibitor"
+	];
+        modules-right = [ 
+		"mpris" 
+		"wireplumber" 
+		"backlight" 
+		"memory" 
+		"cpu" 
+		"network" 
+		"temperature" 
+		"battery" 
+		"custom/powermenu"
+	];
+       
         "custom/launcher" = {
-          "format" = "『🍓』";
+          "format" = " ";
           #"on-click" = "pkill rofi || ~/.config/rofi/launcher.sh";
           "tooltip" = false;
         };
+     /*
         "hyprland/window" = {
-          max-length = 25;
-          separate-outputs = false;
-          rewrite = {
-            "" = "Ⳋ ⋆｡°✩♬ ♪";
-          };
+          "format" = "{}";
+          "rewrite" = {
+           	"(.*) — Mozilla Firefox" = "󰈹 $1";
+          	"(.*) — Mozilla Thunderbird" = "󰇮 $1";
+          	"(.*) — kitty" = "󰞷 $1";
+	  };
         };
         /*
           "custom/wall" = {
@@ -186,10 +183,17 @@ in
           "tooltip" = false;
         };
         "hyprland/workspaces" = {
-          "format" = "𔓘";
-          "on-click" = "activate";
-          "on-scroll-up" = "hyprctl dispatch workspace e+1";
-          "on-scroll-down" = "hyprctl dispatch workspace e-1";
+          "format" = " <b>{icon}</b> {windows} ";
+        	"window-rewrite-default" = " ";
+	        "window-rewrite" = {
+                  "Alacritty" = "󰞷 ";
+	          "Firefox" = "󰈹 ";
+	          "Thunderbird" = "󰇮 ";
+	          "Spotify" = "󰓇 ";
+	        };
+        "on-scroll-up" = "hyprctl dispatch workspace e+1";
+        "on-scroll-down" = "hyprctl dispatch workspace e-1";
+        "on-click" = "activate";
         };
         "backlight" = {
           "device" = "intel_backlight";
@@ -203,19 +207,19 @@ in
             "󰃠"
           ];
         };
-        "mpris" = {
+      	"mpris" = {
           "format" = "♪【{artist} - {title}】";
           "format-paused" = "・【{artist} - {title}】";
         };
         "wireplumber" = {
-          "scroll-step" = 2;
+          "scroll-step" = 1;
           "format" = "{icon} {volume}%";
-          "format-muted" = "(° × ° )";
+          "format-muted" = "󰖁 Muted";
           "format-icons" = {
             "default" = [
-              "♪"
-              "♪~"
-              "┗┯~"
+              ""
+              ""
+              ""
             ];
           };
           "on-click" = "pavucontrol";
@@ -246,21 +250,44 @@ in
         };
         "clock" = {
           "interval" = 1;
-          "format" = "{:%I:%M %p  %A %b %d}";
+          "format" = " {:%H:%M:%S}";
+          "format-alt" = " {:%H:%M |  %Y年 %m月 %d日}";
           "tooltip" = true;
-          "tooltip-format" = "<tt>{calendar}</tt>";
+          "tooltip-format"= "<tt><small>{calendar}</small></tt>";
+          "calendar" = {
+		        "mode" = "month";
+	          #"mode-mon-col" = 3;   # if you want to set "mode" = "year".
+		        "weeks-pos" = ""; # display week number. right/left
+		        "on-scroll" = 1;
+		        "format" = {
+			        "months" = "<span color='#ffead3'><b>{}</b></span>";
+		        	"days" = "<span color='#ecc6d9'><b>{}</b></span>";
+		        	"weeks" = "<span color='#99ffdd'><b>W{}</b></span>";
+		        	"weekdays" = "<span color='#ffcc66'><b>{}</b></span>";
+		        	"today" = "<span color='#ff6699'><b><u>{}</u></b></span>";
+		        };
+          };
         };
-          "memory" = {
-            "interval" = 1;
-            "format" = "✿ {percentage}%";
-            "states" = {
-              "warning" = 85;
-            };
+
+       "idle_inhibitor" = {
+          "format" = "{icon}";
+	        "format-icons" = {
+		        "activated" = " ";
+		        "deactivated" = " ";
+	        };
+        };
+
+        "memory" = {
+          "interval" = 1;
+          "format" = "󰍛 {percentage}%";
+          "states" = {
+            "warning" = 85;
           };
-          "cpu" = {
-            "interval" = 1;
-            "format" = "❀ {usage}%";
-          };
+        };
+        "cpu" = {
+          "interval" = 1;
+          "format" = "󰻠 {usage}%";
+        };
         /*
           "mpd" = {
             "max-length" = 25;
@@ -279,7 +306,7 @@ in
         */
         "network" = {
           "format-disconnected" = "󰯡 Disconnected";
-          "format-ethernet" = "𖤣.𖥧.𖡼.⚘";
+          "format-ethernet" = " Wired";
           "format-linked" = "󰖪 (No IP)";
           "format-wifi" = "󰖩 ";
           "interval" = 1;
@@ -287,14 +314,14 @@ in
           "tooltip-format" = "󰖩  {essid} ({ipaddr})";
           "on-click" = "nm-applet --indicator";
         };
-          "temperature" = {
-            "hwmon-path" = "/sys/class/hwmon/hwmon1/temp1_input";
-            #"critical-threshold"= 80;
-            "tooltip" = false;
-            "format" = "⋆.˚ {temperatureC}°C";
-          };
+        "temperature" = {
+          "hwmon-path" = "sys/class/hwmon/hwmon1/temp1_input"
+          #"critical-threshold"= 80;
+          "tooltip" = false;
+          "format" = " {temperatureC}°C";
+        };
         "custom/powermenu" = {
-          "format" = "𖹭";
+          "format" = " ";
           "on-click" = "wlogout";
           "tooltip" = false;
         };
