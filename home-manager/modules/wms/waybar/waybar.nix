@@ -8,7 +8,7 @@
     };
     style = ''
       * {
-      font-family: "ShureTechMono Nerd Font";
+      font-family: "JetBrainsMono Nerd Font";
       font-size: 13pt;
       font-weight: bold;
       border-radius: 0px;
@@ -35,7 +35,7 @@
       margin-left: 5px;
       margin-right: 5px;
       margin-top: 5px;
-      background-color: #191724;
+      background-color: #3b4252;
       }
       #workspaces {
       padding-left: 0px;
@@ -49,15 +49,15 @@
       color:#D8DEE9;
       }
       #workspaces button.active {
-      background-color: #ebbcba;
-      color: #191724;
+      background-color: rgb(181, 232, 224);
+      color: rgb(26, 24, 38);
       }
       #workspaces button.urgent {
       color: rgb(26, 24, 38);
       }
       #workspaces button:hover {
-      background-color:#e0def4;
-      color: #191724;
+      background-color:#B38DAC;
+      color: rgb(26, 24, 38);
       }
       tooltip {
       /* background: rgb(250, 244, 252); */
@@ -70,7 +70,7 @@
       font-size: 20px;
       padding-left: 8px;
       padding-right: 6px;
-      color: #ebbcba;
+      color: #7ebae4;
       }
       #mode, #clock, #memory, #temperature,#cpu,#custom-wall, #temperature, #backlight, #wireplumber, #network, #battery, #custom-powermenu, #custom-cava-internal {
       padding-left: 10px;
@@ -83,9 +83,6 @@
       color: #B38DAC;
       }
       #clock {
-      color: #E4E8EF;
-      }
-      #idle_inhibitor {
       color: #E4E8EF;
       }
       #custom-wall {
@@ -103,7 +100,6 @@
       #network {
       color: #99CC99;
       }
-
       #network.disconnected {
       color: #CCCCCC;
       }
@@ -114,17 +110,20 @@
       color: #D6DCE7;
       }
       #custom-powermenu {
-      color: #eb6f92;
+      color: #BD6069;
       }
       #tray {
       padding-right: 8px;
       padding-left: 10px;
       }
       #tray menu {
-      background: #191724;
+      background: #3b4252;
       color: #DEE2EA;
       }
-      #custom-cava-internal{
+      #mpris {
+        color: #E4E8EF;
+      }
+      #custom-cava-internal {
       font-family: "Hack Nerd Font" ;
       }
     '';
@@ -133,41 +132,32 @@
       {
         "layer" = "top";
         "position" = "top";
-        modules-left = [ 
-		"custom/launcher"
-		"hyprland/workspaces"
-		"custom/wall"
-		"tray" 
-	];
+        modules-left = [
+		        "custom/launcher"
+            "hyprland/workspaces"
+            "temperature"
+		        "custom/wall"
+            "mpris"
+            "custom/cava-internal"
+	      ];
         modules-center = [
-		"clock"
-		"idle_inhibitor"
-	];
-        modules-right = [ 
-		"mpris" 
-		"wireplumber" 
-		"backlight" 
-		"memory" 
-		"cpu" 
-		"network" 
-		"temperature" 
-		"battery" 
-		"custom/powermenu"
-	];
-       
+		        "clock"
+	      ];
+        modules-right = [
+            "tray"
+		        "wireplumber"
+		        "backlight"
+		        "memory"
+		        "cpu"
+		        "network"
+		        "battery"
+		        "custom/powermenu"
+	      ];
+
         "custom/launcher" = {
           "format" = " ";
           #"on-click" = "pkill rofi || ~/.config/rofi/launcher.sh";
           "tooltip" = false;
-        };
-     /*
-        "hyprland/window" = {
-          "format" = "{}";
-          "rewrite" = {
-           	"(.*) — Mozilla Firefox" = "󰈹 $1";
-          	"(.*) — Mozilla Thunderbird" = "󰇮 $1";
-          	"(.*) — kitty" = "󰞷 $1";
-	  };
         };
         /*
           "custom/wall" = {
@@ -183,17 +173,10 @@
           "tooltip" = false;
         };
         "hyprland/workspaces" = {
-          "format" = " <b>{icon}</b> {windows} ";
-        	"window-rewrite-default" = " ";
-	        "window-rewrite" = {
-                  "Alacritty" = "󰞷 ";
-	          "Firefox" = "󰈹 ";
-	          "Thunderbird" = "󰇮 ";
-	          "Spotify" = "󰓇 ";
-	        };
-        "on-scroll-up" = "hyprctl dispatch workspace e+1";
-        "on-scroll-down" = "hyprctl dispatch workspace e-1";
-        "on-click" = "activate";
+          "format" = "{name}";
+          "on-scroll-up" = "hyprctl dispatch workspace e+1";
+          "on-scroll-down" = "hyprctl dispatch workspace e-1";
+          "on-click" = "activate";
         };
         "backlight" = {
           "device" = "intel_backlight";
@@ -250,8 +233,8 @@
         };
         "clock" = {
           "interval" = 1;
-          "format" = " {:%H:%M:%S}";
-          "format-alt" = " {:%H:%M |  %Y年 %m月 %d日}";
+          "format" = "  {:%H:%M:%S}";
+          "format-alt" = "  {:%H:%M |  %Y年 %m月 %d日}";
           "tooltip" = true;
           "tooltip-format"= "<tt><small>{calendar}</small></tt>";
           "calendar" = {
@@ -268,15 +251,6 @@
 		        };
           };
         };
-
-       "idle_inhibitor" = {
-          "format" = "{icon}";
-	        "format-icons" = {
-		        "activated" = " ";
-		        "deactivated" = " ";
-	        };
-        };
-
         "memory" = {
           "interval" = 1;
           "format" = "󰍛 {percentage}%";
@@ -306,13 +280,12 @@
         */
         "network" = {
           "format-disconnected" = "󰯡 Disconnected";
-          "format-ethernet" = " Wired";
+          "format-ethernet" = "󰀂 {ifname}";
           "format-linked" = "󰖪 (No IP)";
           "format-wifi" = "󰖩 ";
           "interval" = 1;
           "tooltip" = true;
-          "tooltip-format" = "󰖩  {essid} ({ipaddr})";
-          "on-click" = "nm-applet --indicator";
+          "tooltip-format" = "{essid}({ipaddr})";
         };
         "temperature" = {
           "hwmon-path" = "/sys/class/hwmon/hwmon1/temp1_input";

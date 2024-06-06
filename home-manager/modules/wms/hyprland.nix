@@ -21,7 +21,7 @@ in
 
       #monitors
       monitor = HDMI-A-1, 1920x1080@60, 0x0, 1
-      monitor = HDMI-A-2, 2560x1600@60, 1920x0, 1
+      monitor = DP-1, 1920x1080@60, 1920x0, 1
 
       #env variables
       env = XCURSOR_SIZE,24
@@ -36,12 +36,12 @@ in
       exec-once = nm-applet
       exec-once = wl-paste --type text --watch cliphist store & wl-paste --type image --watch cliphist store & wl-paste --watch cliphist store
       exec-once = spotify
-      exec-once = firefox
       exec-once = systemd
+      exec-once = kdeconnect-indicator
       exec-once = fcitx5
 
       #opacity window rules
-      windowrule = opacity 1 0.84, Discord
+      windowrule = opacity 1 0.84, vesktop
       windowrule = opacity 0.8, Spotify
       windowrule = opacity 0.9, neovide
       windowrule = opacity 0.8, bottles
@@ -50,11 +50,11 @@ in
       #float window rules
       windowrulev2 = float, class:^([Rr]ofi)$
       #workspaces window rules
-      windowrule = workspace 10, Discord
+      windowrule = workspace 10, vesktop
       windowrule = workspace 1, firefox
       windowrule = workspace special:magic, Spotify
       #workspace rules
-      workspace=10, monitor:HDMI-A-2, default:true
+      workspace=10, monitor:DP-1, default:true
 
       #keybindings
       bind = $mainMod, RETURN, exec, $terminal

@@ -103,4 +103,10 @@ in
       }
     '';
   };
+
+# Place Files Inside Home Directory
+  home.file.".config/wlogout/icons" = {
+    source = ./icons;
+    recursive = true;
+  };
 }

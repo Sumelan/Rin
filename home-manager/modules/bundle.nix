@@ -1,10 +1,9 @@
 {
   imports = [
-    ./cursor.nix
     ./git.nix
+    ./gtk-qt.nix
     ./htop.nix
     ./kitty.nix
-    ./qt.nix
     ./spicetify.nix
     ./wms/hyprland.nix
     ./wms/hypridle.nix
