@@ -40,48 +40,68 @@
       wireplumber
       pavucontrol
     # programs
+      anki-bin
       bottles
       cpufrequtils
       firefox
       gimp
+      hypridle
+      hyprlock
       hyprpicker
       krita
+      lutris
       neovide
       obs-studio
       opentabletdriver
+      prismlauncher
+      protonup-qt
       soundconverter
-      soulseekqt
       spicetify-cli
       spotify
       thunderbird
       vencord
       vesktop
       vlc
-
+      udiskie
+      wine
+      winetricks
     # CLI programs
+      atuin
+      bat
+      btop
+      clinfo
+      cowsay
+      curl
       fastfetch
+      fd
       ffmpeg
       ffmpegthumbnailer
       file
       fzf
       gh # github cli
       git
-      glib #  for gsettings to work
-      glxinfo
-      htop
       jq
       libappindicator
       lazygit
+      lsd
+      lshow
+      ncspot
+      nh
+      nitch
       playerctl
-      ranger
-      tree
+      poppler
+      qmk
+      ripgrep
+      starship
+      socat
+      spotdl
+      unar
       vim
       wget
+      xdg-utils
+      ydotool
       yt-dlp
-      zram-generator
-
-      hypridle    # requires unstable channel
-      hyprlock    # requires unstable channel
+      zoxide
     # libs/frameworks
       libsForQt5.kdeconnect-kde
       libsForQt5.qt5.qtwayland
