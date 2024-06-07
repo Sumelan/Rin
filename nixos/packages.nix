@@ -84,7 +84,7 @@
       libappindicator
       lazygit
       lsd
-      lshow
+      lshw
       ncspot
       nh
       nitch

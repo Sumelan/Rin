@@ -4,6 +4,7 @@
   imports = [
       ./hardware-configuration.nix
       ./packages.nix
+      ./packages-option.nix
       ./fonts/fonts.nix
       ./amd-drivers.nix
       ./modules/bundle.nix
