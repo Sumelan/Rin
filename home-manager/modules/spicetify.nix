@@ -1,9 +1,4 @@
-{
-  pkgs,
-  lib,
-  spicetify-nix,
-  ...
-}:
+{ pkgs, lib, spicetify-nix, ... }:
 let
   spicePkgs = spicetify-nix.packages.${pkgs.system}.default;
 in
@@ -17,8 +12,8 @@ in
   # configure spicetify :)
   programs.spicetify = {
     enable = true;
-    theme = spicePkgs.themes.text;
-    colorScheme = "rosepine";
+    theme = spicePkgs.themes.catppuccin;
+    colorScheme = "mocha";
     enabledExtensions = with spicePkgs.extensions; [
       fullAppDisplay
       shuffle # shuffle+ (special characters are sanitized out of ext names)

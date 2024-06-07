@@ -2,7 +2,6 @@
   imports = [
     ./git.nix
     ./gtk-qt.nix
-    ./htop.nix
     ./kitty.nix
     ./spicetify.nix
     ./wms/hyprland.nix
