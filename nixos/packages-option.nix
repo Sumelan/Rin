@@ -9,7 +9,11 @@
     starship.enable = true;
     dconf.enable = true;
     nm-applet.enable = true;
-    steam.enable = true;
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true;
+      dedicatedServer.openFirewall = true;
+    };
     virt-manager.enable = true;
     thunar = {
       enable = true;
