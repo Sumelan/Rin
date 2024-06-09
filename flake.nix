@@ -32,8 +32,8 @@
       hostname = "Rin";
       username = "bathys";
       gitUsername = "bathys";
-      gitEmail = "68154148+bathys@users.noreply.github.com";
-      theme = "rose-pine";
+      gitEmail = "bathys@proton.me";
+      theme = "catppuccin-mocha";
 
       pkgs = import nixpkgs {
         inherit system;

@@ -2,7 +2,7 @@
 {
   services.nextcloud = {
     enable = true;
-    hostName = "sakurairo.ddnsfree.com";
+    hostName = "nextcloud.sakurairo.ddnsfree.com";
   ## Need to manually increment with every major upgrade.
     package = pkgs.nextcloud29;
   # Let NixOS install and configure the database automatically.
@@ -56,7 +56,7 @@
   security.acme = {
     acceptTerms = true;
     certs.${config.services.nextcloud.hostName} = {
-      email = "nishimura7802@gmail.com";
+      email = "bathys@proton.me";
     };
   };
 }
