@@ -41,6 +41,7 @@
       pavucontrol
     # programs
       anki-bin
+      audiobookshelf
       bottles
       cpufrequtils
       firefox
