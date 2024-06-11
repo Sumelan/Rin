@@ -13,7 +13,6 @@
     # de stuff
       brightnessctl
       cliphist
-      dunst
       eww
       feh
       gparted
@@ -28,6 +27,7 @@
       polkit_gnome
       slurp
       swappy
+      swaynotificationcenter
       swww
       unrar
       unzip
@@ -37,8 +37,9 @@
       wpgtk
       yad
     # audio
-      wireplumber
+      pamixer
       pavucontrol
+      wireplumber
     # programs
       anki-bin
       audiobookshelf
@@ -49,11 +50,11 @@
       hypridle
       hyprlock
       hyprpicker
+      hyprshade
       krita
       lutris
       neovide
       obs-studio
-      opentabletdriver
       prismlauncher
       protonup-qt
       soundconverter

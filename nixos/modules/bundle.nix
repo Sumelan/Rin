@@ -5,7 +5,6 @@
     ./env.nix
     ./network.nix
     ./nixvim/nixvim.nix
-    ./opentabletdriver.nix
     ./security.nix
     ./services.nix
     ./sound.nix
@@ -16,7 +15,7 @@
     ./xdg-portal.nix
     ./zram.nix
     # Rin only 
-    ./nextcloud.nix
     ./audiobookshelf.nix
+    ./nextcloud.nix
   ];
 }
