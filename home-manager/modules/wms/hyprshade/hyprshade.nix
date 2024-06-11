@@ -1,5 +1,5 @@
 {
-  home.file.".config/hypr/hyprshade/shaders" = {
+  home.file.".config/hyprshade/shaders" = {
     source = ./shaders;
     recursive = true;
   };
