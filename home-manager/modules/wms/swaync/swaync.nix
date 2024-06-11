@@ -427,7 +427,7 @@ settings = {
         "buttons-grid" = {
             "actions" = [
                 {
-                    "label" = "󰔏";
+                    "label" = "󰔏 ";
                     "command" = "hyprshade toggle blue-light-filter";
                 }
                 {
