@@ -11,11 +11,6 @@ const int LUMINOSITY = 0;
 const int LIGHTNESS = 1;
 const int AVERAGE = 2;
 
-/**
- * Type of grayscale conversion.
- */
-const int Type = {{#nc}}{{type}} ? LUMINOSITY{{/nc}};
-
 // Enum for selecting luma coefficients
 const int PAL = 0;
 const int HDTV = 1;
