@@ -16,12 +16,6 @@ const int PAL = 0;
 const int HDTV = 1;
 const int HDR = 2;
 
-/**
- * Formula used to calculate relative luminance.
- * (Only applies to type = "luminosity".)
- */
-const int LuminosityType = {{#nc}}{{luminosity_type}} ? HDR{{/nc}};
-
 void main() {
     vec4 pixColor = texture2D(tex, v_texcoord);
 
