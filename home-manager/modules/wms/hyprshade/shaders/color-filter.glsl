@@ -11,14 +11,6 @@ precision highp float;
 varying vec2 v_texcoord;
 uniform sampler2D tex;
 
-/**
- * Strength of filter.
- *
- * @min 0.0
- * @max 1.0
- */
-const float Strength = float({{#nc}}{{strength}} ? 0.2{{/nc}});
-
 // Enum for color correction type
 const int PROTANOPIA = 0;
 const int PROTAN = PROTANOPIA;
