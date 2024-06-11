@@ -431,14 +431,6 @@ settings = {
                     "command" = "hyprshade toggle blue-light-filter";
                 }
                 {
-                    "label" = "󰌵";
-                    "command" = "hyprshade toggle color-filter";
-                }
-                {
-                    "label" = "󰊠";
-                    "command" = "hyprshade toggle grayscale";
-                }
-                {
                     "label" = "󰏘";
                     "command" = "hyprshade toggle vibrance";
                 }
