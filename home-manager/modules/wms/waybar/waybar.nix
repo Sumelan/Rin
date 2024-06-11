@@ -64,7 +64,7 @@
       }
 
       #idle_inhibitor.activated{
-        color:#e57474;
+        color:#63f7b4;
       }
 
       #custom-launcher {
@@ -143,8 +143,8 @@
           };
         };
         "pulseaudio" = {
-          "format" = "<span foreground='#e5c76b'>{icon}</span> {volume}%";
-          "format-muted" = "<span foreground='#e5c76b'>󰖁 </span> Muted";
+          "format" = "<span foreground='#939cb8'>{icon}</span> {volume}%";
+          "format-muted" = "<span foreground='#939cb8'>󰖁 </span> Muted";
           "format-icons" = {
             "default" = [ "" " " " " ];
             "alsa_output.usb-SXW_iFi_USB_Audio_SE_iFi_USB_Audio_SE-00.iec958-stereo" = " - ";
@@ -163,7 +163,7 @@
             "warning" = 20;
             "critical" = 10;
           };
-          "format" = "<span color='#8ccf7e'>{icon}</span> {capacity}%";
+          "format" = "<span color='#01f207'>{icon}</span> {capacity}%";
           "format-icons" = [
             " "
             " "
@@ -171,8 +171,8 @@
             " "
             " "
           ];
-          "format-plugged" = "<span color='#8ccf7e'></span> {capacity}%";
-          "format-charging" = "<span color='#8ccf7e'></span> {capacity}%";
+          "format-plugged" = "<span color='#4d7088'></span> {capacity}%";
+          "format-charging" = "<span color='#4d7088'></span> {capacity}%";
           "tooltip" = false;
         };
         "clock" = {
@@ -182,27 +182,27 @@
           "tooltip" = false;
         };
         "bluetooth" = {
-    	    "format-on" = "<span color='#e57474'></span> Turned On";
-    	    "format-off" = "<span color='#e57474'></span> Turned Off";
-    	    "format-disabled" = "<span color='#e57474'></span> Disabled";
-    	    "format-connected" = "<span color='#e57474'></span> Connected";
-    	    "format" = "<span color='#e57474'></span> Disabled";
+    	    "format-on" = "<span color='#247afd'></span> Turned On";
+    	    "format-off" = "<span color='#247afd'></span> Turned Off";
+    	    "format-disabled" = "<span color='#247afd'></span> Disabled";
+    	    "format-connected" = "<span color='#247afd'></span> Connected";
+    	    "format" = "<span color='#247afd'></span> Disabled";
     	    "on-click" = "blueman-manager &";
         };
         "network" = {
-          "format-disconnected" = "<span color='#67b0e8'>󰯡</span> Disconnected";
-          "format-ethernet" = "<span color='#67b0e8'>󰀂</span> {ifname}";
-          "format-linked" = "<span color='#67b0e8'>󰖪</span> {ifname} (No IP)";
-          "format-wifi" = "<span color='#67b0e8'>󰖩</span> {essid}";
+          "format-disconnected" = "<span color='#9dff00'>󰯡 </span> Disconnected";
+          "format-ethernet" = "<span color='#9dff00'>󰀂 </span> {ifname}";
+          "format-linked" = "<span color='#9dff00'>󰖪 </span> {ifname} (No IP)";
+          "format-wifi" = "<span color='#9dff00'>󰖩 </span> {essid}";
           "interval" = 60;
           "tooltip" = false;
         };
         "custom/power" = {
-          "format" = "";
+          "format" = " ";
           "on-click" = "wlogout";
         };
         "custom/notification" = {
-          "format" = "󱅫";
+          "format" = "󱅫 ";
           "on-click" = "swaync-client -t -sw";
         };
         /*

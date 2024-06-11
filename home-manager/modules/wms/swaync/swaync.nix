@@ -15,22 +15,22 @@
       @define-color bg-selected #1B1D1D;
 
       @define-color black     #232a2d;
-      @define-color red       #67b0e8;
-      @define-color green     #000000;
-      @define-color yellow    #000000;
-      @define-color blue      #e57474;
-      @define-color purple    #c47fd5;
-      @define-color aqua      #6cbfbf;
-      @define-color gray      #b3b9b8;
+      @define-color red       #ff0000;
+      @define-color green     #008000;
+      @define-color yellow    #ffff00;
+      @define-color blue      #0000ff;
+      @define-color purple    #800080;
+      @define-color aqua      #00ffff;
+      @define-color gray      #808080;
       @define-color brgray    #80AA9E;
       @define-color brred     #F3594B;
-      @define-color brgreen   #ee5396;
-      @define-color bryellow  #E9B243;
-      @define-color brblue    #80AA9E;
-      @define-color brpurple  #D3869B;
-      @define-color braqua    #8CBA7F;
-      @define-color white     #E0CDA5;
-      @define-color bg2       #504945;
+      @define-color brgreen   #66ff00;
+      @define-color bryellow  #FFEA00;
+      @define-color brblue    #0096FF;
+      @define-color brpurple  #BF40BF;
+      @define-color braqua    #0BF9EA;
+      @define-color offwhite  #FAF9F6;
+      @define-color bg2       #cdf0f0;
 
       * {
         font-family: Iosevka Nerd Font;
@@ -40,7 +40,7 @@
       .control-center .notification-row:focus,
       .control-center .notification-row:hover {
         opacity: 1;
-        background: alpha(@red, 0.25);
+        background: alpha(@brblue, 0.25);
         border-radius: 0px;
         margin: 0px;
       }
@@ -117,7 +117,7 @@
         color: @white;
       }
       .notification-group-icon {
-        color: @red;
+        color: @brblue;
         margin-right: 8px;
       }
       .notification-group-collapse-button {
@@ -128,7 +128,7 @@
       }
       .notification-group-collapse-button:hover {
         background: @noti-close-bg-hover;
-        color: @red;
+        color: @brblue;
       }
       .notification-group-close-all-button {
         background: @noti-close-bg;
@@ -175,7 +175,7 @@
         font-weight: bold;
         font-style: italic;
         background: transparent;
-        color: @red;
+        color: @brblue;
         margin-left: 10px;
         /* text-shadow: 0 0 3px @red; */
       }
@@ -222,7 +222,7 @@
         background: alpha(black, 0.0)
       }
       .widget-title {
-        color: @red;
+        color: @yellow;
         margin: 20px 20px 5px 20px;
         font-size: 10.5pt;
         font-weight: bold;
@@ -233,7 +233,7 @@
         font-size: initial;
         font-weight: bold;
         font-family: 'Symbols Nerd Font';
-        color: @brgreen;
+        color: @gray;
         text-shadow: none;
         background: @noti-bg;
         border: 1px solid @noti-border-color;
@@ -245,7 +245,7 @@
         /* text-shadow: 0 0 3px @brgreen; */
       }
       .widget-dnd {
-        color: @text-color;
+        color: @brgreen;
         margin: 5px 20px 5px 20px;
         font-size: 10.5pt;
         font-weight: bold;
@@ -260,7 +260,7 @@
         transition: all .1s ease-in-out;
       }
       .widget-dnd>switch:checked {
-        background: @brgreen
+        background: @brblue
       }
       .widget-dnd>switch slider {
         background: @noti-bg-hover;
@@ -310,7 +310,7 @@
       }
       .widget-buttons-grid>flowbox>flowboxchild>button:hover {
         /* background: @noti-bg-hover; */
-        color: @brgreen;
+        color: @bryellow;
         /* text-shadow: 0 0 3px @white; */
       }
       .widget-menubar>box>.menu-button-bar>button {
@@ -329,7 +329,7 @@
         border: 1px solid @noti-close-bg;
         border-radius: 8px;
         font-size: x-large;
-        color: @brgreen;
+        color: @brgray;
       }
       .widget-volume>box>button {
         background: @red;
@@ -370,7 +370,7 @@
       '';
 
 settings = {
-    "positionX" = "left";
+    "positionX" = "right";
     "positionY" = "top";
     "control-center-margin-top" = 10;
     "control-center-margin-bottom" = 10;
@@ -427,19 +427,19 @@ settings = {
         "buttons-grid" = {
             "actions" = [
                 {
-                    "label" = "󰖚";
+                    "label" = "󰖚 ";
                     "command" = "hyprshade toggle blue-light-filter";
                 }
                 {
-                    "label" = "󰏘";
+                    "label" = "󰏘 ";
                     "command" = "hyprshade toggle vibrance";
                 }
                 {
-                    "label": "󰋰";
+                    "label" = "󰋰 ";
                     "command" = "hyprshade toggle grayscale";
                 }
                 {
-                    "label" = "󰌁";
+                    "label" = "󰌁 ";
                     "command" = "hyprshade toggle invert";
                 }
             ];
