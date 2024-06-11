@@ -427,12 +427,16 @@ settings = {
         "buttons-grid" = {
             "actions" = [
                 {
-                    "label" = "󰔏 ";
+                    "label" = "󰖚";
                     "command" = "hyprshade toggle blue-light-filter";
                 }
                 {
                     "label" = "󰏘";
                     "command" = "hyprshade toggle vibrance";
+                }
+                {
+                    "label": "󰋰";
+                    "command" = "hyprshade toggle grayscale";
                 }
                 {
                     "label" = "󰌁";
