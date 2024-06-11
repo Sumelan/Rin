@@ -428,11 +428,11 @@ settings = {
             "actions" = [
                 {
                     "label" = "󰔏";
-                    "command" = "hyprshade toggle redshift";
+                    "command" = "hyprshade toggle blue-light-filter";
                 }
                 {
                     "label" = "󰌵";
-                    "command" = "hyprshade toggle dim";
+                    "command" = "hyprshade toggle color-filter";
                 }
                 {
                     "label" = "󰊠";
