@@ -22,11 +22,6 @@ const int TRITANOPIA = 2;
 const int TRITAN = TRITANOPIA;
 const int BLUEYELLOW = TRITANOPIA;
 
-/**
- * Type of color correction.
- */
-const int Type = {{#nc}}{{type}} ? PROTANOPIA{{/nc}};
-
 void main() {
     vec4 pixColor = texture2D(tex, v_texcoord);
 
