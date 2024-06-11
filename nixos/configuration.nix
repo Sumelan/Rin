@@ -5,6 +5,7 @@
       ./hardware-configuration.nix
       ./packages.nix
       ./packages-option.nix
+      ./japanese-input.nix
       ./fonts/fonts.nix
       ./amd-drivers.nix
       ./modules/bundle.nix
@@ -15,8 +16,7 @@
       ./modules/xserver.nix
   ];
 
- 
-  # Define your hostname. 
+  # Define your hostname.
   networking.hostName = "Rin";
 
   # Set your time zone.
@@ -36,18 +36,10 @@
       LC_TIME = "ja_JP.UTF-8";
     };
 
-  # Japanese input.
-  i18n.inputMethod = {
-   enabled = "fcitx5";
-   fcitx5.addons = with pkgs; [
-     fcitx5-mozc
-   ];
-  };
-
 # Power management.
   powerManagement = {
 	  enable = true;
-  }; 
+  };
 
   # flatpak
   services.flatpak.enable = true;
