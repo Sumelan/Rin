@@ -109,7 +109,8 @@
             "pulseaudio"
 		        "network"
 		        "battery"
-		        "custom/power"
+            "custom/power"
+            "tray"
 	      ];
 
         "custom/launcher" = {
@@ -205,12 +206,10 @@
           "format" = "󱅫 ";
           "on-click" = "swaync-client -t -sw";
         };
-        /*
         "tray" = {
           "icon-size" = 15;
           "spacing" = 5;
         };
-        */
       }
     ];
   };

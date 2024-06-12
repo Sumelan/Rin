@@ -7,13 +7,8 @@
       ./packages-option.nix
       ./japanese-input.nix
       ./fonts/fonts.nix
-      ./amd-drivers.nix
       ./modules/bundle.nix
       ./disko-config.nix
-  ];
-
-  disabledModules = [
-      ./modules/xserver.nix
   ];
 
   # Define your hostname.
