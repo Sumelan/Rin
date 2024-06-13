@@ -99,6 +99,7 @@
       spotdl
       unar
       vim
+      vimPlugins.yuck-vim
       wget
       xdg-utils
       ydotool
