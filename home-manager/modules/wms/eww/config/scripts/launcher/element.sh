@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-element-desktop
+/run/current-system/sw/bin/element-desktop
