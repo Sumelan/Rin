@@ -1,9 +1,12 @@
 {pkgs, ... }:
 {
+  imports = [
+      ./options.nix
+  ];  
+
   nixpkgs.config = {
     allowUnfree = true;
   };
-
   environment.systemPackages =
     let
       sugar = pkgs.callPackage ./sddm-sugar-dark.nix { };
