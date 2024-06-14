@@ -6,7 +6,6 @@
       enable = true;
       xwayland.enable = true;
     };
-    starship.enable = true;
     dconf.enable = true;
     nm-applet.enable = true;
     steam = {
