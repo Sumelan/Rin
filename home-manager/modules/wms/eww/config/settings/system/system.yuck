@@ -1,7 +1,7 @@
-(defpoll display :interval "0.1s" "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/volume/volumedisplay.sh")
-(defvar volumeUpIcon "/home/nick/dotfiles/home-manager/modules/eww/config/images/plus.png")
-(defvar volumeDownIcon "/home/nick/dotfiles/home-manager/modules/eww/config/images/minus.png")
-(defvar volumeMuteIcon "/home/nick/dotfiles/home-manager/modules/eww/config/images/mute.png")
+(defpoll display :interval "0.1s" "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/volume/volumedisplay.sh")
+(defvar volumeUpIcon "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/plus.png")
+(defvar volumeDownIcon "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/minus.png")
+(defvar volumeMuteIcon "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/mute.png")
 
 (defwidget systemMenu []
 	(box
@@ -22,12 +22,12 @@
 		:class systemEventboxClass
 		:cursor "pointer"
 		:space-evenly false
-		:onclick "~/dotfiles/home-manager/modules/eww/config/scripts/system.sh"
+		:onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/system.sh"
 		(image
 		  :class "gear"
 		  :image-width 25
 		  :image-height 25
-		  :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/gear.png"
+		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/gear.png"
 		)
 	  )
 	)
@@ -58,12 +58,12 @@
 	  (eventbox
 		:class volumeButtonsEventboxClass
 		:cursor "pointer"
-		:onclick "~/dotfiles/home-manager/modules/eww/config/scripts/volume/volumemenu.sh"
+		:onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/volume/volumemenu.sh"
 		(image
 		  :class "volumeButton"
 		  :image-width 25
 		  :image-height 25
-		  :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/speaker.png"
+		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/speaker.png"
 		)
 	  )
 	)
@@ -74,7 +74,7 @@
 	  :class "volumeUp"
 	  :cursor "pointer"
 	  :width 25
-	  :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/volume/volumeup.sh"
+	  :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/volume/volumeup.sh"
 			(image
 		  :class "volumeUpButton"
 		  :image-width 18
@@ -89,7 +89,7 @@
 	  :class "volumeDisplay"
 	  :cursor "pointer"
 	  :width 25
-	  :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/easyeffects.sh"
+	  :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/easyeffects.sh"
 	  (label
 	    :text {display}
 		:justify "center"
@@ -102,7 +102,7 @@
 	  :class "volumeDown"
 	  :cursor "pointer"
 	  :width 25
-	  :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/volume/volumedown.sh"
+	  :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/volume/volumedown.sh"
 			(image
 		  :class "volumeDownButton"
 		  :image-width 18
@@ -117,7 +117,7 @@
 	  :class "volumeMute"
 	  :cursor "pointer"
 	  :width 25
-	  :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/volume/volumemute.sh ; /home/nick/dotfiles/home-manager/modules/eww/config/scripts/volume/volumemuteon.sh"
+	  :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/volume/volumemute.sh ; /home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/volume/volumemuteon.sh"
 			(image
 		  :class "volumeMuteButton"
 		  :image-width 19
@@ -131,12 +131,12 @@
 	(eventbox
 	  :class "bluetooth"
 	  :cursor "pointer"
-	  :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/bluetooth.sh"
+	  :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/bluetooth.sh"
 			(image
 		  :class "bluetoothButton"
 		  :image-width 20
 		  :image-height 20
-		  :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/bluetooth.png"
+		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/bluetooth.png"
 		)
 	)
   )
