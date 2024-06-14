@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       general = {
-        lock_cmd = "pidof hyprlock || hyprlock";       # avoid starting multiple hyprlock instances.
+        lock_cmd = "pidof swaylock || swaylock";       # avoid starting multiple hyprlock instances.
         before_sleep_cmd = "loginctl lock-session";    # lock before suspend.
         after_sleep_cmd = "hyprctl dispath dpms on";  # to avoid having to press a key twice to run on the display.
       };
@@ -15,11 +15,11 @@
           on-resume = "brightnessctl -r";            # monitor backlight restor.
         }
 # turn off keyboard backlight, uncomment this section if have keyboard backlight.
-    #   {
-    #     timeout = 150;                                           # 2.5 min
-    #     on-timeout = "brightnessctl -sd rgb:kbd_backlight set 0"; # turn off keyboard backlight.
-    #     on-resume = "brightnessctl -rd rgb:kbd_backlight";        # turn on keyboard backlight.
-    #   }
+        {
+          timeout = 150;                                           # 2.5 min
+          on-timeout = "brightnessctl -sd rgb:kbd_backlight set 0"; # turn off keyboard backlight.
+          on-resume = "brightnessctl -rd rgb:kbd_backlight";        # turn on keyboard backlight.
+        }
         {
           timeout = 600;                        # 10 min.
           on-timeout = "loginctl lock-session";  # lock screen when timeout has passed.
