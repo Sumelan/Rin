@@ -8,10 +8,11 @@
     ./wms/hypridle.nix
     ./wms/hyprlock.nix
     ./wms/hyprshade/hyprshade.nix
-    ./wms/rofi/rofi.nix
     ./wms/swappy.nix
     ./wms/swaync/swaync.nix
-    ./wms/waybar/waybar.nix
-    ./wms/wlogout/wlogout.nix
+    ./wms/eww/eww.nix
+    #./wms/rofi/rofi.nix
+    #./wms/waybar/waybar.nix
+    #./wms/wlogout/wlogout.nix
   ];
 }
