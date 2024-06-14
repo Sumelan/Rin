@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-steam
+/run/current-system/sw/bin/steam
