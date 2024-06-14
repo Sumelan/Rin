@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-bitwarden
+/run/current-system/sw/bin/bitwarden
