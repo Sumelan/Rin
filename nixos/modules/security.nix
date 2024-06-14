@@ -1,5 +1,6 @@
 {
- security = {
+security = {
+    pam.services.swaylock = {};  #REQUIRE if use swaylock.
     rtkit.enable = true;
     polkit.enable = true;
     polkit.extraConfig = ''
