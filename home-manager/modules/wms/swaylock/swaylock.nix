@@ -2,7 +2,7 @@
   programs.swaylock = {
     enable = true;
     settings = {
-      image = "./lockscreen/lockscreen.png";
+      image = "home/bathys/.config/swaylock/lockscreen/lockscreen.png";
       indicator-idle-visible = false;
       indicator-radius = 100;
       indicator-thickness = 20;
