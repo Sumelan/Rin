@@ -4,7 +4,7 @@
 
 ;; ***** User variables **********************************************
 ;; Profile
-(defvar PF_FACE "images/gab.png")
+(defvar PF_FACE "images/miu_kawakami.png")
 (defpoll PF_NAME :interval "1h" "echo $USER")
 
 ; ;; Display size
