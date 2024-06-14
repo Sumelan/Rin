@@ -57,7 +57,7 @@
       firefox
       gimp
       gitlab
-      gnome-system-monitor
+      gnome.gnome-system-monitor
       hypridle
       hyprlock
       hyprpicker
