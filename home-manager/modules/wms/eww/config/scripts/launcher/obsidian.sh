@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-/home/nick/.nix-profile/bin/obsidian
+/home/banthys/.nix-profile/bin/obsidian
