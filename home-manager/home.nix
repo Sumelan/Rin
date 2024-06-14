@@ -6,7 +6,6 @@
     ./zsh.nix
     inputs.nix-colors.homeManagerModules.default
     inputs.nixvim.homeManagerModules.nixvim
-    inputs.hyprland.homeManagerModules.default
     ./modules/bundle.nix
   ];
 
