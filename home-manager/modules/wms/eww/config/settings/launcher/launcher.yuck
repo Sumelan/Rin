@@ -11,7 +11,7 @@
 		  :class "menu"
 		  :image-width 35
 		  :image-height 35
-		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/apps.png"
+		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/menu.png"
 		)
 	  )
 	  (revealer
