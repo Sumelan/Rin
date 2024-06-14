@@ -1,51 +1,178 @@
-.workspaceButton1 {
+.launcher {
+    background-color: transparent;
+    margin: 5px 5px 5px 5px;
     border-radius: 50px;
 }
 
-.workspaceButton1:hover {
-    background-color: rgb(108, 112, 134, 0.2);
+.launcherEventClassClosed {
+	background-color: transparent;
+    border-radius: 20px;
+    transition: all 400ms;
 }
 
-.workspaceIcon1 {
-	opacity: 0.5;
-}
-
-.workspaceIcon1:hover {
-	opacity: 0.75;
-}
-
-.workspaceButton2 {
+.launcherEventClassClosed:hover {
+    background-color: rgba(108, 112, 134, 0.2);
     border-radius: 50px;
+    transition: all 400ms;
 }
 
-.workspaceButton2:hover {
+.launcherEventboxOpen {
+    background-color: rgb(108, 112, 134, 0.2);
+    border-radius: 10px 0px 0px 10px;
+    transition: all 400ms;
+}
+
+.launcherEventClassOpen:hover {
+    border-radius: 0px 0px 0px 10px;
+    transition: all 400ms;
+}
+
+.menu {
+    padding: 5px 5px 5px 5px;
+    opacity: 0.75;
+}
+
+.bitwarden {
+    border-radius: 50px 50px 5px 5px;
+}
+
+.bitwarden:hover {
     background-color: rgb(108, 112, 134, 0.2);
 }
 
-.workspaceIcon2 {
-	opacity: 0.5;
+.resolve {
+    border-radius: 5px 5px 5px 5px;
 }
 
-.workspaceButton3 {
-    border-radius: 50px;
-}
-
-.workspaceButton3:hover {
+.resolve:hover {
     background-color: rgb(108, 112, 134, 0.2);
 }
 
-.workspaceIcon3 {
-	opacity: 0.5;
+.krita {
+    border-radius: 5px 5px 5px 5px;
 }
 
-.workspaceButton4 {
-    border-radius: 50px;
-}
-
-.workspaceButton4:hover {
+.krita:hover {
     background-color: rgb(108, 112, 134, 0.2);
 }
 
-.workspaceIcon4 {
-	opacity: 0.5;
+.libre {
+    border-radius: 5px 5px 5px 5px;
+}
+
+.libre:hover {
+    background-color: rgb(108, 112, 134, 0.2);
+}
+
+.monitor {
+    border-radius: 5px 5px 5px 5px;
+}
+
+.monitor:hover {
+    background-color: rgb(108, 112, 134, 0.2);
+}
+
+.obs {
+    border-radius: 5px 5px 5px 5px;
+}
+
+.obs:hover {
+    background-color: rgb(108, 112, 134, 0.2);
+}
+
+.obsidian {
+    border-radius: 5px 5px 5px 5px;
+}
+
+.obsidian:hover {
+    background-color: rgb(108, 112, 134, 0.2);
+}
+
+.qbittorrent {
+    border-radius: 5px 5px 5px 5px;
+}
+
+.qbittorrent:hover {
+    background-color: rgb(108, 112, 134, 0.2);
+}
+
+.vscode {
+    border-radius: 5px 5px 50px 50px;
+}
+
+.vscode:hover {
+    background-color: rgb(108, 112, 134, 0.2);
+}
+
+.discord {
+    border-radius: 5px 5px 5px 5px;
+}
+
+.discord:hover {
+    background-color: rgb(108, 112, 134, 0.2);
+}
+
+.firefox {
+    border-radius: 5px 5px 5px 5px;
+}
+
+.firefox:hover {
+    background-color: rgb(108, 112, 134, 0.2);
+}
+
+.lutris {
+    border-radius: 5px 5px 5px 5px;
+}
+
+.lutris:hover {
+    background-color: rgb(108, 112, 134, 0.2);
+}
+
+.matrix {
+    border-radius: 5px 5px 5px 5px;
+}
+
+.matrix:hover {
+    background-color: rgb(108, 112, 134, 0.2);
+}
+
+.signal {
+    border-radius: 5px 5px 5px 5px;
+}
+
+.signal:hover {
+    background-color: rgb(108, 112, 134, 0.2);
+}
+
+.spotify {
+    border-radius: 5px 5px 5px 5px;
+}
+
+.spotify:hover {
+    background-color: rgb(108, 112, 134, 0.2);
+}
+
+.steam {
+    border-radius: 5px 5px 5px 5px;
+}
+
+.steam:hover {
+    background-color: rgb(108, 112, 134, 0.2);
+}
+
+.stremio {
+    border-radius: 5px 5px 5px 5px;
+}
+
+.stremio:hover {
+    background-color: rgb(108, 112, 134, 0.2);
+}
+
+.vlc {
+    border-radius: 5px 50px 50px 5px;
+    padding: 5px 5px 5px 5px;
+}
+
+.vlc:hover {
+    background-color: rgb(108, 112, 134, 0.2);
 }
