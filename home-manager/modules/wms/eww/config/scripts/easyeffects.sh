@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-easyeffects
+/run/current-system/sw/bin/easyeffects
