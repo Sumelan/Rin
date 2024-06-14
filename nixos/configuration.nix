@@ -3,6 +3,7 @@
 {
   imports = [
       ./hardware-configuration.nix
+      ./desktop/amd-drivers.nix
       ./packages/packages.nix
       ./japanese-input.nix
       ./fonts/fonts.nix
@@ -43,13 +44,6 @@
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 7d";
-  };
-
- # OpenGL
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
   };
 
   # Enableing flakes and optimize store.
