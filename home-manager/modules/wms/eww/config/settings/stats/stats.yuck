@@ -1,8 +1,8 @@
 (defpoll time :interval "1s" `date +"%l:%M"`)
 (defpoll date :interval "1s" `date +\"%a, %b %e, %y"`)
-(deflisten timeMin :interval "1s" "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/minpolling.sh")
-(deflisten timeHour :interval "1s" "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/hourpolling.sh")
-(deflisten timeSec :interval "1s" "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/secpolling.sh")
+(deflisten timeMin :interval "1s" "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/minpolling.sh")
+(deflisten timeHour :interval "1s" "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/hourpolling.sh")
+(deflisten timeSec :interval "1s" "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/secpolling.sh")
 
 (defwidget systemstats []
 	(box
@@ -40,7 +40,7 @@
         :class "nix"
         :image-width 17
         :image-height 17
-        :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/ssd.png"
+        :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/ssd.png"
       )
     )
       )
@@ -66,7 +66,7 @@
         :class "nix"
         :image-width 17
         :image-height 17
-        :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/net.png"
+        :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/net.png"
       )
       )
     )
@@ -92,7 +92,7 @@
 			:class "nix"
 			:image-width 19
 			:image-height 19
-			:path "/home/nick/dotfiles/home-manager/modules/eww/config/images/ram.png"
+			:path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/ram.png"
 		)
 	)
 	  )
@@ -118,7 +118,7 @@
         :class "nix"
         :image-width 17
         :image-height 17
-        :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/cpu.png"
+        :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/cpu.png"
       )
     )
       )
@@ -141,7 +141,7 @@
 		      :value {timeMin}
 	      )
         (eventbox
-          :onclick "xdg-open https://calendar.proton.me/u/1"
+          :onclick "xdg-open https://calendar.proton.me/u/2/"
         )
     (box
       :class "clock"
