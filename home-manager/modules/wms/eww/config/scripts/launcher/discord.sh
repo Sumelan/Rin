@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-vesktop
+/run/current-system/sw/bin/vesktop
