@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-/home/nick/.nix-profile/bin/code
+/home/bathys/.nix-profile/bin/code
