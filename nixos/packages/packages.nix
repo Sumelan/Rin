@@ -32,6 +32,7 @@
       slurp
       swappy
       swaynotificationcenter
+      swaylock
       swww
       unrar
       unzip
@@ -51,13 +52,16 @@
       bitwarden
       bottles
       cpufrequtils
+      element-desktop
       firefox
       gimp
       gitlab
+      gnome-system-monitor
       hypridle
       hyprlock
       hyprpicker
       hyprshade
+      kdenlive
       krita
       lutris
       neovide
@@ -65,6 +69,7 @@
       obsidian
       protonup-qt
       qbittorrent
+      signal-desktop
       steam
       soundconverter
       spicetify-cli
