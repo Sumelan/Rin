@@ -2,7 +2,7 @@
 
 trap "exit" SIGTERM SIGINT
 
-iconBasePath="/home/bathys/Rin/home-manager/modules/eww/config/images"
+iconBasePath="/home/bathys/Rin/home-manager/modules/wms/eww/config/images"
 
 focusedIcon="ws-focus.png"
 nonEmptyIcon="ws-active.png"
