@@ -43,10 +43,12 @@
     # programs
       anki-bin
       audiobookshelf
+      bitwarden
       bottles
       cpufrequtils
       firefox
       gimp
+      gitlab
       hypridle
       hyprlock
       hyprpicker
@@ -55,8 +57,10 @@
       lutris
       neovide
       obs-studio
-      prismlauncher
+      obsidian
       protonup-qt
+      qbittorrent
+      steam
       soundconverter
       spicetify-cli
       spotify
@@ -64,6 +68,7 @@
       vencord
       vesktop
       vlc
+      vscode
       udiskie
       wine
       winetricks
