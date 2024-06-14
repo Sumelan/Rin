@@ -52,12 +52,12 @@
     :class "net"
   (box
     :class "netBox"
-    :tooltip "${round(EWW_NET.enp14s0.NET_DOWN/1048576, 1)}MB"
+    :tooltip "${round(EWW_NET.eno1.NET_DOWN/1048576, 1)}MB"
     :spacing -35
     (circular-progress    
       :class "netPie"
       :thickness 5
-      :value {(EWW_NET.enp14s0.NET_DOWN)/1000}
+      :value {(EWW_NET.eno1.NET_DOWN)/1000}
       :start-at 75
     )
     (box
