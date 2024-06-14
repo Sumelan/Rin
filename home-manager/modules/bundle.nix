@@ -12,9 +12,10 @@
     ./wms/eww/eww.nix
     ./wms/hyprland.nix
     ./wms/hypridle.nix
-    ./wms/hyprlock.nix
-    ./wms/hyprshade/hyprshade.nix
     ./wms/swappy.nix
+    ./wms/swaylock.nix
+    #./wms/hyprlock.nix
+    #./wms/hyprshade/hyprshade.nix
     #./wms/swaync/swaync.nix
     #./wms/rofi/rofi.nix
     #./wms/waybar/waybar.nix
