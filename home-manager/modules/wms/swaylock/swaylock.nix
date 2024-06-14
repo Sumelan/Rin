@@ -45,7 +45,7 @@
 
   # Place Files Inside Home Directory
   home.file.".config/swaylock/lockscreen" = {
-    source = ./lockscreen.png;
+    source = ./lockscreen;
     recursive = true;
   };
 }
