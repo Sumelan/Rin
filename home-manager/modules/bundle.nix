@@ -3,6 +3,7 @@
     ./git.nix
     ./gtk-qt.nix
     ./kitty.nix
+    ./starship.nix
     ./spicetify.nix
     ./yazi.nix
     ./zsh.nix
