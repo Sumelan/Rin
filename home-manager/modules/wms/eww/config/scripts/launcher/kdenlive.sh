@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-kdenlive
+/run/current-system/sw/bin/kdenlive
