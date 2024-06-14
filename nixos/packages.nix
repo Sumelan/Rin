@@ -13,6 +13,7 @@
     # de stuff
       brightnessctl
       cliphist
+      dunst
       eww
       feh
       gparted
