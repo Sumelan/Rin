@@ -17,5 +17,6 @@
     # Rin only 
     ./audiobookshelf.nix
     ./nextcloud.nix
+    ./opentabletdriver.nix
   ];
 }
