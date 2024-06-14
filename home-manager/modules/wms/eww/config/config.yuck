@@ -19,7 +19,7 @@
   "scripts/display.sh --get_dp_height")
 
 ;; Distro logo
-(defvar DISTRO_LOGO "images/endeavouros-icon.png")
+(defvar DISTRO_LOGO "images/nixos-icon.png")
 
 ;; Default apps name
 (defvar _TERMINAL "kitty")
