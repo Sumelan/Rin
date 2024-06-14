@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-krita
+/run/current-system/sw/bin/krita
