@@ -4,6 +4,7 @@
     ./gtk-qt.nix
     ./kitty.nix
     ./spicetify.nix
+    ./zsh.nix
     ./wms/hyprland.nix
     ./wms/hypridle.nix
     ./wms/hyprlock.nix
