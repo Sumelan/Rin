@@ -4,7 +4,6 @@
   imports = [
       ./hardware-configuration.nix
       ./packages.nix
-      ./packages-option.nix
       ./japanese-input.nix
       ./fonts/fonts.nix
       ./modules/bundle.nix
