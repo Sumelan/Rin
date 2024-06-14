@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-/home/nick/.nix-profile/bin/signal-desktop
+/home/bathys/.nix-profile/bin/signal-desktop
