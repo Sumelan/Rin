@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-code
+/run/current-system/sw/bin/code
