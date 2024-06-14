@@ -99,7 +99,7 @@
 		  :class "monitorButton"
 		  :image-width 20
 		  :image-height 20
-		  :path "/home/bathys/home-manager/modules/wms/eww/config/images/monitor.png"
+		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/monitor.png"
 		)
 	)
   )
