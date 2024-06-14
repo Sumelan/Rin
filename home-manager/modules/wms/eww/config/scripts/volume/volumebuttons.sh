@@ -2,7 +2,7 @@
 
 trap "echo 'Script terminated'; exit" SIGTERM SIGINT
 
-iconBasePath="/home/bathys/Rin/home-manager/modules/eww/config/images"
+iconBasePath="/home/bathys/Rin/home-manager/modules/wms/eww/config/images"
 
 volumeDownIconNormal="minus.png"
 volumeDownIconMin="minusmax.png"
