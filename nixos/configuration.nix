@@ -3,7 +3,7 @@
 {
   imports = [
       ./hardware-configuration.nix
-      ./packages.nix
+      ./packages/packages.nix
       ./japanese-input.nix
       ./fonts/fonts.nix
       ./modules/bundle.nix
