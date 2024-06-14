@@ -254,7 +254,7 @@
 	  :cursor "pointer"
 	  :width 25
 	  :tooltip "spotify"
-	  :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/launcher/spotify.sh"
+	  :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/launcher/spotify.sh"
 			(image
 		  :class "spotifyButton"
 		  :image-width 20
