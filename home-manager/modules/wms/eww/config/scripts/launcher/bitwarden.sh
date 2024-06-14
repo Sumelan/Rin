@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-/home/nick/.nix-profile/bin/bitwarden
+/home/bathys/.nix-profile/bin/bitwarden
