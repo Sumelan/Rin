@@ -8,13 +8,14 @@
     ./vscode.nix
     ./yazi.nix
     ./zsh.nix
+    ./wms/dunst/dunst.nix
+    ./wms/eww/eww.nix
     ./wms/hyprland.nix
     ./wms/hypridle.nix
     ./wms/hyprlock.nix
     ./wms/hyprshade/hyprshade.nix
     ./wms/swappy.nix
-    ./wms/swaync/swaync.nix
-    ./wms/eww/eww.nix
+    #./wms/swaync/swaync.nix
     #./wms/rofi/rofi.nix
     #./wms/waybar/waybar.nix
     #./wms/wlogout/wlogout.nix
