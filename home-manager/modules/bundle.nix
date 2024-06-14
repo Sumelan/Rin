@@ -5,6 +5,7 @@
     ./kitty.nix
     ./starship.nix
     ./spicetify.nix
+    ./vscode.nix
     ./yazi.nix
     ./zsh.nix
     ./wms/hyprland.nix
