@@ -6,12 +6,12 @@
 	  (eventbox
 		:class launcherEventClass
 		:cursor "pointer"
-		:onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/launcher.sh"
+		:onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/launcher.sh"
 		(image
 		  :class "menu"
 		  :image-width 35
 		  :image-height 35
-		  :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/apps.png"
+		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/apps.png"
 		)
 	  )
 	  (revealer
@@ -47,12 +47,12 @@
 	  :cursor "pointer"
 	  :width 25
 	  :tooltip "bitwarden"
-	  :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/launcher/bitwarden.sh"
+	  :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/launcher/bitwarden.sh"
 			(image
 		  :class "bitwardenButton"
 		  :image-width 23
 		  :image-height 23
-		  :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/bitwarden.png"
+		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/bitwarden.png"
 		)
 	)
   )
@@ -63,12 +63,12 @@
 	  :cursor "pointer"
 	  :width 25
 	  :tooltip "resolve"
-	  :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/launcher/kdenlive.sh"
+	  :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/launcher/kdenlive.sh"
 			(image
 		  :class "resolveButton"
 		  :image-width 20
 		  :image-height 20
-		  :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/resolve.png"
+		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/resolve.png"
 		)
 	)
   )
@@ -79,12 +79,12 @@
 	  :cursor "pointer"
 	  :tooltip "krita"
 	  :width 25
-	  :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/launcher/krita.sh"
+	  :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/launcher/krita.sh"
 			(image
 		  :class "kritaButton"
 		  :image-width 25
 		  :image-height 25
-		  :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/krita.png"
+		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/krita.png"
 		)
 	)
   )
@@ -94,12 +94,12 @@
 	  :class "monitor"
 	  :cursor "pointer"
 	  :width 25
-	  :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/launcher/monitor.sh"
+	  :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/launcher/monitor.sh"
 			(image
 		  :class "monitorButton"
 		  :image-width 20
 		  :image-height 20
-		  :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/monitor.png"
+		  :path "/home/bathys/wms/home-manager/modules/wms/eww/config/images/monitor.png"
 		)
 	)
   )
@@ -110,12 +110,12 @@
 	  :cursor "pointer"
 	  :width 25
 	  :tooltip "obs"
-	  :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/launcher/obs.sh"
+	  :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/launcher/obs.sh"
 			(image
 		  :class "obsButton"
 		  :image-width 20
 		  :image-height 20
-		  :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/obs.png"
+		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/obs.png"
 		)
 	)
   )
@@ -126,12 +126,12 @@
 	  :cursor "pointer"
 	  :width 25
 	  :tooltip "obsidian"
-	  :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/launcher/obsidian.sh"
+	  :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/launcher/obsidian.sh"
 			(image
 		  :class "obsidianButton"
 		  :image-width 20
 		  :image-height 20
-		  :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/obsidian.png"
+		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/obsidian.png"
 		)
 	)
   )
@@ -142,12 +142,12 @@
 	  :cursor "pointer"
 	  :width 25
 	  :tooltip "vscode"
-	  :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/launcher/vscode.sh"
+	  :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/launcher/vscode.sh"
 			(image
 		  :class "vscodeButton"
 		  :image-width 20
 		  :image-height 20
-		  :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/vscode.png"
+		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/vscode.png"
 		)
 	)
   )
@@ -158,12 +158,12 @@
 	  :cursor "pointer"
 	  :width 25
 	  :tooltip "discord"
-	  :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/launcher/discord.sh"
+	  :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/launcher/discord.sh"
 			(image
 		  :class "discordButton"
 		  :image-width 20
 		  :image-height 20
-		  :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/discord.png"
+		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/discord.png"
 		)
 	)
   )
@@ -174,12 +174,12 @@
 	  :cursor "pointer"
 	  :width 25
 	  :tooltip "matrix"
-	  :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/launcher/element.sh"
+	  :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/launcher/element.sh"
 			(image
 		  :class "matrixButton"
 		  :image-width 20
 		  :image-height 20
-		  :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/matrix.png"
+		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/matrix.png"
 		)
 	)
   )
@@ -190,12 +190,12 @@
 	  :cursor "pointer"
 	  :width 25
 	  :tooltip "firefox"
-	  :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/launcher/firefox.sh"
+	  :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/launcher/firefox.sh"
 			(image
 		  :class "firefoxButton"
 		  :image-width 20
 		  :image-height 20
-		  :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/firefox.png"
+		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/firefox.png"
 		)
 	)
   )
@@ -206,12 +206,12 @@
 	  :cursor "pointer"
 	  :width 25
 	  :tooltip "lutris"
-	  :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/launcher/lutris.sh"
+	  :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/launcher/lutris.sh"
 			(image
 		  :class "lutrisButton"
 		  :image-width 20
 		  :image-height 20
-		  :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/lutris.png"
+		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/lutris.png"
 		)
 	)
   )
@@ -222,12 +222,12 @@
 	  :cursor "pointer"
 	  :width 25
 	  :tooltip "signal"
-	  :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/launcher/signal.sh"
+	  :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/launcher/signal.sh"
 			(image
 		  :class "signalButton"
 		  :image-width 20
 		  :image-height 20
-		  :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/signal.png"
+		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/signal.png"
 		)
 	)
   )
@@ -238,12 +238,12 @@
 	  :cursor "pointer"
 	  :width 25
 	  :tooltip "steam"
-	  :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/launcher/steam.sh"
+	  :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/launcher/steam.sh"
 			(image
 		  :class "steamButton"
 		  :image-width 20
 		  :image-height 20
-		  :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/steam.png"
+		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/steam.png"
 		)
 	)
   )
@@ -259,7 +259,7 @@
 		  :class "spotifyButton"
 		  :image-width 20
 		  :image-height 20
-		  :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/spotify.png"
+		  :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/spotify.png"
 		)
 	)
   )
