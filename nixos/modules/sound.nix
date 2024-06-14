@@ -16,8 +16,4 @@
       };
     };
   };
-
-  services.easyeffects = {
-    enable = true;
-  };
 }
