@@ -20,8 +20,7 @@ in
 
       #monitors
       monitor = HDMI-A-1, 1920x1080@60, 0x0, 1
-      monitor = HDMI-A-2, 1920x1080@60, 1920x0, 1
-      #monitor = DP-1, 1920x1080@60, 1920x0, 1
+      monitor = DP-1, 1920x1080@60, 1920x0, 1
 
       #env variables
       env = XCURSOR_SIZE,24
@@ -51,11 +50,10 @@ in
       #float window rules
       windowrulev2 = float, class:^([Rr]ofi)$
       #workspaces window rules
-      windowrule = workspace 10, vesktop
       windowrule = workspace 1, firefox
       windowrule = workspace special:magic, Spotify
       #workspace rules
-      workspace=10, monitor:HDMI-A-2, default:true
+      workspace=10, monitor:DP-1, default:true
 
       #keybindings
       bind = $mainMod, RETURN, exec, $terminal
