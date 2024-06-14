@@ -14,6 +14,7 @@
     in
       with pkgs; [
     # de stuff
+      alacritty
       brightnessctl
       cliphist
       dunst
@@ -25,6 +26,7 @@
       kitty
       libnotify
       lm_sensors
+      maim
       mpv
       networkmanagerapplet
       rofi-wayland
@@ -42,7 +44,7 @@
       wpgtk
       yad
     # audio
-      alsa-utils
+      pamixer
       easyeffects
       pavucontrol
       wireplumber
