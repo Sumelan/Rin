@@ -5,6 +5,7 @@
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
+    source-code-pro
     fira-code
     jetbrains-mono
     font-awesome
