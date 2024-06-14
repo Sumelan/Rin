@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-spotify
+/run/current-system/sw/bin/spotify
