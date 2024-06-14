@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-lutris
+/run/current-system/sw/bin/lutris
