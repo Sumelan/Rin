@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-obsidian
+/run/current-system/sw/bin/obsidian
