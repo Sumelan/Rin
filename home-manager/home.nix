@@ -18,9 +18,6 @@
 
   programs = {
     home-manager.enable = true;
-    starship = {
-      enable = true;
-    };
   };
 
 # Create XDG Dirs
