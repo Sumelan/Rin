@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-signal-desktop
+/run/current-system/sw/bin/signal-desktop
