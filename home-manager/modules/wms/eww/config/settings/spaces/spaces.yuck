@@ -1,7 +1,7 @@
-(defvar workspaceIcon1 "/home/nick/dotfiles/home-manager/modules/eww/config/images/ws-inactive.png")
-(defvar workspaceIcon2 "/home/nick/dotfiles/home-manager/modules/eww/config/images/ws-inactive.png")
-(defvar workspaceIcon3 "/home/nick/dotfiles/home-manager/modules/eww/config/images/ws-inactive.png")
-(defvar workspaceIcon4 "/home/nick/dotfiles/home-manager/modules/eww/config/images/ws-inactive.png")
+(defvar workspaceIcon1 "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/ws-inactive.png")
+(defvar workspaceIcon2 "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/ws-inactive.png")
+(defvar workspaceIcon3 "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/ws-inactive.png")
+(defvar workspaceIcon4 "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/ws-inactive.png")
 
 (defwidget workspaces []
 	(box
