@@ -27,7 +27,6 @@
       lm_sensors
       mpv
       networkmanagerapplet
-      opentabletdriver
       rofi-wayland
       polkit_gnome
       slurp
