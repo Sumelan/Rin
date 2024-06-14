@@ -2,7 +2,7 @@
 {
   imports = [
       ./options.nix
-  ];  
+  ];
 
   nixpkgs.config = {
     allowUnfree = true;
@@ -41,8 +41,8 @@
       wpgtk
       yad
     # audio
+      alsa-utils
       easyeffects
-      pamixer
       pavucontrol
       wireplumber
     # programs
