@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-obs
+/run/current-system/sw/bin/obs
