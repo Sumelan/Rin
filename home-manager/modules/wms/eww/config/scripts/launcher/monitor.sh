@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-/home/nick/.nix-profile/bin/gnome-system-monitor
+/home/bathys/.nix-profile/bin/gnome-system-monitor
