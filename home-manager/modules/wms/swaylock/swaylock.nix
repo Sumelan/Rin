@@ -2,7 +2,7 @@
   programs.swaylock = {
     enable = true;
     settings = {
-      image = "./lockscreen.png";
+      image = "./lockscreen/lockscreen.png";
       indicator-idle-visible = false;
       indicator-radius = 100;
       indicator-thickness = 20;
@@ -41,5 +41,11 @@
       text-ver-color = "#cdd6f4";
       text-wrong-color = "#cdd6f4";
     };
+  };
+
+  # Place Files Inside Home Directory
+  home.file.".config/swaylock/lockscreen" = {
+    source = ./lockscreen.png;
+    recursive = true;
   };
 }
