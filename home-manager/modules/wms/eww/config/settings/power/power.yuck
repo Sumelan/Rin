@@ -6,12 +6,12 @@
     (eventbox
       :class powermenuEventboxClass
       :cursor "pointer"
-      :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/powermenu.sh"
+      :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/powermenu.sh"
       (image
         :class "nix"
         :image-width 31
         :image-height 31
-        :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/nix2.png"
+        :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/nix2.png"
       )
     )
     (revealer
@@ -36,12 +36,12 @@
     :class "lock"
     :cursor "pointer"
     :height 30
-    :onclick "/home/nick/dotfiles/home-manager/modules/eww/config/scripts/swaylock.sh"
+    :onclick "/home/bathys/Rin/home-manager/modules/wms/eww/config/scripts/swaylock.sh"
           (image
         :class "lockButton"
         :image-width 20
         :image-height 20
-        :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/lock2.png"
+        :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/lock2.png"
       )
   )
 )
@@ -56,7 +56,7 @@
         :class "suspendButton"
         :image-width 20
         :image-height 20
-        :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/moon2.png"
+        :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/moon2.png"
       )
   )
 )
@@ -71,7 +71,7 @@
         :class "rebootButton"
         :image-width 20
         :image-height 20
-        :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/restart2.png"
+        :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/restart2.png"
       )
   )
 )
@@ -86,7 +86,7 @@
         :class "shutdownButton"
         :image-width 20
         :image-height 20
-        :path "/home/nick/dotfiles/home-manager/modules/eww/config/images/power-button2.png"
+        :path "/home/bathys/Rin/home-manager/modules/wms/eww/config/images/power-button2.png"
       )
   )
 )
