@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-gnome-system-monitor
+/run/current-system/sw/bin/gnome-system-monitor
