@@ -52,11 +52,8 @@
       bitwarden
       bottles
       cpufrequtils
-      element-desktop
       firefox
       gimp
-      gitlab
-      gnome.gnome-system-monitor
       hypridle
       hyprlock
       hyprpicker
@@ -68,8 +65,6 @@
       obs-studio
       obsidian
       protonup-qt
-      qbittorrent
-      signal-desktop
       steam
       soundconverter
       spicetify-cli
