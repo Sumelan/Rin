@@ -1,4 +1,6 @@
-#!/bin/bash
+#! /usr/bin/env nix-shell
+#! nix-shell -i bash -p bash
+
 
 ewwPath="$HOME/.config/eww"
 v0="JSON_DOCK_CLIENT_LIST"
