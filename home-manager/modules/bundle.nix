@@ -9,10 +9,10 @@
     ./yazi.nix
     ./zsh.nix
     ./wms/hyprland.nix
-    ./wms/hypridle.nix
-    ./wms/swappy.nix
     ./wms/eww/eww.nix
-    ./wms/dunst/dunst.nix
+    ./wms/hypridle.nix
+    #./wms/swappy.nix
+    #./wms/dunst/dunst.nix
     ./wms/swaylock/swaylock.nix
     #./wms/hyprlock.nix
     #./wms/hyprshade/hyprshade.nix
