@@ -16,6 +16,7 @@
     # de stuff
       alacritty
       brightnessctl
+      cava
       cliphist
       dunst
       eww
