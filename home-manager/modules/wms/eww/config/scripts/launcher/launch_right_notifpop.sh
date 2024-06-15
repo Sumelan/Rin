@@ -1,4 +1,5 @@
-#!/bin/bash
+#! /usr/bin/env nix-shell
+#! nix-shell -i bash -p bash
 
 ewwPath="$HOME/.config/eww"
 tmpPath="$HOME/.cache/eww/right_notifpop"
