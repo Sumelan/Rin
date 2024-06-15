@@ -1,46 +1,35 @@
 #!/bin/bash
 
-check_occupied() {
-    wmctrl -l | awk '{print $2}' | uniq | while read -r op; do
-        if [ "$op" == "$1" ]; then
-            echo "true"
-            return
-        fi
-    done
-}
+# wsNumber at current desktop.
+currentDesktop="$(echo -e "$(hyprctl -j monitors)" | jq -r '.[0] | "\(.activeWorkspace.id)"')"
+# all count of workspaces.
+countWorkspace="$(echo -e "$(hyprctl -j workspaces)" | jq 'map(.id) | max')"
+# wsNumber that is not empty.
+wsNumber="$(echo -e "$(hyprctl -j workspaces)" | jq -r '.[] | "\(.id)"')"
+# command for eww.
+COMMAND="(box	:class \"works\"	:orientation \"h\" :spacing 5 :space-evenly \"false\""
 
 # Main
-xprop -spy -root _NET_CURRENT_DESKTOP | while read -r; do
-    wsNumber=$(wmctrl -d | awk '{print $1}' | tail -c 2)
-
-    wmctrl -d | awk '{print $1 " " $2 " " $9}' | while read -r number status name; do
-        statusClass="ws_inactive"
-        # icon="󰧞"
-        icon="󰣏"
-
-        if [ "$(check_occupied $number)" == "true" ]; then
-            statusClass="ws_occupied"
-            # icon="󰊠"
-            # icon=""
-            icon="󰮿"
-        fi
-
-        if [ "$status" == "*" ]; then # "*" mean active
-            statusClass="ws_active"
-            # icon="󰮯"
-            # icon=""
-            icon=""
-        fi
-
-        buffered+=$' '
-        buffered+="(label :class '$statusClass' :text '$icon')"
-
-        if [ "$number" == "$wsNumber" ]; then
-            echo "(box :space-evenly false :spacing 20 $buffered)"
-        fi
-    done
+for WS in $(seq $countWorkspace)
+do
+    if [[ ! "${wsNumber[*]}" =~ "${WS}" ]]; then
+         statusClass="ws_inactive"
+         # icon="󰧞"
+         icon="󰣏"
+        elif [ $currentDesktop -eq ${WS} ]; then
+        statusClass="ws_active"
+        # icon="󰮯"
+         # icon=""
+         icon=""
+    else
+        statusClass="ws_occupied"
+        # icon="󰊠"
+        # icon=""
+        icon="󰮿"
+    fi
+    buffered=$' '
+    buffered="(label :class '$statusClass' :text '$icon')"
+    echo "(box :space-evenly false :spacing 20 $buffered)"
 done
-
-
 
 
