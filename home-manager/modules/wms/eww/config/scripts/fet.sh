@@ -24,7 +24,7 @@ fet_model() {
 }
 
 fet_wmname() {
-    wmctrl -m | grep "Name:" | awk '{print $2}'
+    echo $XDG_CURRENT_DESKTOP
 }
 
 # Main
