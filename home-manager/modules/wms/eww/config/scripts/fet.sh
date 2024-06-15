@@ -1,8 +1,5 @@
-#!/bin/bash
-
-######################################################################
-## You need to install hostnamectl, wmctrl
-######################################################################
+#! /usr/bin/env nix-shell
+#! nix-shell -i bash -p bash
 
 fet_all() {
     fet_hostname
