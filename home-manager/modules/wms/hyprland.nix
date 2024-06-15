@@ -31,9 +31,8 @@ in
       exec-once = dbus-update-activation-environment --systemd --all
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
       exec-once = swww-daemon & swww img ~/Pictures/Wallpapers/kobato.png
-      exec-once = cd /home/bathys/Rin/home-manager/modules/wms/eww/config/scripts && ./master.sh
-      exec-once = cd /home/bathys/Rin/home-manager/modules/wms/dunst && ./notifications.sh
-      exec-once = pkill dunst && Sleep .5 && dunst
+      exec-once = eww daemon
+      #exec-once = pkill dunst && Sleep .5 && dunst
       exec-once = nm-applet
       exec-once = wl-paste --type text --watch cliphist store & wl-paste --type image --watch cliphist store & wl-paste --watch cliphist store
       exec-once = systemd
