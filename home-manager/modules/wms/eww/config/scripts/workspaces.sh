@@ -27,8 +27,8 @@ do
         # icon=""
         icon="󰮿"
     fi
-    buffered=$' '
-    buffered="(label :class '$statusClass' :text '$icon')"
+    buffered+=$' '
+    buffered+="(label :class '$statusClass' :text '$icon')"
     echo "(box :space-evenly false :spacing 20 $buffered)"
 done
 
