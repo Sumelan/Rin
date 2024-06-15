@@ -1,4 +1,6 @@
-#!/bin/bash
+#! /usr/bin/env nix-shell
+#! nix-shell -i bash -p bash
+
 
 ######################################################################
 ## You need to install wmctrl
@@ -6,7 +8,7 @@
 
 killWin() {
     if [ "$1" != "" ]; then
-        wmctrl -ic $(echo $1 | sed -e s/\.jpg//g)
+        hyprctl dispatch closewindow $(echo $1 | sed -e s/\.jpg//g)
     fi
 }
 
