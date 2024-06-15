@@ -10,7 +10,8 @@ in pkgs.mkShell {
       python-pkgs.pandas
       python-pkgs.requests
       python-pkgs.numpy
-      python-pkgs.gistyc
+      python-pkgs.pygobject3
+      python-pkgs.gst-python
     ]))
   ];
 }
