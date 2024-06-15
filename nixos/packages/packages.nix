@@ -49,7 +49,6 @@
       pavucontrol
       wireplumber
     # programs
-      acpi
       anki-bin
       audiobookshelf
       bitwarden
@@ -81,6 +80,7 @@
       wine
       winetricks
     # CLI programs
+      acpi
       atuin
       bat
       btop
