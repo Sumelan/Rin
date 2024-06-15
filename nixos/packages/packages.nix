@@ -128,6 +128,7 @@
       nodejs
       opencv
       pkg-config
+      python3
       python312Packages.numpy
       qt6.qtwayland
       v4l-utils
