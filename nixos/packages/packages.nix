@@ -49,6 +49,7 @@
       pavucontrol
       wireplumber
     # programs
+      acpi
       anki-bin
       audiobookshelf
       bitwarden
