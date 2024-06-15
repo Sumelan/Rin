@@ -1,4 +1,5 @@
-#!/bin/bash
+#! /usr/bin/env nix-shell
+#! nix-shell -i bash -p bash
 
 # wsNumber at current desktop.
 currentDesktop="$(echo -e "$(hyprctl -j monitors)" | jq -r '.[0] | "\(.activeWorkspace.id)"')"
