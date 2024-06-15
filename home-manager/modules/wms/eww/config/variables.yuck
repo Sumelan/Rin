@@ -23,7 +23,7 @@
 (defpoll DATE_MON_FULL  :interval "1m" "date +'%B'")
 (defpoll DATE_DAY       :interval "1m" "date +'%d'")
 (defpoll UPTIME         :interval "1m"
-  "uptime -p | awk '{print $1 \" \" $2 \" \" $3}' | sed -e s/,//g")
+  "uptime | awk '{print $3}' | sed -e s/,//g")
 
 ;; Weather
 (defpoll WEATHER_CON :interval "1h"
