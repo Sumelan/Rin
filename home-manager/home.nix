@@ -2,7 +2,7 @@
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
-    ./cols/vixima.nix { };
+    ./cols/vixima.nix { }
     ./modules/bundle.nix
   ];
 
