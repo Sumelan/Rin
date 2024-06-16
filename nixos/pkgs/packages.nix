@@ -35,7 +35,7 @@
       slurp
       swappy
       swaynotificationcenter
-      swaylock
+      swaylock-effects
       swww
       unrar
       unzip
