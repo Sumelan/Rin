@@ -1,10 +1,8 @@
 { inputs, pkgs, ... }:
-let
-  colors = import ./cols/vixima.nix { };
-in
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
+    ./cols/vixima.nix
     ./modules/bundle.nix
   ];
 
@@ -16,7 +14,7 @@ in
     homeDirectory = "/home/bathys";
     packages = with pkgs; [
       (pkgs.callPackage ../nixos/icons/papirus.nix { })
-      (pkgs.callPackage ../nixos/others/phocus.nix { inherit colors; })
+      (pkgs.callPackage ../nixos/others/phocus.nix { })
     ];
   };
 
