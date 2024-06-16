@@ -5,7 +5,7 @@ in
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
-    ./modules/bundle.nix
+    ./modules/bundle.nix { inherit colors; }
   ];
 
 # Nicely reload system units when changing configs
