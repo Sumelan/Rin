@@ -9,7 +9,7 @@
     ./yazi.nix
     ./zsh.nix
     ./mpd/mpd.nix
-    ./wms/hyprland.nix
+    ./wms/hyprland.nix { inherit colors; }
     ./wms/eww/eww.nix
     ./wms/hypridle.nix
     ./wms/swappy.nix
