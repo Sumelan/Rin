@@ -1,4 +1,4 @@
-{ inputs, theme, ... }:
+{ inputs, pkgs, ... }:
 let
   colors = import ../shared/cols/vixima.nix { };
 in
