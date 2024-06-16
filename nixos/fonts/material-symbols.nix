@@ -2,7 +2,7 @@
 , stdenvNoCC
 , fetchFromGitHub
 , util-linux
-,
+, ...
 }:
 stdenvNoCC.mkDerivation {
   pname = "material-symbols";

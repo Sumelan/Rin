@@ -45,8 +45,9 @@
       wpgtk
       yad
     # audio
-      pamixer
       easyeffects
+      mpd
+      pamixer
       pavucontrol
       wireplumber
     # programs
