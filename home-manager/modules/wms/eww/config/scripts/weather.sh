@@ -10,8 +10,8 @@ check_if_empty() {
 	[[ -z "$1" ]] && echo "0" || echo "$1"
 }
 
-KEY=""
-CITY="New Delhi"
+KEY="acd9fb16dbd1e0a9631507bef2a46399"
+CITY="Otsu"
 CITY=$(encode_to_url_format "$CITY")
 WEATHER=$(curl -sf "api.openweathermap.org/data/2.5/weather?q=$CITY&appid=$KEY&units=metric")
 
