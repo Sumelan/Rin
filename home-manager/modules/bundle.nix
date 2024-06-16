@@ -1,3 +1,4 @@
+{ colors, ... }:
 {
   imports = [
     ./git.nix
