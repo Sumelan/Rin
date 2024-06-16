@@ -11,13 +11,13 @@
     ./wms/hyprland.nix
     ./wms/eww/eww.nix
     ./wms/hypridle.nix
-    #./wms/swappy.nix
-    #./wms/dunst/dunst.nix
+    ./wms/swappy.nix
+    ./wms/dunst/dunst.nix
     ./wms/swaylock/swaylock.nix
-    #./wms/hyprlock.nix
+    ./wms/hyprlock.nix
     #./wms/hyprshade/hyprshade.nix
     #./wms/swaync/swaync.nix
-    #./wms/rofi/rofi.nix
+    ./wms/rofi/rofi.nix
     #./wms/waybar/waybar.nix
     #./wms/wlogout/wlogout.nix
   ];
