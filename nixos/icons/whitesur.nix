@@ -8,6 +8,7 @@
 , blackPanelIcons ? false
 , alternativeIcons ? false
 , themeVariants ? []
+, ...
 }:
 
 let pname = "Whitesur-icon-theme";
