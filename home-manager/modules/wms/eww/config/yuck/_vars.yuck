@@ -15,8 +15,8 @@
 (defpoll volume :interval "1s" `pamixer --get-volume`)
 (defpoll brightness :interval "1s" `brightnessctl -m -d amdgpu_bl0 | awk -F, '{print substr($4, 0, length($4)-1)}' | tr -d '%'`)
 
-(defvar pfp "/home/namish/.config/eww/assets/pfp.png")
-(defvar fullpfp "/home/namish/.config/eww/assets/fullpfp.png")
+(defvar pfp "/home/bathys/.config/eww/assets/pfp.png")
+(defvar fullpfp "/home/bathys/.config/eww/assets/fullpfp.png")
 
 (defpoll cputemp :interval "1s" "~/.config/eww/scripts/cpu.sh")
 (defpoll wifisped :interval "1s" "~/.config/eww/scripts/wifi.sh --speed")
