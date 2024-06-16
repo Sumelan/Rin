@@ -129,12 +129,10 @@
       nodejs
       opencv
       pkg-config
-      python312
-      python312Packages.pandas
-      python312Packages.requests
-      python312Packages.numpy
-      python312Packages.pygobject3
-      python312Packages.gst-python
+      (python3.withPackages (subpkgs: with subpkgs; [
+        pip
+        pygobject3
+      ]))
       qt6.qtwayland
       v4l-utils
     # vm
