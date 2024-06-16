@@ -5,6 +5,7 @@ in
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
+    colors
     ./modules/bundle.nix
   ];
 
