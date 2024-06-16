@@ -7,6 +7,7 @@
       ./pkgs/packages.nix
       ./japanese-input.nix
       ./fonts/fonts.nix
+      ./icons/icons.nix
       ./modules/bundle.nix
       ./disko-config.nix
   ];
