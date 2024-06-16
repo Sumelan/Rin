@@ -146,7 +146,7 @@
         gaps_in = 4
         gaps_out = 6
         border_size = 0
-        col.active_border = rgb(FA3867)
+        col.active_border = rgb(${accent})
         col.inactive_border = rgba(595959aa)
         layout = dwindle
         allow_tearing = true
