@@ -1,5 +1,10 @@
 { pkgs, ... }:
 {
+  imports = [
+      ./material-symbols.nix
+      ./phospor.nix
+  ];
+
   fonts = {
     packages = with pkgs; [
     noto-fonts
