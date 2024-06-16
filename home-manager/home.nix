@@ -1,9 +1,11 @@
 { inputs, theme, ... }:
+let
+  colors = import ../shared/cols/vixima.nix { };
+in
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
-    ./cols/vixima.nix { }
-    ./modules/bundle.nix
+    ./modules/bundle.nix { inherit colors; }
   ];
 
 # Nicely reload system units when changing configs
@@ -17,6 +19,11 @@
   programs = {
     home-manager.enable = true;
   };
+  
+  packages = with pkgs; [
+    (pkgs.callPackage ../../pkgs/icons/papirus.nix { })
+    (pkgs.callPackage ../../pkgs/others/phocus.nix { inherit colors; })
+  ]
 
 # Create XDG Dirs
   xdg = {
