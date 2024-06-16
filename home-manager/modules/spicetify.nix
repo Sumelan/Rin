@@ -1,4 +1,4 @@
-{ colors, inputs, pkgs }:
+{ colors, inputs, pkgs, ... }:
 let
   spicePkgs = inputs.spicetify-nix.packages.${pkgs.system}.default;
 in
