@@ -1,10 +1,8 @@
 { inputs, theme, ... }:
 {
-  colorScheme = inputs.nix-colors.colorSchemes."${theme}";
-
   imports = [
-    inputs.nix-colors.homeManagerModules.default
     inputs.nixvim.homeManagerModules.nixvim
+    ./cols/vixima.nix { };
     ./modules/bundle.nix
   ];
 
