@@ -23,7 +23,7 @@ in
   packages = with pkgs; [
     (pkgs.callPackage ../../pkgs/icons/papirus.nix { })
     (pkgs.callPackage ../../pkgs/others/phocus.nix { inherit colors; })
-  ]
+  ];
 
 # Create XDG Dirs
   xdg = {
