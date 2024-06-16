@@ -14,16 +14,15 @@ in
   home = {
     username = "bathys";
     homeDirectory = "/home/bathys";
+    packages = with pkgs; [
+      (pkgs.callPackage ../nixos/icons/papirus.nix { })
+      (pkgs.callPackage ../nixos/others/phocus.nix { inherit colors; })
+    ];
   };
 
   programs = {
     home-manager.enable = true;
   };
-  
-  packages = with pkgs; [
-    (pkgs.callPackage ../nixos/icons/papirus.nix { })
-    (pkgs.callPackage ../nixos/others/phocus.nix { inherit colors; })
-  ];
 
 # Create XDG Dirs
   xdg = {
