@@ -1,9 +1,6 @@
-{ config, ... }:
-let
-  theme = config.colorScheme.palette;
-in
+{ config, colors, ... }:
 {
-  wayland.windowManager.hyprland = {
+  wayland.windowManager.hyprland = with colors; {
     enable = true;
     xwayland.enable = true;
     systemd.enable = true;
@@ -149,8 +146,8 @@ in
         gaps_in = 4
         gaps_out = 6
         border_size = 0
-        col.active_border = rgba(${theme.base02}ff)
-        col.inactive_border = rgba(${theme.base00}ff)
+        col.active_border = rgb(${accent})
+        col.inactive_border = rgba(595959aa)
         layout = dwindle
         allow_tearing = true
       }
