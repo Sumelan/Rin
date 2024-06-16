@@ -1,7 +1,7 @@
 {
   imports = [
     ./git.nix
-  #  ./gtk-qt.nix
+    ./gtk-qt.nix
     ./kitty.nix
     ./starship.nix
     ./spicetify.nix
