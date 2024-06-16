@@ -129,10 +129,7 @@
       nodejs
       opencv
       pkg-config
-      (python3.withPackages (subpkgs: with subpkgs; [
-        pip
-        pygobject3
-      ]))
+      python3
       qt6.qtwayland
       v4l-utils
     # vm
