@@ -1,4 +1,4 @@
-{ colors, pkgs }: with colors;{
+{ colors, pkgs, ... }: with colors;{
   services.dunst = {
     enable = true;
     settings = {

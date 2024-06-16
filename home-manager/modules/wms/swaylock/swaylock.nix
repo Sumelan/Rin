@@ -1,4 +1,4 @@
-{ colors, pkgs }: {
+{ colors, pkgs, ... }: {
   programs.swaylock = with colors;{
     package = pkgs.swaylock-effects;
     settings = {
