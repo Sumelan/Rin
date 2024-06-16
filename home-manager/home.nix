@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }:
 let
-  colors = import ../shared/cols/vixima.nix { };
+  colors = import ./cols/vixima.nix { };
 in
 {
   imports = [
