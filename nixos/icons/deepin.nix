@@ -4,6 +4,7 @@
 , gtk3
 , xcursorgen
 , papirus-icon-theme
+, ...
 }:
 
 stdenvNoCC.mkDerivation rec {
