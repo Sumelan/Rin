@@ -21,8 +21,8 @@ in
   };
   
   packages = with pkgs; [
-    (pkgs.callPackage ../nixos/pkgs/icons/papirus.nix { })
-    (pkgs.callPackage ../nixos/pkgs/others/phocus.nix { inherit colors; })
+    (pkgs.callPackage ../nixos/icons/papirus.nix { })
+    (pkgs.callPackage ../nixos/others/phocus.nix { inherit colors; })
   ];
 
 # Create XDG Dirs
