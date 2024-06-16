@@ -4,7 +4,7 @@
   imports = [
       ./hardware-configuration.nix
       ./desktop/amd-drivers.nix
-      ./packages/packages.nix
+      ./pkgs/packages.nix
       ./japanese-input.nix
       ./fonts/fonts.nix
       ./modules/bundle.nix
