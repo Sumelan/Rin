@@ -58,7 +58,7 @@ in
 
       #keybindings
       bind = $mainMod, RETURN, exec, $terminal
-      bind = $mainMod, D, exec, pkill rofi || rofi -show drun -modi drun,run,filebrowser,window
+      bind = $mainMod, D, exec, pkill rofi || rofi -show drun
       bind = $mainMod, T, exec, $fileManager
       bind = $mainMod, W, exec, $browser
       bind = $mainMod, C, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
@@ -69,10 +69,10 @@ in
       bind = $mainMod, V, togglefloating
       bind = $mainMod, F, fullscreen
       bind = $mainMod, P, pseudo, dwindle
-      
-      bind = ,XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ 
-      bind = ,XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-      binde = ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+
+      bind = ,XF86AudioRaiseVolume, exec, pamixer -i 5
+      bind = ,XF86AudioLowerVolume, exec, pamixer -d 5
+      binde = ,XF86AudioMute, exec, pamixer -t
       bind = ,XF86AudioPlay, exec, playerctl play-pause
       bind = ,XF86AudioNext, exec, playerctl next
       bind = ,XF86AudioPrev, exec, playerctl previous

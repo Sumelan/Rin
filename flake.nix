@@ -29,7 +29,7 @@
       username = "bathys";
       gitUsername = "bathys";
       gitEmail = "bathys@proton.me";
-      theme = "catppuccin-mocha";
+      theme = "catppuccin-macchiato";
 
       pkgs = import nixpkgs {
         inherit system;

@@ -1,7 +1,12 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: 
+let
+  theme = config.colorScheme.palette;
+in
+{
   programs.swaylock = {
     package = pkgs.swaylock-effects;
     settings = {
+      image = "/home/bathys/.config/swaylock/lockscreen/lockscreen.png";
       clock = true;
       color = "00000000";
       font = "Product Sans";
@@ -9,26 +14,26 @@
       indicator = true;
       indicator-radius = 220;
       indicator-thickness = 25;
-      line-color = "#17181C";
-      ring-color = "#1E1F24";
-      inside-color = "#17181C";
-      key-hl-color = "#FA3867";
+      line-color = "#${theme.base0D}";
+      ring-color = "#${theme.base0C}";
+      inside-color = "#${theme.base06}";
+      key-hl-color = "#${theme.base09}";
       separator-color = "00000000";
-      text-color = "#e4e5e7";
+      text-color = "#${theme.base05}";
       text-caps-lock-color = "";
-      line-ver-color = "#FA3867";
-      ring-ver-color = "#FA3867";
+      line-ver-color = "#${theme.base0A}";
+      ring-ver-color = "#${theme.base0A}";
       inside-ver-color = "#17181C";
       text-ver-color = "#e4e5e7";
-      ring-wrong-color = "#FA3867";
-      text-wrong-color = "#FA3867";
-      inside-wrong-color = "#17181C";
-      inside-clear-color = "#17181C";
+      ring-wrong-color = "#${theme.base08}";
+      text-wrong-color = "#${theme.base08}";
+      inside-wrong-color = "#${theme.base0C}";
+      inside-clear-color = "#${theme.base0C}";
       text-clear-color = "#e4e5e7";
       ring-clear-color = "#A771EF";
-      line-clear-color = "#17181C";
-      line-wrong-color = "#17181C";
-      bs-hl-color = "#FA3867";
+      line-clear-color = "#${theme.base09}";
+      line-wrong-color = "#${theme.base09}";
+      bs-hl-color = "#${theme.base0B}";
       line-uses-ring = false;
       grace = 0;
       grace-no-mouse = true;

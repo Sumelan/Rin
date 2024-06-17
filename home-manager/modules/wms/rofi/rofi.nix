@@ -1,5 +1,7 @@
 { config, pkgs, ... }:
-
+let
+  theme = config.colorScheme.palette;
+in
 {
   programs.rofi = {
     enable = true;
@@ -22,12 +24,12 @@
     @theme "/dev/null"
     * {
     font:                        "Product Sans 12";
-    background:                  #17181C;
-    background-alt:              #1E1F24;
-    foreground:                  #e4e5e7;
-    selected:                    #FA3867;
-    active:                      #65DB3D;
-    urgent:                      #FA3867;
+    background:                  #${theme.base01};
+    background-alt:              #${theme.base00};
+    foreground:                  #${theme.base04};
+    selected:                    #${theme.base0D};
+    active:                      #${theme.base0A};
+    urgent:                      #${theme.base08};
     }
 
     window {
