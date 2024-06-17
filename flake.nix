@@ -75,7 +75,7 @@
       homeConfigurations = {
         ${username} = inputs.home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-          extraSpecialArgs = { inherit inputs outputs self; };
+          extraSpecialArgs = { inherit inputs self; };
           modules = [
             ./home/namish/home.nix
           ];
