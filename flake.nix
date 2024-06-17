@@ -62,7 +62,7 @@
                 inherit theme;
                 inherit spicetify-nix;
               };
-              modules = [ ./home-manager/home.nix ]
+              modules = [ ./home-manager/home.nix ];
             /*home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
