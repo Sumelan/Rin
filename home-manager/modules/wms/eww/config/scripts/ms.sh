@@ -2,8 +2,8 @@
 
 ## Get data
 STATUS="$(playerctl status)"
-COVERURL="$(playerctl metadata | grep artUrl | awk '{print $3}')
-COVER="$HOME/.config/eww/cache/.music_cover.png"
+COVERURL="$(playerctl metadata | grep artUrl | awk '{print $3}')"
+COVER="/tmp/.music_cover.png"
 MUSIC_DIR="$HOME/Music"
 
 ## Get status
@@ -71,8 +71,8 @@ get_cover() {
 	if [ "$STATUS" -eq 0 ];then
 		echo "$COVER"
 	else
-		echo "images/music.png"
-	fi 
+		echo "$HOME/.config/eww/assets/music.png"
+	fi
 }
 
 ## Execute accordingly
@@ -97,3 +97,4 @@ elif [[ "$1" == "--next" ]]; then
 elif [[ "$1" == "--prev" ]]; then
 	{ playerctl previous; get_cover; }
 fi
+
