@@ -77,7 +77,7 @@
           pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
           extraSpecialArgs = { inherit inputs; };
           modules = [
-            ./home/namish/home.nix
+            ./home-manager/home.nix
           ];
         };
       };
