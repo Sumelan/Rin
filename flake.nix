@@ -4,8 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
-    nix-colors.url = "github:misterio77/nix-colors";
     spicetify-nix.url = "github:the-argus/spicetify-nix";
+    nix-colors.url = "github:misterio77/nix-colors";
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -54,7 +54,7 @@
             inputs.nixvim.nixosModules.nixvim
             inputs.disko.nixosModules.disko
             home-manager.nixosModules.home-manager
-            {
+              {
               home-manager.extraSpecialArgs = {
                 inherit username;
                 inherit gitEmail;
@@ -68,7 +68,7 @@
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
               home-manager.users.${username} = import ./home-manager/home.nix;
-            }
+            } 
           ];
         };
       };

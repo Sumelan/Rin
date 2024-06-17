@@ -1,9 +1,6 @@
-{ inputs, theme, ... }:
+{ inputs, pkgs, ... }:
 {
-  colorScheme = inputs.nix-colors.colorSchemes."${theme}";
-
   imports = [
-    inputs.nix-colors.homeManagerModules.default
     inputs.nixvim.homeManagerModules.nixvim
     ./modules/bundle.nix
   ];
@@ -14,6 +11,10 @@
   home = {
     username = "bathys";
     homeDirectory = "/home/bathys";
+    packages = with pkgs; [
+      (pkgs.callPackage ../nixos/icons/papirus.nix { })
+      (pkgs.callPackage ../nixos/others/phocus.nix { })
+    ];
   };
 
   programs = {
