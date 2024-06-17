@@ -1,4 +1,4 @@
-{ config, pkgs, colors, ... }:
+{ config, pkgs, ... }:
 
 {
   programs.rofi = {
@@ -22,12 +22,12 @@
     @theme "/dev/null"
     * {
     font:                        "Product Sans 12";
-    background:                  #${colors.background};
-    background-alt:              #${colors.mbg};
-    foreground:                  #${colors.foreground};
-    selected:                    #${colors.accent};
-    active:                      #${colors.color2};
-    urgent:                      #${colors.color1};
+    background:                  #17181C;
+    background-alt:              #1E1F24;
+    foreground:                  #e4e5e7;
+    selected:                    #FA3867;
+    active:                      #65DB3D;
+    urgent:                      #FA3867;
     }
 
     window {
