@@ -3,7 +3,7 @@
   gtk =
     let
       extraConfig = {
-        gtk-decoration-layout = "menu:";
+        #gtk-application-prefer-light = 0;
       };
     in
     {
@@ -28,11 +28,13 @@
       */
 
       theme = {
-        name = "phocus";
+        name = "${config.colorScheme.slug}";
+        package = gtkThemeFromScheme { scheme = config.colorScheme; };
       };
 
       iconTheme = {
-        name = "Papirus";
+        name = "elementary-xfce-icon-theme";
+        package = pkgs.elementary-xfce-icon-theme;
       };
       gtk3 = {
         inherit extraConfig;

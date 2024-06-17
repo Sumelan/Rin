@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 {  pkgs, ... }:
 {
-=======
-{ colors, pkgs, ... }: with colors;{
->>>>>>> f3ed4109dabca9fdcaaf93be377627a875834fd1
   services.dunst = {
     enable = true;
     settings = {

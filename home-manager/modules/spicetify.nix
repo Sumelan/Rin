@@ -21,7 +21,7 @@ in
         sha256 = "01gy16b69glqcalz1wm8kr5wsh94i419qx4nfmsavm4rcvcr3qlx";
       };
     in
-    with colors; {
+    {
       spotifyPackage = pkgs.spotify;
       enable = true;
       colorScheme = "custom";
@@ -50,22 +50,22 @@ in
       };
 
       customColorScheme = {
-        text = "${foreground}";
-        subtext = "${color15}";
-        sidebar-text = "${color7}";
-        main = "${background}";
-        sidebar = "${mbg}";
-        player = "${mbg}";
-        card = "${color0}";
-        shadow = "${color8}";
-        selected-row = "${color8}";
-        button = "${accent}";
-        button-active = "${foreground}";
-        button-disabled = "${color5}";
-        tab-active = "${accent}";
-        notification = "${color3}";
-        notification-error = "${color1}";
-        misc = "${comment}";
+        text = "e4e5e7";
+        subtext = "CBCCCE";
+        sidebar-text = "CBCCCE";
+        main = "17181C";
+        sidebar = "1E1F24";
+        player = "1E1F24";
+        card = "$26272B";
+        shadow = "333438";
+        selected-row = "333438";
+        button = "FA3867";
+        button-active = "e4e5e7";
+        button-disabled = "A771EF";
+        tab-active = "FA3867";
+        notification = "F57F3D";
+        notification-error = "FA3867";
+        misc = "8f9093";
       };
       enabledExtensions = with spicePkgs.extensions; [
         playlistIcons
