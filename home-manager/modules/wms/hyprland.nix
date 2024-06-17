@@ -37,7 +37,7 @@ in
       exec-once = nm-applet
       exec-once = wl-paste --type text --watch cliphist store & wl-paste --type image --watch cliphist store & wl-paste --watch cliphist store
       exec-once = systemd
-      exec-once = kdeconnect-indicator
+     #exec-once = kdeconnect-indicator
       exec-once = fcitx5
 
       #opacity window rules

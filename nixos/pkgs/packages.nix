@@ -46,7 +46,6 @@
       yad
     # audio
       easyeffects
-      mpd
       pamixer
       pavucontrol
       wireplumber

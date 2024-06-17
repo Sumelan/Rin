@@ -71,10 +71,11 @@ in
         playlistIcons
         lastfm
         historyShortcut
-        inputs.spicetify-nix.packages.${pkgs.system}.default.extensions.adblock
         hidePodcasts
         fullAppDisplay
         shuffle
+        popupLyrics
+        keyboardShortcut
       ];
     };
 }

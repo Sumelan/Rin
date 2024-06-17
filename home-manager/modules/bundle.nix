@@ -8,7 +8,6 @@
     ./vscode.nix
     ./yazi.nix
     ./zsh.nix
-    ./mpd/mpd.nix
     ./wms/hyprland.nix
     ./wms/eww/eww.nix
     ./wms/hypridle.nix

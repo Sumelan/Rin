@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
-# scripts by adi1090x
 
 ## Get data
-STATUS="$(mpc status)"
-COVER="/tmp/.music_cover.png"
+STATUS="$(playerctl status)"
+COVERURL="$(playerctl metadata | grep artUrl | awk '{print $3}')
+COVER="$HOME/.config/eww/cache/.music_cover.png"
 MUSIC_DIR="$HOME/Music"
 
 ## Get status
 get_status() {
-	if [[ $STATUS == *"[playing]"* ]]; then
+	if [[ $STATUS == "Playing" ]]; then
 		echo "󰏤"
 	else
 		echo "󰐊"
@@ -17,53 +17,54 @@ get_status() {
 
 ## Get song
 get_song() {
-	song=`mpc -f %title% current`
+	song=`playerctl metadata --format "{{ title }}"`
 	if [[ -z "$song" ]]; then
 		echo "Offline"
 	else
 		echo "$song"
-	fi	
+	fi
 }
 
 ## Get artist
 get_artist() {
-	artist=`mpc -f %artist% current`
+	artist=`playerctl metadata --format "{{ artist }}"`
 	if [[ -z "$artist" ]]; then
 		echo ""
 	else
 		echo "$artist"
-	fi	
+	fi
 }
 
 ## Get time
 get_time() {
-	time=`mpc status | grep "%)" | awk '{print $4}' | tr -d '(%)'`
+	time=`playerctl position --format "{{ duration(mpris:length - position) }}"`
 	if [[ -z "$time" ]]; then
 		echo "0"
 	else
 		echo "$time"
-	fi	
+	fi
 }
 get_ctime() {
-	ctime=`mpc status | grep "#" | awk '{print $3}' | sed 's|/.*||g'`
+	ctime=`playerctl metadata --format "{{ duration(position) }}"`
 	if [[ -z "$ctime" ]]; then
 		echo "0:00"
 	else
 		echo "$ctime"
-	fi	
+	fi
 }
 get_ttime() {
-	ttime=`mpc -f %time% current`
+	ttime=`playerctl metadata --format "{{ duration(mpris:length) }}"`
 	if [[ -z "$ttime" ]]; then
 		echo "0:00"
 	else
 		echo "$ttime"
-	fi	
+	fi
 }
 
 ## Get cover
 get_cover() {
-	ffmpeg -i "${MUSIC_DIR}/$(mpc current -f %file%)" "${COVER}" -y &> /dev/null
+
+  ffmpeg -i ${COVERURL} "${COVER}" -y &> /dev/null
 	STATUS=$?
 
 	# Check if the file has a embbeded album art
@@ -71,7 +72,7 @@ get_cover() {
 		echo "$COVER"
 	else
 		echo "images/music.png"
-	fi
+	fi 
 }
 
 ## Execute accordingly
@@ -90,9 +91,9 @@ elif [[ "$1" == "--ttime" ]]; then
 elif [[ "$1" == "--cover" ]]; then
 	get_cover
 elif [[ "$1" == "--toggle" ]]; then
-	mpc -q toggle
+  playerctl play-pause
 elif [[ "$1" == "--next" ]]; then
-	{ mpc -q next; get_cover; }
+	{ playerctl next; get_cover; }
 elif [[ "$1" == "--prev" ]]; then
-	{ mpc -q prev; get_cover; }
+	{ playerctl previous; get_cover; }
 fi
