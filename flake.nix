@@ -52,9 +52,8 @@
             ./nixos/configuration.nix
             inputs.nixvim.nixosModules.nixvim
             inputs.disko.nixosModules.disko
-            home-manager.nixosModules
-
-           /* {
+            home-manager.nixosModules.home-manager
+              {
               home-manager.extraSpecialArgs = {
                 inherit username;
                 inherit gitEmail;
@@ -67,17 +66,7 @@
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
               home-manager.users.${username} = import ./home-manager/home.nix;
-            } */
-
-          ];
-        };
-      };
-      homeConfigurations = {
-        ${username} = inputs.home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-          extraSpecialArgs = { inherit inputs; };
-          modules = [
-            ./home-manager/home.nix
+            } 
           ];
         };
       };
