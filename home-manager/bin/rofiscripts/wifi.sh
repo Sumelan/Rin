@@ -1,6 +1,4 @@
-_:
-''
-  #!/usr/bin/env zsh
+#!/usr/bin/env zsh
   #This script provides a rofi menu interface for wifi control
   #It uses and requires nmcli
   get_match()
@@ -119,5 +117,3 @@ _:
       fi
     fi
   fi
-
-''
