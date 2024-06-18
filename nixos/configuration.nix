@@ -39,6 +39,9 @@
   # flatpak
   services.flatpak.enable = true;
 
+  #Add ~/.local/bin/ to $PATH
+  environment.localBinInPath = true;
+
   # Automatic Garbage Collection
   nix.gc = {
     automatic = true;

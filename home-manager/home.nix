@@ -35,5 +35,12 @@
     };
   };
 
+  home.file = {
+    ".local/bin" = {
+      source = ./bin;
+      recursive = true;
+    };
+  };
+
   home.stateVersion = "23.11";
 }
