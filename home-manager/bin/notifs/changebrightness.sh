@@ -1,6 +1,4 @@
-_:
-''
-  #!/usr/bin/env bash
+#!/usr/bin/env bash
 
   function send_notification() {
   	brightness=$(printf "%.0f\n" $(brillo -G))
@@ -17,4 +15,3 @@ _:
   	send_notification $1
   	;;
   esac
-''
