@@ -40,7 +40,6 @@ in
         show_age_threshold = 60;
         markup = "full";
         font = "Product Sans 12";
-        format = "<b>%s</b>\n%b";
         word_wrap = "yes";
         sort = "yes";
         shrink = "no";
