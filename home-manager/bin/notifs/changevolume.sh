@@ -1,6 +1,4 @@
-_:
-''
-  #!/usr/bin/env bash
+#!/usr/bin/env bash
 
   function send_notification() {
   	volume=$(pamixer --get-volume)
@@ -28,4 +26,3 @@ _:
   	fi
   	;;
   esac
-''
