@@ -1,6 +1,4 @@
-_:
-''
-  #!/usr/bin/env bash
+#!/usr/bin/env bash
   chosen=$(printf "  Power Off\n  Restart\n  Suspend\n  Hibernate\n  Log Out\n  Lock" | rofi -dmenu -i)
 
   case "$chosen" in
@@ -12,4 +10,3 @@ _:
   	"  Lock") hyprlock ;;
   	*) exit 1 ;;
   esac
-''
