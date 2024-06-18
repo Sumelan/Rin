@@ -24,6 +24,7 @@
       gparted
       gwenview
       grim
+      grimblast
       kitty
       libnotify
       lm_sensors
@@ -54,6 +55,7 @@
       audiobookshelf
       bitwarden
       bottles
+      catppuccinifier-gui
       cpufrequtils
       firefox
       gimp

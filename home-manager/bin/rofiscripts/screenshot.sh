@@ -4,7 +4,6 @@
   screen="All visible outputs"
   output="Currently active output"
   area="Select an area"
-  window="Select a window"
 
   copy="Copy to clipboard"
   save="Save file"
@@ -14,7 +13,7 @@
   # Function taken directly from grimshot
   # https://github.com/swaywm/sway/blob/master/contrib/grimshot
   target_directory() {
-    echo ~/Pictures/Screenshots 
+    echo ~/Pictures/Screenshots
   }
 
   # Rofi CMD
@@ -30,7 +29,7 @@
 
   # Mode selection
   mode_cmd() {
-    rofi -dmenu 
+    rofi -dmenu
   }
 
   # Ask to select mode
@@ -41,21 +40,18 @@
   menu_option="$(run_rofi)"
   if [[ ! -z "$menu_option" ]]
   then
-  	case $menu_option in 
+  	case $menu_option in
   		$active)
-  		grimshot save active $tmp_filename > /dev/null 2>&1
+  		grimblast --notify save active $tmp_filename > /dev/null 2>&1
   			;;
   		$screen)
-  		grimshot save screen $tmp_filename > /dev/null 2>&1
+  		grimblast --notify save screen $tmp_filename > /dev/null 2>&1
   			;;
   		$output)
-  		grimshot save output $tmp_filename > /dev/null 2>&1
+  		grimblast --notify save output $tmp_filename > /dev/null 2>&1
   			;;
   		$area)
-  		grimshot save area $tmp_filename > /dev/null 2>&1
-  			;;
-  		$window)
-  		grimshot save window $tmp_filename > /dev/null 2>&1
+  		grimblast --notify save area $tmp_filename > /dev/null 2>&1
   			;;
   	esac
   	mode="$(select_mode)"

@@ -35,12 +35,13 @@
     };
   };
 
-  home.file = {
-    ".local/bin" = {
-      source = ./bin;
-      recursive = true;
-    };
-  };
+  home.packages = with pkgs; [
+    (writeShellScriptBin "powermenu" (builtins.readFile ./bin/rofiscripts/powermenu.sh) )
+    (writeShellScriptBin "screenshotmenu" (builtins.readFile ./bin/rofiscripts/screenshot.sh) )
+    (writeShellScriptBin "wifimenu" (builtins.readFile ./bin/rofiscripts/wifi.sh) )
+    (writeShellScriptBin "changebrightness" (builtins.readFile ./bin/notifs/changebrightness.sh) )
+    (writeShellScriptBin "changevolume" (builtins.readFile ./bin/notifs/changevolume.sh) )
+  ];
 
   home.stateVersion = "23.11";
 }

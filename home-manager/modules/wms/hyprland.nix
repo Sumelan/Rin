@@ -20,7 +20,7 @@ in
 
       #monitors
       monitor = HDMI-A-1, 1920x1080@60, 0x0, 1
-      monitor = DP-1, 1920x1080@60, 1920x0, 1
+      monitor = HDMI-A-2, 1920x1080@60, 1920x0, 1
 
       #env variables
       env = XCURSOR_SIZE,24
@@ -47,14 +47,13 @@ in
       windowrule = opacity 0.9, neovide
       windowrule = opacity 0.8, bottles
       windowrule = opacity 0.8, fl64.exe
-      windowrulev2 = opacity 0.8, title:(FL Studio)
       #float window rules
       windowrulev2 = float, class:^([Rr]ofi)$
       #workspaces window rules
       windowrule = workspace 1, firefox
       windowrule = workspace special:magic, Spotify
       #workspace rules
-      workspace=10, monitor:DP-1, default:true
+      workspace=10, monitor:HDMI-A-2, default:true
 
       #keybindings
       bind = $mainMod, RETURN, exec, $terminal
@@ -62,7 +61,9 @@ in
       bind = $mainMod, T, exec, $fileManager
       bind = $mainMod, W, exec, $browser
       bind = $mainMod, C, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
-      bind = $mainMod, S, exec, grim -g "$(slurp -d)" - |swappy -f -
+      bind = $mainMod, S, exec, screenshotmenu | swappy -f -
+
+      bind = CTRL ALT, P, exec, powermenu
 
       bind = $mainMod, Q, killactive
       bind = $mainMod, ESC, exit
@@ -70,15 +71,15 @@ in
       bind = $mainMod, F, fullscreen
       bind = $mainMod, P, pseudo, dwindle
 
-      bind = ,XF86AudioRaiseVolume, exec, pamixer -i 5
-      bind = ,XF86AudioLowerVolume, exec, pamixer -d 5
-      binde = ,XF86AudioMute, exec, pamixer -t
+      bind = ,XF86AudioRaiseVolume, exec, changevolume up
+      bind = ,XF86AudioLowerVolume, exec, changevolume down
+      binde = ,XF86AudioMute, exec, changevolume mute
       bind = ,XF86AudioPlay, exec, playerctl play-pause
       bind = ,XF86AudioNext, exec, playerctl next
       bind = ,XF86AudioPrev, exec, playerctl previous
-      bind = ,XF86MonBrightnessUp, exec, brightnessctl set +5%
-      bind = ,XF86MonBrightnessDown, exec, brightnessctl set -5%
-      bind = ,Print, exec, grim -g "$(slurp -d)" - |swappy -f -
+      bind = ,XF86MonBrightnessUp, exec, changebrightness up
+      bind = ,XF86MonBrightnessDown, exec, changebrightness down
+      bind = ,Print, exec, screenshotmenu
 
       bind = $mainMod, H, movefocus, l
       bind = $mainMod, J, movefocus, d
