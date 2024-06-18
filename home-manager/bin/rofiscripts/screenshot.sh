@@ -1,6 +1,4 @@
-_:
-''
-  #!/usr/bin/env bash
+#!/usr/bin/env bash
 
   active="Active window"
   screen="All visible outputs"
@@ -74,4 +72,3 @@ _:
   	fi
   	rm $tmp_filename
   fi
-''
