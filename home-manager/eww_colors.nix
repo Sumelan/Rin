@@ -30,7 +30,7 @@ in
     $magenta-light : #${theme.base07};
 
     $comment : #${theme.base02};
-    $accent : #${theme.base09};
+    $accent : #${theme.base0E};
 
   '';
 }
