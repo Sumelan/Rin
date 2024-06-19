@@ -5,6 +5,7 @@
   imports = [
     inputs.nix-colors.homeManagerModules.default
     inputs.nixvim.homeManagerModules.nixvim
+    ./eww_colors.nix
     ./modules/bundle.nix
   ];
 
