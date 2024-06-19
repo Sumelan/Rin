@@ -4,7 +4,7 @@ let
   theme = config.colorScheme.palette;
 in
 {
-  home.file.".config/eww/style/_colors.scss".text = ''
+  xdg.configFile.".config/eww/style/_colors.scss".text = ''
     $background : #${theme.base00};
     $foreground : #${theme.base05};
     $background-alt : #${theme.base01};
