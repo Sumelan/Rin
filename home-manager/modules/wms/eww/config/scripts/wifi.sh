@@ -4,7 +4,7 @@ SSID=$(iwgetid | awk -F '"' '{ print $2 }')
 STRENGTH=$(awk 'NR==3 {printf("%.0f",$3*10/7)}' /proc/net/wireless)
 
 toggle() {
-    if [[ $STATUS == "connected" ]]; then
+    if [[ $STATUS == "接続済み" ]]; then
         nmcli radio wifi off
         notify-send --icon=window-close --urgency=normal "Wi-Fi" "Wi-Fi has been turned off!"
     else
@@ -15,7 +15,7 @@ toggle() {
 
 
 class() {
-    if [[ $STATUS == "connected" ]]; then
+    if [[ $STATUS == "接続済み" ]]; then
         echo active
     else
         echo inactive
@@ -23,7 +23,7 @@ class() {
 }
 
 ssid() {
-    if [[ $STATUS == "connected" ]]; then
+    if [[ $STATUS == "接続済み" ]]; then
         echo $(iwgetid -r)
 
     else
@@ -31,7 +31,7 @@ ssid() {
     fi
 }
 color() {
-    if [[ $STATUS == "connected" ]]; then
+    if [[ $STATUS == "接続済み" ]]; then
         echo "green"
 
     else
@@ -39,7 +39,7 @@ color() {
     fi
 }
 icon() {
-    if [[ $STATUS == "connected" ]]; then
+    if [[ $STATUS == "接続済み" ]]; then
         echo "󰤨 "
 
     else
