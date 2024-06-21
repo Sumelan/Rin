@@ -1,12 +1,12 @@
 { config, pkgs, ... }:
 let
-  theme = config.colorScheme.palette;
+  theme = config.stylix.base16Scheme;
 in
 {
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
-    font = "JetBrainsMono Nerd Font 12";
+    font = "Iosevka Nerd Font 12";
     extraConfig = {
       modi = "drun";
       display-drun = "";
@@ -80,7 +80,7 @@ in
     enabled:                     true;
     expand:                      false;
     str:                         "  ";
-    font:                        "JetBrainsMono Nerd Font 12";
+    font:                        "Iosevka Nerd Font 12";
     background-color:            inherit;
     text-color:                  inherit;
     }
