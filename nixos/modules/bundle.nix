@@ -3,11 +3,13 @@
     ./bluetooth.nix
     ./bootloader.nix
     ./env.nix
+    ./hardware.nix
     ./network.nix
-    ./nixvim/nixvim.nix
     ./security.nix
     ./services.nix
+    ./stylix.nix
     ./sound.nix
+    ./starship.nix
     ./systemd.nix
     ./trim.nix
     ./user.nix
