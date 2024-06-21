@@ -36,11 +36,8 @@
 	  enable = true;
   };
 
-  # flatpak
-  services.flatpak.enable = true;
-
   #Add ~/.local/bin/ to $PATH
-  environment.localBinInPath = true;
+  environment.localBinInPath = false;
 
   # Automatic Garbage Collection
   nix.gc = {
@@ -51,8 +48,10 @@
 
   # Enableing flakes and optimize store.
   nix.settings = {
-    experimental-features = [ "nix-command" "flakes" ];
     auto-optimise-store = true;
+    experimental-features = [ "nix-command" "flakes" ];
+    substituters = [ "https://hyprland.cachix.org" ];
+    trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
   };
 
   # Set system version.
