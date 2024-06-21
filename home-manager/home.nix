@@ -1,10 +1,6 @@
 { inputs, pkgs, theme, ... }:
 {
-  colorScheme = inputs.nix-colors.colorSchemes."${theme}";
-
   imports = [
-    inputs.nix-colors.homeManagerModules.default
-    inputs.nixvim.homeManagerModules.nixvim
     ./eww_colors.nix
     ./modules/bundle.nix
   ];
@@ -37,6 +33,7 @@
   };
 
   home.packages = with pkgs; [
+    (writeShellScriptBin "wallsetter" (builtins.readFile ./bin/wallsetter.sh) )
     (writeShellScriptBin "powermenu" (builtins.readFile ./bin/rofiscripts/powermenu.sh) )
     (writeShellScriptBin "screenshotmenu" (builtins.readFile ./bin/rofiscripts/screenshot.sh) )
     (writeShellScriptBin "wifimenu" (builtins.readFile ./bin/rofiscripts/wifi.sh) )
