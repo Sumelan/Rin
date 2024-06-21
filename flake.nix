@@ -5,13 +5,13 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
     spicetify-nix.url = "github:the-argus/spicetify-nix";
-    nix-colors.url = "github:misterio77/nix-colors";
+    stylix.url = "github:danth/stylix";
+    fine-cmdline = {
+      url = "github:VonHeikemen/fine-cmdline.nvim";
+      flake = false;
+    };
     disko = {
       url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nixvim = {
-      url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
@@ -25,7 +25,7 @@
       system = "x86_64-linux";
 
       # User Variables
-      hostname = "Rin";
+      hostname = "BathyScarf";
       username = "bathys";
       gitUsername = "bathys";
       gitEmail = "bathys@proton.me";
@@ -51,7 +51,7 @@
           };
           modules = [
             ./nixos/configuration.nix
-            inputs.nixvim.nixosModules.nixvim
+            inputs.stylix.nixosModules.stylix
             inputs.disko.nixosModules.disko
             home-manager.nixosModules.home-manager
               {
@@ -61,7 +61,6 @@
                 inherit inputs;
                 inherit gitUsername;
                 inherit theme;
-                inherit (inputs.nix-colors.lib-contrib { inherit pkgs; }) gtkThemeFromScheme;
                 inherit spicetify-nix;
               };
               home-manager.useGlobalPkgs = true;
