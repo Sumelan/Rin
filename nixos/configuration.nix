@@ -36,6 +36,18 @@
 	  enable = true;
   };
 
+# Extra Module Options
+  drivers.amdgpu.enable = true;
+  drivers.nvidia.enable = false;
+  drivers.nvidia-prime = {
+    enable = false;
+    intelBusID = "";
+    nvidiaBusID = "";
+  };
+  drivers.intel.enable = false;
+  vm.guest-services.enable = false;
+  local.hardware-clock.enable = false;
+
   #Add ~/.local/bin/ to $PATH
   environment.localBinInPath = false;
 
