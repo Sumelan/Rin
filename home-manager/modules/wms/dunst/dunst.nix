@@ -1,7 +1,7 @@
 { pkgs, config, ... }:
 let
-  theme = config.colorScheme.palette;
-in  
+  theme = config.stylix.base16Scheme;
+in
 {
   services.dunst = {
     enable = true;
@@ -29,7 +29,6 @@ in
         separator_height = 2;
         frame_width = 2;
         frame_color = "#${theme.base06}";
-        separator_color = "frame";
         corner_radius = 3;
         transparency = 0;
         gap_size = 8;
@@ -39,7 +38,6 @@ in
         history_length = 20;
         show_age_threshold = 60;
         markup = "full";
-        font = "Product Sans 12";
         word_wrap = "yes";
         sort = "yes";
         shrink = "no";
@@ -62,19 +60,16 @@ in
       fullscreen_delay_everything = { fullscreen = "delay"; };
       urgency_low = {
         timeout = 8;
-        background = "#${theme.base00}";
         foreground = "#${theme.base05}";
         highlight = "#${theme.base0D}";
       };
       urgency_normal = {
         timeout = 8;
-        background = "#${theme.base00}";
         foreground = "#${theme.base05}";
         highlight = "#${theme.base0D}";
       };
       urgency_critical = {
         timeout = 10;
-        background = "#${theme.base00}";
         foreground = "#${theme.base05}";
         highlight = "#${theme.base08}";
       };
