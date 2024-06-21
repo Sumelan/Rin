@@ -7,6 +7,14 @@
       xwayland.enable = true;
     };
     dconf.enable = true;
+    seahorse.enable = true;
+    fuse.userAllowOther = true;
+    mtr.enable = true;
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
+
     nm-applet.enable = true;
     steam = {
       enable = true;
@@ -25,4 +33,5 @@
     file-roller.enable = true;
     kdeconnect.enable = true;
   };
+  hardware.brillo.enable = true;
 }
