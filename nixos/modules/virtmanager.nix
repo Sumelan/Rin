@@ -1,7 +1,9 @@
 { config, pkgs, ... }:
 {
-  virtualisation = {
-	  libvirtd.enable = true;
-	  spiceUSBRedirection.enable = true;
+  virtualisation.libvirtd.enable = true;
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+    defaultNetwork.settings.dns_enabled = true;
   };
 }
