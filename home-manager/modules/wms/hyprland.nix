@@ -1,6 +1,6 @@
 { config, ... }:
 let
-  theme = config.colorScheme.palette;
+  theme = config.stylix.base16Scheme;
 in
 {
   wayland.windowManager.hyprland =  {
@@ -27,17 +27,17 @@ in
       env = QT_QPA_PLATFORMTHEME,qt6ct # change to qt6ct if you have that
       env = WLR_NO_HARDWARE_CURSORS,1
 
-      #start programs
+     #start programs
       exec-once = dbus-update-activation-environment --systemd --all
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-      exec-once = swww-daemon & swww img ~/Pictures/Wallpapers/kobato.png
+      exec-once = swww-daemon & swww img ~/Pictures/wallpapers/honkai-kafka-06.png
       exec-once = pkill dunst && Sleep .5 && dunst
-      exec-once = eww daemon
-      exec = eww open bar && eww reload &
+      exec-once = eww daemon && sleep .5
+      exec = eww open bar && sleep .5 && eww reload &
       exec-once = nm-applet
       exec-once = wl-paste --type text --watch cliphist store & wl-paste --type image --watch cliphist store & wl-paste --watch cliphist store
       exec-once = systemd
-      exec-once = spotify
+      exec-once = spotify && sleep .5
       exec-once = kdeconnect-indicator
       exec-once = fcitx5
 
@@ -50,9 +50,9 @@ in
       #float window rules
       windowrulev2 = float, class:^([Rr]ofi)$
       #workspaces window rules
-      windowrule = workspace 1, firefox
+      windowrule = workspace 1, $browser
       windowrule = workspace special:magic, Spotify
-      #workspace rules
+      #workspace monitor rules
       workspace=10, monitor:HDMI-A-2, default:true
 
       #keybindings
@@ -61,8 +61,8 @@ in
       bind = $mainMod, T, exec, $fileManager
       bind = $mainMod, W, exec, $browser
       bind = $mainMod, C, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
-      bind = $mainMod, S, exec, screenshotmenu | swappy -f -
-
+      bind = $mainMod, S, exec, screenshotmenu
+      bind = $mainMod ALT, W, exec, wallsetter
       bind = CTRL ALT, P, exec, powermenu
 
       bind = $mainMod, Q, killactive
@@ -80,6 +80,10 @@ in
       bind = ,XF86MonBrightnessUp, exec, changebrightness up
       bind = ,XF86MonBrightnessDown, exec, changebrightness down
       bind = ,Print, exec, screenshotmenu
+
+      bind = ,Menu, exec, eww open --toggle dash
+      bind = ,Pause, exec, eww open --toggle control
+      bind = ,Insert, exec, eww open --toggle moment
 
       bind = $mainMod, H, movefocus, l
       bind = $mainMod, J, movefocus, d
