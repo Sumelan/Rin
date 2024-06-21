@@ -10,7 +10,11 @@
       PasswordAuthentication = true;
     };
   };
-
+services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
   networking.firewall = {
     enable = true;
     allowedTCPPorts = [ 80 443 ];
