@@ -8,6 +8,7 @@
       description = "Bathys Scarf";
       extraGroups = [ "networkmanager" "wheel" "input" "libvirtd" ];
     };
+    mutableUsers = true;
     defaultUserShell = pkgs.zsh;
   };
 
