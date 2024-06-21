@@ -39,10 +39,6 @@
         ];
       };
 
-      status.separator_style = {
-        fg = "red";
-        bg = "red";
-      };
     };
   };
 
