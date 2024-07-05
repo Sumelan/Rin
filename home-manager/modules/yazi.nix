@@ -22,9 +22,6 @@
 
     theme = {
       manager = {
-        preview_hovered = {
-          underline = false;
-        };
         folder_offset = [
           1
           0

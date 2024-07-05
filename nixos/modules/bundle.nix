@@ -2,12 +2,12 @@
   imports = [
     ./bluetooth.nix
     ./bootloader.nix
+    ./catppuccin.nix
     ./env.nix
     ./hardware.nix
     ./network.nix
     ./security.nix
     ./services.nix
-    ./stylix.nix
     ./sound.nix
     ./starship.nix
     ./systemd.nix

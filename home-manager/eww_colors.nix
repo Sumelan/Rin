@@ -1,36 +1,29 @@
-{ config, ... }:
-
-let
-  theme = config.stylix.base16Scheme;
-in
 {
   xdg.configFile.".config/eww/style/_colors.scss".text = ''
-    $background : #${theme.base00};
-    $foreground : #${theme.base05};
-    $background-alt : #${theme.base01};
-    $background-light : #${theme.base04};
-    $foreground-alt : #${theme.base06};
+    $background : #363a4f;
+    $foreground : #939ab7;
+    $background-alt : #24273a;
+    $background-light : #5b6078;
+    $foreground-alt : #8087a2;
     $red : #902c3b;
-    $red-light : #${theme.base08};
+    $red-light : #ed8796;
 
     $green : #2a8664;
-    $green-light : #${theme.base0B};
-
+    $green-light : #a6da95;
 
     $yellow : #eed49f;
-    $yellow-light : #${theme.base0A};
+    $yellow-light : #e1ee9f;
 
-    $blue : #8aadf4;
-    $blue-light : #${theme.base0D};
+    $blue : #6fa8dc;
+    $blue-light : #8aadf4;
 
     $cyan : #00ffff;
-    $cyan-light : #${theme.base0C};
+    $cyan-light : #ee99a0;
 
     $magenta : #ff00ff;
-    $magenta-light : #${theme.base07};
+    $magenta-light : #b7bdf8;
 
-    $comment : #${theme.base02};
-    $accent : #${theme.base0E};
-
+    $comment : #cad3f5;
+    $accent : #c6a0f6;
   '';
 }

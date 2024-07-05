@@ -1,7 +1,4 @@
 { config, ... }:
-let
-  theme = config.stylix.base16Scheme;
-in
 {
   wayland.windowManager.hyprland =  {
     enable = true;
@@ -19,9 +16,7 @@ in
       $browser = brave
 
       #monitors
-      monitor = HDMI-A-1, 1920x1080@60, 0x0, 1
-      monitor = HDMI-A-2, 1920x1080@60, 1920x0, 1
-
+      monitor=,preferred,auto,1
       #env variables
       env = XCURSOR_SIZE,24
       env = QT_QPA_PLATFORMTHEME,qt6ct # change to qt6ct if you have that
@@ -30,7 +25,7 @@ in
      #start programs
       exec-once = dbus-update-activation-environment --systemd --all
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-      exec-once = swww-daemon & swww img ~/Pictures/wallpapers/XXXYAN-01.png
+      exec-once = swww-daemon & swww img ~/Pictures/wallpapers/honkai-sparkle-01.jpg
       exec-once = pkill dunst && Sleep .5 && dunst
       exec-once = eww daemon && sleep .5
       exec = eww open bar && sleep .5 && eww reload &
@@ -53,7 +48,6 @@ in
       windowrule = workspace 1, $browser
       windowrule = workspace special:magic, Spotify
       #workspace monitor rules
-      workspace=10, monitor:HDMI-A-2, default:true
 
       #keybindings
       bind = $mainMod, RETURN, exec, $terminal
@@ -155,8 +149,6 @@ in
         gaps_in = 4
         gaps_out = 6
         border_size = 0
-        col.active_border = rgba(${theme.base02}ff)
-        col.inactive_border = rgba(${theme.base00}ff)
         layout = dwindle
         allow_tearing = true
       }
