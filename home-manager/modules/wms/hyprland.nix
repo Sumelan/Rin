@@ -16,7 +16,8 @@
       $browser = brave
 
       #monitors
-      monitor=,preferred,auto,1
+      monitor= , preferred, auto, 1
+
       #env variables
       env = XCURSOR_SIZE,24
       env = QT_QPA_PLATFORMTHEME,qt6ct # change to qt6ct if you have that
@@ -25,21 +26,20 @@
      #start programs
       exec-once = dbus-update-activation-environment --systemd --all
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-      exec-once = swww-daemon & swww img ~/Pictures/wallpapers/honkai-sparkle-01.jpg
+      exec-once = swww-daemon & swww img ~/Pictures/wallpapers/genshin-ayaka.png
       exec-once = pkill dunst && Sleep .5 && dunst
       exec-once = eww daemon && sleep .5
       exec = eww open bar && sleep .5 && eww reload &
       exec-once = nm-applet
       exec-once = wl-paste --type text --watch cliphist store & wl-paste --type image --watch cliphist store & wl-paste --watch cliphist store
       exec-once = systemd
-      exec-once = spotify && sleep .5
       exec-once = kdeconnect-indicator
       exec-once = fcitx5
 
       #opacity window rules
       windowrule = opacity 1 0.84, vesktop
-      windowrule = opacity 0.8, Spotify
       windowrule = opacity 0.9, neovide
+      windowrule = opacity 0.8, spotify
       windowrule = opacity 0.8, bottles
       windowrule = opacity 0.8, fl64.exe
       #float window rules

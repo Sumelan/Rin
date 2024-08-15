@@ -1,7 +1,7 @@
 { self, config, lib, pkgs, ... }:
 {
   services.audiobookshelf = {
-    enable = true;
+    enable = false;
     port = 8234;
     openFirewall = true;
   };

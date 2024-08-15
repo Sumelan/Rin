@@ -74,6 +74,7 @@
       udiskie
       wine
       winetricks
+      tartube-yt-dlp
     # CLI programs
       acpi
       atuin

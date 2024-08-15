@@ -23,17 +23,23 @@
       log_type = "file";
       default_phone_region = "JP";
       enabledPreviewProviders = [
-        "OC\\Preview\\BMP"
-        "OC\\Preview\\GIF"
-        "OC\\Preview\\JPEG"
-        "OC\\Preview\\Krita"
-        "OC\\Preview\\MarkDown"
-        "OC\\Preview\\MP3"
-        "OC\\Preview\\OpenDocument"
-        "OC\\Preview\\PNG"
         "OC\\Preview\\TXT"
-        "OC\\Preview\\XBitmap"
-        "OC\\Preview\\HEIC"
+        "OC\\Preview\\MarkDown"
+        "OC\\Preview\\OpenDocument"
+        "OC\\Preview\\PDF"
+        "OC\\Preview\\MSOffice2023"
+        "OC\\Preview\\MSOfficeDoc"
+        "OC\\Preview\\Image"
+        "OC\\Preview\\Photoshop"
+        "OC\\Preview\\TIFF"
+        "OC\\Preview\\SVG"
+        "OC\\Preview\\Font"
+        "OC\\Preview\\MP3"
+        "OC\\Preview\\Movie"
+        "OC\\Preview\\MKV"
+        "OC\\Preview\\MP4"
+        "OC\\Preview\\AVI"
+        "OC\\Preview\\Krita"
       ];
     };
     config = {
