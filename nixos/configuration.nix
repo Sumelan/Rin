@@ -57,6 +57,25 @@
     trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
   };
 
+# Overlays.
+  nixpkgs.overlays = [ 
+    (final: prev: {
+      luajit = prev.luajit.override {
+        packageOverrides = luafinal: luaprev: {
+          # https://github.com/NixOS/nixpkgs/issues/333761
+          dkjson = luaprev.dkjson.overrideAttrs (finalAttrs: prevAttrs: {
+            src = final.fetchurl {
+              inherit (prevAttrs.src) url;
+              hash = "sha256-JOjNO+uRwchh63uz+8m9QYu/+a1KpdBHGBYlgjajFTI=";
+            };
+          });
+         };
+      };
+
+      luajitPackages = final.luajit.pkgs;
+    })
+  ];
+
   # Set system version.
   system.stateVersion = "23.11";
 }

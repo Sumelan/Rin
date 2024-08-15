@@ -23,7 +23,7 @@
       env = QT_QPA_PLATFORMTHEME,qt6ct # change to qt6ct if you have that
       env = WLR_NO_HARDWARE_CURSORS,1
 
-     #start programs
+      #start programs
       exec-once = dbus-update-activation-environment --systemd --all
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
       exec-once = swww-daemon & swww img ~/Pictures/wallpapers/genshin-ayaka.png
@@ -187,7 +187,7 @@
       }
 
       master {
-        new_is_master = true
+        new_status = inherit
       }
 
       misc {

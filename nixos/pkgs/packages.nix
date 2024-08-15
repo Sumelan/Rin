@@ -36,7 +36,6 @@
       wpgtk
       yad
     # audio
-      easyeffects
       pamixer
       pavucontrol
       wireplumber
