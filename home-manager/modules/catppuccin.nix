@@ -3,6 +3,11 @@
     enable = true;
     accent = "mauve";
     flavor = "macchiato";
+    pointerCursor = {
+      enable = true;
+      accent = "mauve";
+      flavor = "macchiato";
+    };
   };
   # gtk theme
   gtk.catppuccin = {
@@ -11,11 +16,6 @@
     flavor = "macchiato";
     size = "standard";
     tweaks = [ "normal" ];
-    cursor = {
-      enable = true;
-      accent = "mauve";
-      flavor = "macchiato";
-    };
     icon = {
       enable = true;
       accent = "mauve";
