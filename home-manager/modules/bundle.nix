@@ -9,11 +9,11 @@
     ./yazi.nix
     ./zsh.nix
     ./wms/hyprland.nix
-    ./wms/eww/eww.nix
     ./wms/hypridle.nix
-    ./wms/swappy.nix
-    ./wms/dunst/dunst.nix
     ./wms/hyprlock.nix
+    ./wms/swappy.nix
     ./wms/rofi/rofi.nix
+    ./wms/swaync/swaync.nix
+    ./wms/waybar/waybar.nix
   ];
 }

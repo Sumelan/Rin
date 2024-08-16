@@ -27,10 +27,10 @@
       exec-once = dbus-update-activation-environment --systemd --all
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
       exec-once = swww-daemon & swww img ~/Pictures/wallpapers/genshin-ayaka.png
-      exec-once = pkill dunst && Sleep .5 && dunst
-      exec-once = eww daemon && sleep .5
-      exec = eww open bar && sleep .5 && eww reload &
-      exec-once = nm-applet
+      exec-once = pkill waybar;sleep .5 && waybar
+      exec-once = pkill swaync;sleep .5 && swaync
+      exec-once = nm-applet --indicator
+      exec-once = buleman-applet
       exec-once = wl-paste --type text --watch cliphist store & wl-paste --type image --watch cliphist store & wl-paste --watch cliphist store
       exec-once = systemd
       exec-once = kdeconnect-indicator
@@ -74,10 +74,6 @@
       bind = ,XF86MonBrightnessUp, exec, changebrightness up
       bind = ,XF86MonBrightnessDown, exec, changebrightness down
       bind = ,Print, exec, screenshotmenu
-
-      bind = ,Menu, exec, eww open --toggle dash
-      bind = ,Pause, exec, eww open --toggle control
-      bind = ,Insert, exec, eww open --toggle moment
 
       bind = $mainMod, H, movefocus, l
       bind = $mainMod, J, movefocus, d

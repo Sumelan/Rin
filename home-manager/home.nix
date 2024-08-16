@@ -1,7 +1,7 @@
 { inputs, pkgs, theme, ... }:
 {
   imports = [
-    ./eww_colors.nix
+    ./macchiato.nix
     ./modules/bundle.nix
   ];
 

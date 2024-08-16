@@ -29,7 +29,7 @@
     anchor:   north west;
     fullscreen:                  false;
     width:                       360px;
-    x-offset:                    290px;
+    x-offset:                    20px;
     y-offset:                    20px;
 
     enabled:                     true;

@@ -12,8 +12,6 @@
       brightnessctl
       cava
       cliphist
-      dunst
-      eww
       feh
       gparted
       gwenview
@@ -29,6 +27,7 @@
       polkit_gnome
       slurp
       swappy
+      swaynotificationcenter
       swww
       unrar
       unzip

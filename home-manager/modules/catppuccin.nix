@@ -1,24 +1,24 @@
 {
   catppuccin = {
     enable = true;
-    accent = "mauve";
+    accent = "sky";
     flavor = "macchiato";
     pointerCursor = {
       enable = true;
-      accent = "mauve";
+      accent = "rosewater";
       flavor = "macchiato";
     };
   };
   # gtk theme
   gtk.catppuccin = {
     enable = true;
-    accent = "mauve";
+    accent = "flamingo";
     flavor = "macchiato";
     size = "standard";
     tweaks = [ "normal" ];
     icon = {
       enable = true;
-      accent = "mauve";
+      accent = "flamingo";
       flavor = "macchiato";
     };
   };
@@ -57,13 +57,13 @@
   # lazygit
   programs.lazygit.catppuccin = {
     enable = true;
-    accent = "mauve";
+    accent = "maroon";
     flavor = "macchiato";
   };
   # mpv
   programs.mpv.catppuccin = {
     enable = true;
-    accent = "mauve";
+    accent = "teal";
     flavor = "macchiato";
   };
   # neovim
@@ -81,6 +81,12 @@
     enable = true;
     flavor = "macchiato";
   };
+  # waybar
+  programs.waybar.catppuccin = {
+    enable = true;
+    flavor = "macchiato";
+    mode = "prependImport";
+  };
   # yazi
   programs.yazi.catppuccin = {
     enable = true;
@@ -94,19 +100,14 @@
   # qt
   qt.style.catppuccin = {
     enable = true;
-    accent = "mauve";
+    accent = "flamingo";
     apply = true;
-    flavor = "macchiato";
-  };
-  # dunst
-  services.dunst.catppuccin = {
-    enable = true;
     flavor = "macchiato";
   };
   # Hyprland
   wayland.windowManager.hyprland.catppuccin = {
     enable = true;
-    accent = "mauve";
+    accent = "blue";
     flavor = "macchiato";
   };
 }
