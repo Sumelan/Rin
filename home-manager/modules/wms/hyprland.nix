@@ -30,7 +30,7 @@
       exec-once = pkill waybar;sleep .5 && waybar
       exec-once = pkill swaync;sleep .5 && swaync
       exec-once = nm-applet --indicator
-      exec-once = buleman-applet
+      exec-once = blueman-applet
       exec-once = wl-paste --type text --watch cliphist store & wl-paste --type image --watch cliphist store & wl-paste --watch cliphist store
       exec-once = systemd
       exec-once = kdeconnect-indicator
@@ -50,14 +50,14 @@
       #workspace monitor rules
 
       #keybindings
-      bind = $mainMod, RETURN, exec, $terminal
-      bind = $mainMod, D, exec, pkill rofi || rofi -show drun
+      bind = $mainMod, Return, exec, $terminal
+      bind = $mainMod SHIFT, Return, exec, pkill rofi || rofi -show drun
       bind = $mainMod, T, exec, $fileManager
       bind = $mainMod, W, exec, $browser
       bind = $mainMod, C, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
       bind = $mainMod, S, exec, screenshotmenu
       bind = $mainMod ALT, W, exec, wallsetter
-      bind = CTRL ALT, P, exec, powermenu
+      bind = $mainMod ALT, P, exec, powermenu
 
       bind = $mainMod, Q, killactive
       bind = $mainMod, ESC, exit
@@ -65,15 +65,19 @@
       bind = $mainMod, F, fullscreen
       bind = $mainMod, P, pseudo, dwindle
 
-      bind = ,XF86AudioRaiseVolume, exec, changevolume up
-      bind = ,XF86AudioLowerVolume, exec, changevolume down
-      binde = ,XF86AudioMute, exec, changevolume mute
+      bind = ,XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+      bind = ,XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+      binde = ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
       bind = ,XF86AudioPlay, exec, playerctl play-pause
       bind = ,XF86AudioNext, exec, playerctl next
       bind = ,XF86AudioPrev, exec, playerctl previous
-      bind = ,XF86MonBrightnessUp, exec, changebrightness up
-      bind = ,XF86MonBrightnessDown, exec, changebrightness down
+      bind = ,XF86MonBrightnessUp, exec, brightnessctl set 5%+
+      bind = ,XF86MonBrightnessDown, exec, brightnessctl set 5%+
       bind = ,Print, exec, screenshotmenu
+      #bind = ,XF86Search, exec,
+      #bind = $mainMod, K, exec, 
+      #bind = $mainMod, D, exec, 
+      bind = $mainMod ALT, L, exec, hyprlock
 
       bind = $mainMod, H, movefocus, l
       bind = $mainMod, J, movefocus, d
