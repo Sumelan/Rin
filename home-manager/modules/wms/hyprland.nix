@@ -19,9 +19,18 @@
       monitor= , preferred, auto, 1
 
       #env variables
-      env = XCURSOR_SIZE,24
-      env = QT_QPA_PLATFORMTHEME,qt6ct # change to qt6ct if you have that
-      env = WLR_NO_HARDWARE_CURSORS,1
+      env = NIXOS_OZONE_WL, 1
+      env = NIXPKGS_ALLOW_UNFREE, 1
+      env = XDG_CURRENT_DESKTOP, Hyprland
+      env = XDG_SESSION_TYPE, wayland
+      env = XDG_SESSION_DESKTOP, Hyprland
+      env = GDK_BACKEND, wayland, x11
+      env = CLUTTER_BACKEND, wayland
+      env = QT_QPA_PLATFORM=wayland;xcb
+      env = QT_WAYLAND_DISABLE_WINDOWDECORATION, 1
+      env = QT_AUTO_SCREEN_SCALE_FACTOR, 1
+      env = SDL_VIDEODRIVER, x11
+      env = MOZ_ENABLE_WAYLAND, 1
 
       #start programs
       exec-once = dbus-update-activation-environment --systemd --all
@@ -36,17 +45,19 @@
       exec-once = kdeconnect-indicator
       exec-once = fcitx5
 
-      #opacity window rules
-      windowrule = opacity 1 0.84, vesktop
-      windowrule = opacity 0.9, neovide
-      windowrule = opacity 0.8, spotify
-      windowrule = opacity 0.8, bottles
-      windowrule = opacity 0.8, fl64.exe
-      #float window rules
-      windowrulev2 = float, class:^([Rr]ofi)$
-      #workspaces window rules
-      windowrule = workspace 1, $browser
-      windowrule = workspace special:magic, Spotify
+      #window rules
+      windowrulev2 = opacity 0.9 0.7, class:^(Brave)$
+      windowrulev2 = opacity 0.9 0.7, class:^(thunar)$
+      windowrulev2 = stayfocused, title:^()$,class:^(steam)$
+      windowrulev2 = minsize 1 1, title:^()$,class:^(steam)$
+      windowrule = noborder,^(wofi)$
+      windowrule = center,^(wofi)$
+      windowrule = center,^(steam)$
+      windowrule = float, nm-connection-editor|blueman-manager
+      windowrule = float, swayimg|vlc|Viewnior|pavucontrol
+      windowrule = float, nwg-look|qt5ct|mpv
+      windowrule = float, zoom
+
       #workspace monitor rules
 
       #keybindings
@@ -121,22 +132,21 @@
       bindm = $mainMod, mouse:272, movewindow
       bindm = $mainMod, mouse:273, resizewindow
 
-      #looksmaxxing
       plugin {
-
+        hyprtrails {
+        }
       }
 
       input {
         kb_layout = us
-
+        kb_options = caps:super
         follow_mouse = 1
-        sensitivity = 0
+        sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
         accel_profile = false
-
         touchpad {
           natural_scroll = true
-          middle_button_emulation = true
-          clickfinger_behavior = true
+          disable_while_typing = true
+          scroll_factor = 0.8
         }
       }
 
@@ -146,39 +156,41 @@
       }
 
       general {
-        gaps_in = 4
-        gaps_out = 6
-        border_size = 0
+        gaps_in = 6
+        gaps_out = 8
+        border_size = 2
         layout = dwindle
-        allow_tearing = true
+        resize_on_border = true
       }
 
       decoration {
-        rounding = 0
-        blur {
-          enabled = true
-          size = 2
-          passes = 3
-          xray = true
-          new_optimizations = true
-        }
+        rounding = 10
         drop_shadow = true
-        shadow_range = 140
-        shadow_render_power = 4
-        shadow_offset = 10 15
-        shadow_scale = 0.9
-        col.shadow = rgba(1a1a1aaf)
+        shadow_range = 4
+        shadow_render_power = 3
+        col.shadow = rgba(1a1a1aee)
+        blur {
+            enabled = true
+            size = 5
+            passes = 3
+            new_optimizations = on
+            ignore_opacity = off
+        }
       }
 
       animations {
-        enabled = true
-        bezier = myBezier, 0.05, 0.9, 0.1, 1.05
-        animation = windows, 1, 7, myBezier
-        animation = windowsOut, 1, 7, default, popin 80%
-        animation = border, 1, 10, default
-        animation = borderangle, 1, 8, default
-        animation = fade, 1, 7, default
-        animation = workspaces, 1, 6, default
+        enabled = yes
+        bezier = wind, 0.05, 0.9, 0.1, 1.05
+        bezier = winIn, 0.1, 1.1, 0.1, 1.1
+        bezier = winOut, 0.3, -0.3, 0, 1
+        bezier = liner, 1, 1, 1, 1
+        animation = windows, 1, 6, wind, slide
+        animation = windowsIn, 1, 6, winIn, slide
+        animation = windowsOut, 1, 5, winOut, slide
+        animation = windowsMove, 1, 5, wind, slide
+        animation = border, 1, 1, liner
+        animation = fade, 1, 10, default
+        animation = workspaces, 1, 5, wind
       }
 
       dwindle {
@@ -191,9 +203,10 @@
       }
 
       misc {
-        force_default_wallpaper = -1
+        initial_workspace_tracking = 0
+        mouse_move_enables_dpms = true
+        key_press_enables_dpms = false
       }
-
     '';
   };
 }
