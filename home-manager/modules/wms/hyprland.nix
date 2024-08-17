@@ -161,6 +161,8 @@
         border_size = 2
         layout = dwindle
         resize_on_border = true
+        col.active_border = $accent $accentAlpha 45deg
+        col.inactive_border = $mantle
       }
 
       decoration {
