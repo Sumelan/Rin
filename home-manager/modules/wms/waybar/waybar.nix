@@ -230,18 +230,18 @@
               color: @overlay1;
             }
             #workspaces button.active {
-              background-color: @overlay1;
+              background-color: transparent;
               color: @sky;
             }
             #workspaces button.urgent {
               color: @pearch;
             }
             #workspaces button:hover {
-              background-color:@overlay1;
-              color: @teal;
+              background-color: @base;
+              color: @sky;
             }
             tooltip {
-              background: @overlay1;
+              background: @surface1;
             }
             tooltip label {
               color: @rosewater;
@@ -269,7 +269,7 @@
               color: @text;
             }
             #idle_inhibitor {
-              color: @text;
+              color: @subtext1;
             }
             #temperature {
               color: @red;
