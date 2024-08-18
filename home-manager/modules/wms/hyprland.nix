@@ -35,11 +35,13 @@
       #start programs
       exec-once = dbus-update-activation-environment --systemd --all
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-      exec-once = swww-daemon & swww img ~/Pictures/wallpapers/genshin-ayaka.png
+      exec-once = pkill swww;sleep .5 && swww init
+      exec-once = sleep 1.5 && swww img ~/Pictures/wallpapers/pink/genshin-ayaka.png
       exec-once = pkill waybar;sleep .5 && waybar
       exec-once = pkill swaync;sleep .5 && swaync
       exec-once = nm-applet --indicator
       exec-once = blueman-applet
+      exec-once = lxqt-policykit-agent
       exec-once = wl-paste --type text --watch cliphist store & wl-paste --type image --watch cliphist store & wl-paste --watch cliphist store
       exec-once = systemd
       exec-once = kdeconnect-indicator
