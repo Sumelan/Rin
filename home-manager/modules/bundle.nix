@@ -13,7 +13,7 @@
     ./wms/hyprlock.nix
     ./wms/swappy.nix
     ./wms/rofi/rofi.nix
-    ./wms/swaync/swaync.nix
-    ./wms/waybar/waybar.nix
+    ./wms/dunst/dunst.nix
+    ./wms/eww/eww.nix
   ];
 }

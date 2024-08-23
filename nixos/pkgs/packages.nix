@@ -43,7 +43,6 @@
     # programs
       anki-bin
       audiobookshelf
-      bitwarden
       bottles
       brave
       brillo
@@ -105,7 +104,6 @@
       lsd
       lshw
       ncdu
-      ncspot
       nh
       nitch
       pciutils

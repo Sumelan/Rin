@@ -71,7 +71,7 @@
       )
       (box :orientation 'h'  :space-evenly false :spacing 20
         (box :class "altstats" :orientation 'v' :spacing 20
-          (circprog :value wifisped :icon " " :label "Wifi Speed" :color "green")
+          (circprog :value wifisped :icon "󰛳 " :label "Network Speed" :color "green")
           (circprog :value {EWW_DISK["/"].used_perc} :icon " " :label "Disk" :color "red")
         )
         (box :class "stats" :orientation 'h' :hexpand true

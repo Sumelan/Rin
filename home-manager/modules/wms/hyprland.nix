@@ -206,7 +206,7 @@
       bind = ,Print, exec, screenshotmenu
 
       ##open eww widget
-      #bind = ,Menu, exec, eww open --toggle dash
+      bind = ,XF86HomePage, exec, eww open --toggle dash
       #bind = ,Pause, exec, eww open --toggle control
       #bind = ,Insert, exec, eww open --toggle moment
 
