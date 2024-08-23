@@ -42,16 +42,16 @@ if [[ ! -z "$menu_option" ]]
 then
   case $menu_option in
   	$active)
-  	grimblast --notify save active $tmp_filename > /dev/null 2>&1
+  	sleep 1.0 && grimblast --notify save active $tmp_filename > /dev/null 2>&1
   		;;
   	$screen)
-  	grimblast --notify save screen $tmp_filename > /dev/null 2>&1
+  	sleep 1.0 && grimblast --notify save screen $tmp_filename > /dev/null 2>&1
   		;;
   	$output)
-  	grimblast --notify save output $tmp_filename > /dev/null 2>&1
+  	sleep 1.0 && grimblast --notify save output $tmp_filename > /dev/null 2>&1
   		;;
   	$area)
-  	grimblast --notify save area $tmp_filename > /dev/null 2>&1
+  	sleep 1.0 && grimblast --notify save area $tmp_filename > /dev/null 2>&1
   		;;
   esac
   mode="$(select_mode)"

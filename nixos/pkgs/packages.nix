@@ -12,7 +12,8 @@
       brightnessctl
       cava
       cliphist
-      feh
+      dunst
+      eww
       gparted
       gwenview
       grim
@@ -25,6 +26,7 @@
       networkmanagerapplet
       rofi-wayland
       polkit_gnome
+      pqiv
       slurp
       swappy
       swaynotificationcenter
@@ -65,6 +67,7 @@
       soundconverter
       spicetify-cli
       spotify
+      tartube-yt-dlp
       thunderbird
       vencord
       vesktop
@@ -72,7 +75,7 @@
       udiskie
       wine
       winetricks
-      tartube-yt-dlp
+      xdragon
     # CLI programs
       acpi
       atuin
