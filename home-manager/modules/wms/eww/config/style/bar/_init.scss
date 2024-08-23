@@ -1,0 +1,173 @@
+.workspaces {
+  @include rounding;
+  padding: 16px;
+  margin-top: 2px;
+  inner {
+    &:hover {
+      background-color: $surface0;
+    }
+  }
+  button {
+    border-style: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background-color: $surface0;
+    min-width: 18px;
+    min-height: 18px;
+    margin: 0 0.4rem;
+    border-radius: 10px;
+    &:hover {
+      background-color: $subtext1;
+    }
+    &.occupied {
+      background: rgba($text, 0.6);
+      &:hover {
+        background-color: $text;
+      }
+    }
+    &.active {
+      background: linear-gradient(to right, $sky, $green);
+      background-size: cover;
+    }
+  }
+}
+
+.bar {
+  background: $base;
+}
+
+.barpor {
+  @include rounding;
+  padding: 8px;
+}
+
+.launcher {
+  font-family: "Iosevka Nerd Font";
+  color: $surface0;
+  background: $blue;
+  @include rounding;
+  padding: 3px 12px;
+  margin: 5px 0;
+  margin-left: 0.5rem;
+  font-size: 22px;
+  &.hover {
+    color: $green;
+  }
+}
+
+.both {
+  background-color: $surface0;
+  padding: 3px 12px;
+  border-radius: 50px 7px 7px 50px;
+  margin-top: 2px;
+  font-size: 16px;
+}
+
+.thingy {
+  color: $green;
+}
+
+.time {
+  font-family: "Rubik";
+  background-color: $surface0;
+  padding: 3px 12px;
+  border-radius: 7px 50px 50px 7px;
+  margin-top: 2px;
+  font-size: 16px;
+}
+
+.t {
+  padding: 0.8rem;
+}
+
+.powericon {
+  font-family: "Iosevka Nerd Font";
+  background-color: $surface0;
+  @include rounding;
+  padding: 3px 12px;
+  color: $red;
+  margin-top: 2px;
+  font-size: 20px;
+}
+
+.batteryicon {
+  font-family: "Iosevka Nerd Font";
+  font-size: 20px;
+  color: $base;
+}
+
+.bat_progress trough {
+  min-width: 8rem;
+  min-height: 22px;
+  background: rgba($blue, 0.1);
+  @include rounding;
+}
+
+.bat_progress trough highlight {
+  @include rounding;
+  background: linear-gradient(to right, $blue, $sapphire);
+}
+
+.batterybar {
+  margin: 2px 0;
+  @include rounding;
+  padding: 8px;
+  background: $surface0;
+}
+
+.wifiicon {
+  font-size: 20px;
+  font-family: "Iosevka Nerd Font";
+  color: $blue;
+}
+
+.musicbar {
+  @include rounding;
+  margin: 0px 0px;
+  background-position: bottom;
+  background-size: 100%;
+  min-height: 42px;
+  min-width: 280px;
+}
+
+.barmusic-g {
+  background-image: linear-gradient(to right, rgba($base, 0.8) 40%, rgba($base, 0.7));
+}
+
+.hbmusicbutton {
+  font-family: "Iosevka Nerd Font";
+  padding: 1rem;
+  font-size: 20px;
+}
+
+.bmusicbutton {
+  font-family: "Iosevka Nerd Font";
+  padding: 0.8rem;
+  font-size: 24px;
+}
+
+.bar {
+  margin: 0.3rem 0.3rem;
+  border-radius: 10px;
+}
+
+.image {
+  margin-right: 0.5rem;
+  border-radius: 100px;
+}
+
+.icon {
+  background: $surface0;
+  padding: 0.4rem 1rem;
+  font-size: 18px;
+  @include rounding;
+  margin: 4px 0;
+  margin-right: 0rem;
+  font-family: Material Design Icons Desktop;
+}
+
+.themes {
+  background: $surface0;
+  margin: 4px 0;
+  padding: 0.4rem;
+}

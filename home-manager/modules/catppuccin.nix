@@ -73,7 +73,7 @@
   };
   # rofi
   programs.rofi.catppuccin = {
-    enable = true;
+    enable = false;
     flavor = "macchiato";
   };
   # starship
