@@ -1,7 +1,7 @@
 {
   catppuccin = {
     enable = true;
-    accent = "sky";
+    accent = "green";
     flavor = "macchiato";
     pointerCursor = {
       enable = true;
@@ -15,10 +15,10 @@
     accent = "flamingo";
     flavor = "macchiato";
     size = "standard";
-    tweaks = [ "normal" ];
+    tweaks = [ "rimless" "normal" ];
     icon = {
       enable = true;
-      accent = "flamingo";
+      accent = "sapphire";
       flavor = "macchiato";
     };
   };
@@ -81,12 +81,6 @@
     enable = true;
     flavor = "macchiato";
   };
-  # waybar
-  programs.waybar.catppuccin = {
-    enable = true;
-    flavor = "macchiato";
-    mode = "prependImport";
-  };
   # yazi
   programs.yazi.catppuccin = {
     enable = true;
@@ -100,14 +94,19 @@
   # qt
   qt.style.catppuccin = {
     enable = true;
-    accent = "flamingo";
+    accent = "mauve";
     apply = true;
+    flavor = "macchiato";
+  };
+  # dunst
+  services.dunst.catppuccin = {
+    enable = true;
     flavor = "macchiato";
   };
   # Hyprland
   wayland.windowManager.hyprland.catppuccin = {
     enable = true;
-    accent = "blue";
+    accent = "green";
     flavor = "macchiato";
   };
 }
