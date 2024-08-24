@@ -1,5 +1,21 @@
 # Rin / 鈴
-My NixOS dotfiles.  Minisforum AMD mini PC.
-Nextcloud and Audiobookshelf server.
+My NixOS dotfiles.  
+Minisforum AMD mini PC.
+------
+- **Hyprland**+**eww**+**catppuccin** (macchiato).  
+- Nextcloud and Audiobookshelf (currently disable) .  
+------
+## Screenshot
 
-![swappy-20240612-223235](https://github.com/bathys/Rin/assets/68154148/5086cd64-3af8-4454-be90-db478a7a227a)
+![screenshot_24-08-24_22:01:51](https://github.com/user-attachments/assets/6ed53c64-e064-4d7b-9107-8083e25c06ef)
+
+------
+## Credit
+I learned Hyprland stuffs from the "Hyprland-Dots".  
+  https://github.com/JaKooLit/Hyprland-Dots
+  
+NixOS from "ZaneyOS".  
+  https://gitlab.com/Zaney/zaneyos
+
+Eww widget from "Glaicer".  
+  https://github.com/namishh/crystal/tree/glacier
