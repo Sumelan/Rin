@@ -14,7 +14,6 @@
       cliphist
       dunst
       eww
-      gparted
       gwenview
       grim
       grimblast
@@ -29,7 +28,6 @@
       pqiv
       slurp
       swappy
-      swaynotificationcenter
       swww
       unrar
       unzip
