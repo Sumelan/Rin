@@ -39,16 +39,23 @@
     ];
   };
 
-# Power management.
+  # Power management.
   powerManagement = {
 	  enable = true;
   };
 
-# Extra Module Options
+  # Extra Module Options
   drivers.amdgpu.enable = true;
 
-  #Add ~/.local/bin/ to $PATH
+  # Add ~/.local/bin/ to $PATH
   environment.localBinInPath = false;
+  # Variable
+  environment.sessionVariables = {
+    WLR_HARDWARE_CURSORS = "1";
+    NIXOS_OZONE_WL = "1";
+    NIXOS_CONFIG = "/home/bathys/Rin/";
+  };
+
 
   # Automatic Garbage Collection
   nix.gc = {

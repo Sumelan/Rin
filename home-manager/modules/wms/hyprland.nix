@@ -30,9 +30,6 @@
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
       exec-once = pkill swww;sleep .5 && swww init
       exec-once = swww img ~/Pictures/wallpapers/default.png
-      exec-once = pkill dunst;sleep .5 && dunst
-      exec-once = plill eww;sleep .5 && eww daemon
-      exec = eww open bar && sleep .5 && eww reload
       exec-once = nm-applet --indicator
       exec-once = blueman-applet
       exec-once = lxqt-policykit-agent

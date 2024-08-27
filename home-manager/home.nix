@@ -1,4 +1,4 @@
-{ pkgs, theme, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./modules/bundle.nix
@@ -24,14 +24,22 @@
     };
   };
 
+  wal.enable = true;
+
   gtk = {
     enable = true;
     font = {
-      name = "ShureTechMono Nerd Font";
-      size = 14;
+      name = "Noto Sans";
+    };
+    iconTheme = {
+      name = "Papirus-Dark-Maia";
+      package = pkgs.papirus-maia-icon-theme;
     };
     gtk3.extraConfig = {
-      gtk-application-prefer-dark-theme = 1;
+      gtk-application-prefer-dark-theme = true;
+      gtk-key-theme-name    = "Default";
+      gtk-icon-theme-name   = "Papirus-Dark-Maia";
+      gtk-cursor-theme-name = "Capitaine Cursors - White";
     };
     gtk4.extraConfig = {
       gtk-application-prefer-dark-theme = 1;
@@ -39,13 +47,14 @@
   };
   qt = {
     enable = true;
-    platformTheme.name = "kvantum";
-    style = {
-      name = "kvantum";
-    };
+    platformTheme.name = "gtk";
   };
 
   dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      gtk-key-theme = "Default";
+      cursor-theme = "Capitaine Cursors - White";
+    };
     "org/virt-manager/virt-manager/connections" = {
       autoconnect = [ "qemu:///system" ];
       uris = [ "qemu:///system" ];
