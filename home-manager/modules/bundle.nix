@@ -9,7 +9,7 @@
     ./yazi.nix
     ./zsh.nix
     ./wms/ags/ags.nix
-    ./wms/hyprland.nix
+    ./wms/hyprland/default.nix
     ./wms/hypridle.nix
     ./wms/hyprlock.nix
     ./wms/swappy.nix
