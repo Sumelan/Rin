@@ -28,8 +28,11 @@
   };
   libinput.enable = true;
   fstrim.enable = true;
+  # USB
   gvfs.enable = true;
+  # Flatpak
   flatpak.enable = false;
+  # Printer
   printing = {
     enable = true;
     drivers = [

@@ -3,9 +3,8 @@
 {
   imports = [
       ./hardware-configuration.nix
-      ./desktop/amd-drivers.nix
+      ./amd/amd-drivers.nix
       ./pkgs/packages.nix
-      ./japanese-input.nix
       ./fonts/fonts.nix
       ./modules/bundle.nix
       ./disko-config.nix
@@ -30,6 +29,15 @@
       LC_TELEPHONE = "ja_JP.UTF-8";
       LC_TIME = "ja_JP.UTF-8";
     };
+
+  # Input methods.
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+    fcitx5.addons = with pkgs; [
+      fcitx5-mozc
+    ];
+  };
 
 # Power management.
   powerManagement = {
