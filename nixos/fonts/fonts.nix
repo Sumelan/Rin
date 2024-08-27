@@ -13,8 +13,8 @@
       nerdfonts
     ];
 
+    fontDir.enable = true;
     fontconfig = {
-      hinting.autohint = true;
       defaultFonts = {
          serif = [ "Noto Serif CJK JP" "Noto Color Emoji" ];
          sansSerif = [ "Noto Sans CJK JP" "Noto Color Emoji" ];

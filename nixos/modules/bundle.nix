@@ -3,6 +3,7 @@
     ./bluetooth.nix
     ./bootloader.nix
     ./borgbackup.nix
+    ./catppuccin.nix
     ./env.nix
     ./hardware.nix
     ./network.nix

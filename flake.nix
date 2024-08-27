@@ -1,9 +1,10 @@
 {
-  description = "Rin config flake";
+  description = "My system configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
+    catppuccin.url = "github:catppuccin/nix";
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -16,13 +17,12 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    ags.url = "github:Aylur/ags";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs, disko, home-manager, ... }@inputs:
+  outputs = { nixpkgs, catppuccin, disko, home-manager, ... }@inputs:
 
     let
       system = "x86_64-linux";
@@ -47,6 +47,7 @@
           };
           modules = [
             ./nixos/configuration.nix
+            catppuccin.nixosModules.catppuccin
             disko.nixosModules.disko
             home-manager.nixosModules.home-manager
               {

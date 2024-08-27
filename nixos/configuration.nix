@@ -3,7 +3,7 @@
 {
   imports = [
       ./hardware-configuration.nix
-      ./amd/amd-drivers.nix
+      ./desktop/amd-drivers.nix
       ./pkgs/packages.nix
       ./fonts/fonts.nix
       ./modules/bundle.nix
