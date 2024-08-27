@@ -24,7 +24,7 @@ let
           @import url(\"../general/gtk-colors.css\");
           @import url(\"../general/widgets.css\");
           @import url(\"../general/titlebar.css\");
-          @import url(\"file:///home/zeroth/.config/wpg/templates/gtk.css\");" > ./linea-nord-color/general/dark.css
+          @import url(\"file:///home/bathys/.config/wpg/templates/gtk.css\");" > ./linea-nord-color/general/dark.css
 
           # Remove now invalid imports
           cp ./linea-nord-color/dark.css.base ./tmp.css
