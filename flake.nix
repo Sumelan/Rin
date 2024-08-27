@@ -22,7 +22,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { nixpkgs, catppuccin, home-manager, spicetify-nix, ... }@inputs:
+  outputs = { nixpkgs, catppuccin, disko, home-manager, ... }@inputs:
 
     let
       system = "x86_64-linux";
@@ -39,25 +39,24 @@
         "${hostname}" = nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit system;
-            inherit inputs;
             inherit username;
             inherit hostname;
             inherit gitUsername;
             inherit gitEmail;
+            inherit inputs;
           };
           modules = [
             ./nixos/configuration.nix
             catppuccin.nixosModules.catppuccin
-            inputs.disko.nixosModules.disko
+            disko.nixosModules.disko
             home-manager.nixosModules.home-manager
               {
               home-manager.extraSpecialArgs = {
                 inherit username;
                 inherit gitEmail;
-                inherit inputs;
                 inherit gitUsername;
                 inherit theme;
-                inherit spicetify-nix;
+                inherit inputs;
               };
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
@@ -65,7 +64,6 @@
               home-manager.users.${username} = {
                imports = [
                   ./home-manager/home.nix
-                  catppuccin.homeManagerModules.catppuccin
                 ];
               };
             } 

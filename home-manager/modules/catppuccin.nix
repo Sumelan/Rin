@@ -1,4 +1,8 @@
+{ inputs, pkgs, catppuccin, ... }:
 {
+  # import the flake's module for your system
+  imports = [ inputs.catppuccin.homeManagerModules.catppuccin ];
+
   catppuccin = {
     enable = true;
     accent = "green";
