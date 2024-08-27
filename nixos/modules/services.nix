@@ -41,12 +41,12 @@
   };
   gnome.gnome-keyring.enable = true;
   ipp-usb.enable = true;
-    syncthing = {
-      enable = false;
-      user = "bathys";
-      dataDir = "/home/bathys";
-      configDir = "/home/bathys/.config/syncthing";
-    };
+  syncthing = {
+    enable = true;
+    user = "bathys";
+    dataDir = "/home/bathys";
+    configDir = "/home/bathys/.config/syncthing";
+  };
   rpcbind.enable = false;
   nfs.server.enable = false;
 

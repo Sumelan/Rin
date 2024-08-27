@@ -24,12 +24,23 @@
     };
   };
 
+  xdg.mime.enable = false;
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "inode/directory" = ["Thunar.desktop"];
+      "image/png" = ["imv.desktop"];
+      "image/jpeg" = ["imv.desktop"];
+    };
+  };
+
   wal.enable = true;
 
   gtk = {
     enable = true;
     font = {
       name = "Noto Sans";
+      package = pkgs.noto-fonts;
     };
     iconTheme = {
       name = "Papirus-Dark-Maia";
@@ -41,14 +52,21 @@
       gtk-icon-theme-name   = "Papirus-Dark-Maia";
       gtk-cursor-theme-name = "Capitaine Cursors - White";
     };
-    gtk4.extraConfig = {
-      gtk-application-prefer-dark-theme = 1;
-    };
   };
   qt = {
     enable = true;
     platformTheme.name = "gtk";
   };
+
+  home.file.".icons/default".source = "${pkgs.capitaine-cursors}/share/icons/capitaine-cursors-white";
+  home.sessionVariables = {
+    XCURSOR_SIZE = 16;
+    XCURSOR_THEME = "Capitaine Cursors - White";
+  };
+  xdg.systemDirs.data = [
+    "${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}"
+    "${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}"
+  ];
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
@@ -61,11 +79,14 @@
     };
   };
 
+  home.file.".config/xdg-desktop-portal/hyprland-portals.conf".text = ''
+    [preferred]
+    default=hyprland;gtk
+    org.free.impl.portal.FileChooser=kde
+  '';
+
+
   # Place Files Inside Home Directory
-  home.file."Pictures/wallpapers/default.png" = {
-    source = ./assets/nix-wallpaper-stripes-logo.png;
-    recursive = true;
-  };
   home.file.".pfp.icon".source = ./assets/pfp.png;
   home.file.".fullpfp.icon".source = ./assets/fullpfp.png;
   home.file.".config/pfp.png".source = ./assets/pfp.png;

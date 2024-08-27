@@ -14,7 +14,6 @@
       enable = true;
       enableSSHSupport = true;
     };
-
     nm-applet.enable = true;
     steam = {
       enable = true;
