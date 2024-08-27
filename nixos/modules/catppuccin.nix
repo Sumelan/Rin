@@ -11,7 +11,7 @@
   };
   # plymouth
   boot.plymouth.catppuccin = {
-    enable = false;
+    enable = true;
     flavor = "macchiato";
   };
 }

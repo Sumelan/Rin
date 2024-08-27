@@ -3,7 +3,7 @@
 {
   imports = [
       ./hardware-configuration.nix
-      ./desktop/amd-drivers.nix
+      ./driver/amd-drivers.nix
       ./pkgs/packages.nix
       ./fonts/fonts.nix
       ./modules/bundle.nix
@@ -17,8 +17,9 @@
   time.timeZone = "Asia/Tokyo";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "ja_JP.UTF-8";
-  i18n.extraLocaleSettings = {
+  i18n = {
+    defaultLocale = "ja_JP.UTF-8";
+    extraLocaleSettings = {
       LC_ADDRESS = "ja_JP.UTF-8";
       LC_IDENTIFICATION = "ja_JP.UTF-8";
       LC_MEASUREMENT = "ja_JP.UTF-8";
@@ -29,14 +30,14 @@
       LC_TELEPHONE = "ja_JP.UTF-8";
       LC_TIME = "ja_JP.UTF-8";
     };
-
   # Input methods.
-  i18n.inputMethod = {
-    enable = true;
-    type = "fcitx5";
-    fcitx5.addons = with pkgs; [
-      fcitx5-mozc
-    ];
+    inputMethod = {
+      enable = true;
+      type = "fcitx5";
+      fcitx5.addons = with pkgs; [
+        fcitx5-mozc
+      ];
+    };
   };
 
   # Power management.
@@ -49,13 +50,6 @@
 
   # Add ~/.local/bin/ to $PATH
   environment.localBinInPath = false;
-  # Variable
-  environment.sessionVariables = {
-    WLR_HARDWARE_CURSORS = "1";
-    NIXOS_OZONE_WL = "1";
-    NIXOS_CONFIG = "/home/bathys/Rin/";
-  };
-
 
   # Automatic Garbage Collection
   nix.gc = {

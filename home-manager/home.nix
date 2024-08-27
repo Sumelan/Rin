@@ -24,67 +24,33 @@
     };
   };
 
-  xdg.mime.enable = false;
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-      "inode/directory" = ["Thunar.desktop"];
-      "image/png" = ["imv.desktop"];
-      "image/jpeg" = ["imv.desktop"];
-    };
-  };
-
-  wal.enable = true;
-
   gtk = {
     enable = true;
     font = {
-      name = "Noto Sans";
-      package = pkgs.noto-fonts;
-    };
-    iconTheme = {
-      name = "Papirus-Dark-Maia";
-      package = pkgs.papirus-maia-icon-theme;
+      name = "ShureTechMono Nerd Font";
+      size = 14;
     };
     gtk3.extraConfig = {
-      gtk-application-prefer-dark-theme = true;
-      gtk-key-theme-name    = "Default";
-      gtk-icon-theme-name   = "Papirus-Dark-Maia";
-      gtk-cursor-theme-name = "Capitaine Cursors - White";
+      gtk-application-prefer-dark-theme = 1;
+    };
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
     };
   };
   qt = {
     enable = true;
-    platformTheme.name = "gtk";
+    platformTheme.name = "kvantum";
+    style = {
+      name = "kvantum";
+    };
   };
-
-  home.file.".icons/default".source = "${pkgs.capitaine-cursors}/share/icons/capitaine-cursors-white";
-  home.sessionVariables = {
-    XCURSOR_SIZE = 16;
-    XCURSOR_THEME = "Capitaine Cursors - White";
-  };
-  xdg.systemDirs.data = [
-    "${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}"
-    "${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}"
-  ];
 
   dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      gtk-key-theme = "Default";
-      cursor-theme = "Capitaine Cursors - White";
-    };
     "org/virt-manager/virt-manager/connections" = {
       autoconnect = [ "qemu:///system" ];
       uris = [ "qemu:///system" ];
     };
   };
-
-  home.file.".config/xdg-desktop-portal/hyprland-portals.conf".text = ''
-    [preferred]
-    default=hyprland;gtk
-    org.free.impl.portal.FileChooser=kde
-  '';
-
 
   # Place Files Inside Home Directory
   home.file.".pfp.icon".source = ./assets/pfp.png;

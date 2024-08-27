@@ -39,7 +39,7 @@
   gnome.gnome-keyring.enable = true;
   ipp-usb.enable = true;
   syncthing = {
-    enable = true;
+    enable = false;
     user = "bathys";
     dataDir = "/home/bathys";
     configDir = "/home/bathys/.config/syncthing";

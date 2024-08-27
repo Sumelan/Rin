@@ -22,7 +22,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { nixpkgs, catppuccin, disko, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, catppuccin, disko, home-manager, ... }@inputs:
 
     let
       system = "x86_64-linux";
