@@ -28,7 +28,7 @@
       # start programs
       exec-once = dbus-update-activation-environment --systemd --all
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-      exec-once = pkill swww;sleep .5 && swww init
+      exec-once = pkill swww;sleep .5 && swww-daemon
       exec-once = swww img .config/wallpaper.png
       exec-once = pkill dunst;sleep .5 && dunst
       exec-once = plill eww;sleep .5 && eww daemon

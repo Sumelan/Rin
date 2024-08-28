@@ -54,7 +54,7 @@
 
   # Place Files Inside Home Directory
   home.file.".config/wallpaper.png" = {
-    source = ./assets/nix-wallpaper.png;
+    source = ./assets/rin-wallpaper.png;
     recursive = true;
   };
   home.file.".pfp.icon".source = ./assets/pfp.png;
