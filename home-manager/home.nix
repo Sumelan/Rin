@@ -53,6 +53,10 @@
   };
 
   # Place Files Inside Home Directory
+  home.file."Pictures/wallpapers/default.png" = {
+    source = ./assets/nix-wallpaper-stripes-logo.png;
+    recursive = true;
+  };
   home.file.".pfp.icon".source = ./assets/pfp.png;
   home.file.".fullpfp.icon".source = ./assets/fullpfp.png;
   home.file.".config/pfp.png".source = ./assets/pfp.png;

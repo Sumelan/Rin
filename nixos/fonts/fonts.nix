@@ -11,6 +11,7 @@
       terminus_font
       material-design-icons
       nerdfonts
+      rubik
     ];
 
     fontDir.enable = true;

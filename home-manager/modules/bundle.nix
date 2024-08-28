@@ -10,7 +10,7 @@
     ./yazi.nix
     ./zsh.nix
     ./dunst/dunst.nix
-    ./eww/eww.nix
+    ./wms/eww/eww.nix
     ./hypr/hypridle.nix
     ./hypr/hyprland.nix
     ./hypr/hyprlock.nix
