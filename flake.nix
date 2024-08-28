@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
-    catppuccin.url = "github:catppuccin/nix";
+    stylix.url = "github:danth/stylix";
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,7 +22,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs, catppuccin, disko, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, stylix, disko, home-manager, ... }@inputs:
 
     let
       system = "x86_64-linux";
@@ -47,7 +47,7 @@
           };
           modules = [
             ./nixos/configuration.nix
-            catppuccin.nixosModules.catppuccin
+            stylix.nixosModules.stylix
             disko.nixosModules.disko
             home-manager.nixosModules.home-manager
               {

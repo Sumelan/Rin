@@ -50,8 +50,8 @@
         border_size = 2
         layout = dwindle
         resize_on_border = true
-        col.active_border = $accent $accentAlpha 45deg
-        col.inactive_border = $mantle
+        col.active_border = rgb(${config.stylix.base16Scheme.base08}) rgb(${config.stylix.base16Scheme.base0C}) 45deg
+        col.inactive_border = rgb(${config.stylix.base16Scheme.base01})
       }
       input {
         kb_layout = us

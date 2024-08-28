@@ -3,7 +3,6 @@
     ./bluetooth.nix
     ./bootloader.nix
     ./borgbackup.nix
-    ./catppuccin.nix
     ./env.nix
     ./hardware.nix
     ./network.nix
@@ -11,6 +10,7 @@
     ./services.nix
     ./sound.nix
     ./starship.nix
+    ./stylix.nix
     ./systemd.nix
     ./trim.nix
     ./user.nix

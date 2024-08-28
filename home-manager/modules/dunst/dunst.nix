@@ -33,7 +33,6 @@
         history_length = 20;
         show_age_threshold = 60;
         markup = "full";
-        font = "Product Sans 12";
         word_wrap = "yes";
         sort = "yes";
         shrink = "no";

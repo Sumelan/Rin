@@ -24,14 +24,6 @@
     };
   };
 
-  qt = {
-    enable = true;
-    platformTheme.name = "kvantum";
-    style = {
-      name = "kvantum";
-    };
-  };
-
   dconf.settings = {
     "org/virt-manager/virt-manager/connections" = {
       autoconnect = [ "qemu:///system" ];
@@ -39,9 +31,31 @@
     };
   };
 
+  # Styling Options
+  stylix.targets.waybar.enable = false;
+  stylix.targets.rofi.enable = false;
+  stylix.targets.hyprland.enable = false;
+  gtk = {
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+    };
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+    };
+  };
+  qt = {
+    enable = true;
+    style.name = "adwaita-dark";
+    platformTheme.name = "gtk3";
+  };
+
   # Place Files Inside Home Directory
   home.file."Pictures/wallpapers/default.png" = {
-    source = ./assets/nix-wallpaper-stripes-logo.png;
+    source = ./assets/nix-wallpaper.png;
     recursive = true;
   };
   home.file.".pfp.icon".source = ./assets/pfp.png;
