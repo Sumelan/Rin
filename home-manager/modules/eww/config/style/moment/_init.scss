@@ -1,5 +1,5 @@
 .moment {
-  background: $base;
+  background: $bg;
   padding: 1.2rem;
   @include rounding;
   font-family: "Rubik";
@@ -28,12 +28,12 @@ calendar {
 }
 
 .moment_calendar {
-  background-color: $surface0;
+  background-color: $bg-alt;
   @include rounding;
   border-radius: 10px;
   .moment_cal-box {
     padding: 0 1rem;
-    background-color: $surface0;
+    background-color: $bg-alt;
     @include rounding;
     border-radius: inherit;
     margin: 0.4em;
@@ -59,13 +59,13 @@ calendar {
 .moment_month-year {
   font-family: "Rubik";
   font-size: 1.3rem;
-  color: $subtext1;
+  color: $foreground;
   margin: 1rem 0;
 }
 
 .moment_up {
   padding: 18px;
-  background: $base;
+  background: $bg;
 }
 
 .mo {
@@ -74,19 +74,19 @@ calendar {
 }
 
 .woverlay {
-  background: linear-gradient(to right, rgba($base, 0.94), rgba($surface0, 0.86));
+  background: linear-gradient(to right, rgba($bg, 0.94), rgba($bg-alt, 0.86));
 
 }
 
 .wicon {
   font-size: 4.3rem;
-  color: $subtext1;
+  color: $foreground;
 }
 
 .wdesc {
   font-family: "Rubik";
   font-size: 1.4rem;
-  color: $subtext1;
+  color: $foreground;
 }
 
 .weatherimage {

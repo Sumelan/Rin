@@ -14,7 +14,7 @@
       cliphist
       dunst
       eww
-      gwenview
+      feh
       grim
       grimblast
       kitty
@@ -25,9 +25,7 @@
       networkmanagerapplet
       rofi-wayland
       polkit_gnome
-      pqiv
       slurp
-      swappy
       swww
       unrar
       unzip

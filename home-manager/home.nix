@@ -32,8 +32,10 @@
   };
 
   # Styling Options
-  stylix.targets.rofi.enable = false;
-  stylix.targets.hyprland.enable = false;
+  stylix.targets = {
+    rofi.enable = false;
+    hyprland.enable = false;
+  };
   gtk = {
     iconTheme = {
       name = "Papirus-Dark";

@@ -17,32 +17,15 @@
       in
       {
         "*" = {
-          rosewater = mkLiteral "#f4dbd6";
-          flamingo = mkLiteral "#f0c6c6";
-          pink = mkLiteral "#f5bde6";
-          mauve = mkLiteral "#c6a0f6";
-          red = mkLiteral "#ed8796";
-          maroon = mkLiteral "#ee99a0";
-          peach = mkLiteral "#f5a97f";
-          yellow = mkLiteral "#eed49f";
-          green = mkLiteral "#a6da95";
-          teal = mkLiteral "#8bd5ca";
-          sky = mkLiteral "#91d7e3";
-          sapphire = mkLiteral "#7dc4e4";
-          blue = mkLiteral "#8aadf4";
-          lavender = mkLiteral "#b7bdf8";
-          text = mkLiteral "#cad3f5";
-          subtext1 = mkLiteral "#b8c0e0";
-          subtext0 = mkLiteral "#a5adcb";
-          overlay2 = mkLiteral "#939ab7";
-          overlay1 = mkLiteral "#8087a2";
-          overlay0 = mkLiteral "#6e738d";
-          surface2 = mkLiteral "#5b6078";
-          surface1 = mkLiteral "#494d64";
-          surface0 = mkLiteral "#363a4f";
-          base = mkLiteral "#24273a";
-          mantle = mkLiteral "#1e2030";
-          crust = mkLiteral "#181926";
+          bg = mkLiteral "#${config.stylix.base16Scheme.base00}";
+          bg-alt = mkLiteral "#${config.stylix.base16Scheme.base09}";
+          foreground = mkLiteral "#${config.stylix.base16Scheme.base01}";
+          selected = mkLiteral "#${config.stylix.base16Scheme.base08}";
+          active = mkLiteral "#${config.stylix.base16Scheme.base0B}";
+          text-selected = mkLiteral "#${config.stylix.base16Scheme.base00}";
+          text-color = mkLiteral "#${config.stylix.base16Scheme.base05}";
+          border-color = mkLiteral "#${config.stylix.base16Scheme.base0F}";
+          urgent = mkLiteral "#${config.stylix.base16Scheme.base0E}";
         };
         "window" = {
           transparency = "real";
@@ -55,7 +38,7 @@
           enabled = true;
           border-radius = mkLiteral "15px";
           cursor = mkLiteral "default";
-          background-color = mkLiteral "@base";
+          background-color = mkLiteral "@bg";
         };
         "mainbox" = {
           enabled = true;
@@ -85,8 +68,8 @@
           spacing = mkLiteral "10px";
           padding = mkLiteral "10px";
           border-radius = mkLiteral "10px";
-          background-color = "@surface2";
-          text-color = mkLiteral "@surface0";
+          background-color = "@bg-alt";
+          text-color = mkLiteral "@text-selected";
           children = map mkLiteral [
             "textbox-prompt-colon"
             "entry"
@@ -112,18 +95,18 @@
           enabled = true;
           spacing = mkLiteral "20px";
           background-color = mkLiteral "transparent";
-          text-color = mkLiteral "@subtext1";
+          text-color = mkLiteral "@text-color";
         };
         "button" = {
           padding = mkLiteral "20px";
           border-radius = mkLiteral "10px";
           background-color = mkLiteral "transparent";
-          text-color = mkLiteral "@subtext1";
+          text-color = mkLiteral "@text-color";
           cursor = mkLiteral "pointer";
         };
         "button selected" = {
-          background-color = mkLiteral "@overlay0";
-          text-color = mkLiteral "@green";
+          background-color = mkLiteral "@bg-alt";
+          text-color = mkLiteral "@text-color";
         };
         "listview" = {
           enabled = true;
@@ -138,7 +121,7 @@
           fixed-columns = true;
           spacing = mkLiteral "5px";
           background-color = mkLiteral "transparent";
-          text-color = mkLiteral "@subtext0";
+          text-color = mkLiteral "@text-color";
           cursor = mkLiteral "default";
         };
         "element" = {
@@ -147,7 +130,7 @@
           padding = mkLiteral "10px";
           border-radius = "10px";
           background-color = mkLiteral "transparent";
-          text-color = mkLiteral "@subtext1";
+          text-color = mkLiteral "@text-color";
           cursor = mkLiteral "pointer";
         };
         "element normal.normal" = {
@@ -156,23 +139,23 @@
         };
         "element normal.urgent" = {
           background-color = mkLiteral "transparent";
-          text-color = mkLiteral "@red";
+          text-color = mkLiteral "@urgent";
         };
         "element normal.active" = {
           background-color = mkLiteral "transparent";
-          text-color = mkLiteral "@blue";
+          text-color = mkLiteral "@active";
         };
         "element selected.normal" = {
-          background-color = mkLiteral "@surface2";
-          text-color = mkLiteral "@maroon";
+          background-color = mkLiteral "@bg-alt";
+          text-color = mkLiteral "@text-selected";
         };
         "element selected.urgent" = {
-          background-color = mkLiteral "@surface2";
-          text-color = mkLiteral "@red";
+          background-color = mkLiteral "@bg-alt";
+          text-color = mkLiteral "@urgent";
         };
         "element selected.active" = {
-          background-color = mkLiteral "@surface2";
-          text-color = mkLiteral "@blue";
+          background-color = mkLiteral "@bg-alt";
+          text-color = mkLiteral "@active";
         };
         "element-icon" = {
           background-color = mkLiteral "transparent";
@@ -194,16 +177,16 @@
         "textbox" = {
           padding = mkLiteral "15px";
           border-radius = mkLiteral "10px";
-          background-color = mkLiteral "@surface2";
-          text-color = mkLiteral "@subtext0";
+          background-color = mkLiteral "@bg-alt";
+          text-color = mkLiteral "@text-color";
           vertical-align = mkLiteral "0.5";
           horizontal-align = mkLiteral "0.0";
         };
         "error-message" = {
           padding = mkLiteral "15px";
           border-radius = mkLiteral "20px";
-          background-color = mkLiteral "@yellow";
-          text-color = mkLiteral "@base";
+          background-color = mkLiteral "@bg-alt";
+          text-color = mkLiteral "@text-color";
         };
       };
     };
