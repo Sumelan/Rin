@@ -32,7 +32,6 @@
   };
 
   # Styling Options
-  stylix.targets.waybar.enable = false;
   stylix.targets.rofi.enable = false;
   stylix.targets.hyprland.enable = false;
   gtk = {
@@ -54,7 +53,7 @@
   };
 
   # Place Files Inside Home Directory
-  home.file."Pictures/wallpapers/default.png" = {
+  home.file.".config/wallpaper.png" = {
     source = ./assets/nix-wallpaper.png;
     recursive = true;
   };

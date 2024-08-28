@@ -80,7 +80,6 @@
           });
          };
       };
-
       luajitPackages = final.luajit.pkgs;
     })
   ];
