@@ -32,7 +32,6 @@
       unrar
       unzip
       wl-clipboard
-      wpgtk
       yad
     # audio
       pamixer
