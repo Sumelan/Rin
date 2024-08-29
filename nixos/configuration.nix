@@ -4,7 +4,7 @@
   imports = [
       ./hardware-configuration.nix
       ./driver/amd-drivers.nix
-      ./pkgs/packages.nix
+      ./pkgs.nix
       ./fonts/fonts.nix
       ./modules/bundle.nix
       ./disko-config.nix
@@ -40,6 +40,21 @@
     };
   };
 
+  # shell
+  programs.zsh.enable = true;
+  # user
+  users = {
+    users.bathys = {
+      isNormalUser = true;
+      description = "Bathys Scarf";
+      extraGroups = [ "networkmanager" "wheel" "libvirtd" "video" ];
+    };
+    mutableUsers = true;
+    defaultUserShell = pkgs.zsh;
+  };
+  # Enable automatic login for the user.
+  services.getty.autologinUser = "bathys";
+
   # Power management.
   powerManagement = {
 	  enable = true;
@@ -50,6 +65,14 @@
 
   # Add ~/.local/bin/ to $PATH
   environment.localBinInPath = false;
+
+  # env
+  environment.variables = {
+    EDITOR = "neovim";
+    RANGER_LOAD_DEFAULT_RC = "FALSE";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
+    GSETTINGS_BACKEND = "keyfile";
+  };
 
   # Automatic Garbage Collection
   nix.gc = {
