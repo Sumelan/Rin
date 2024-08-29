@@ -1,11 +1,9 @@
 {
   imports = [
     ./fastfetch.nix
-    ./git.nix
     ./kitty.nix
     ./neovim.nix
     ./spicetify.nix
-    ./starship.nix
     ./yazi.nix
     ./zsh.nix
     ./dunst/dunst.nix

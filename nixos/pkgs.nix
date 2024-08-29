@@ -23,7 +23,6 @@
       vesktop
     ## browzer
       brave
-      firefox
     ## image-viewer
       imv
       pqiv
