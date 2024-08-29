@@ -5,9 +5,12 @@
   };
   environment.systemPackages = with pkgs; [
     # Desktop stuff
+      nautilus
+      nautilus-open-any-terminal
       dunst
       eww
       rofi-wayland
+      wofi
       swww
       hypridle
       hyprlock
@@ -144,14 +147,6 @@
       dedicatedServer.openFirewall = true;
     };
     virt-manager.enable = true;
-    thunar = {
-      enable = true;
-      plugins = with pkgs.xfce; [
-        thunar-archive-plugin
-        thunar-volman
-        thunar-media-tags-plugin
-      ];
-    };
     file-roller.enable = true;
     kdeconnect.enable = true;
   };

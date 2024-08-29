@@ -8,8 +8,9 @@
 
       ## variables
       $mainMod = SUPER
+      $launcher = wofi
       $terminal = kitty
-      $fileManager = thunar
+      $fileManager = nautilus 
       $browser = brave
 
       env = NIXOS_OZONE_WL, 1
