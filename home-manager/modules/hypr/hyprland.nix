@@ -8,9 +8,8 @@
 
       ## variables
       $mainMod = SUPER
-      $launcher = wofi
-      $terminal = kitty
-      $fileManager = thunar
+      $term = kitty
+      $file = thunar
       $browser = brave
 
       env = NIXOS_OZONE_WL, 1
@@ -128,12 +127,12 @@
       }
 
       # keybindings
-      bind = $mainMod, Return, exec, $terminal
+      bind = $mainMod, Return, exec, $term
       bind = $mainMod, D, exec, pkill rofi || rofi -show drun
-      bind = $mainMod, T, exec, $fileManager
+      bind = $mainMod, T, exec, $file
       bind = $mainMod, W, exec, $browser
-      bind = $mainMod, Y, exec, kitty -e yazi
-      bind = $mainMod SHIFT, Y, exec, kitty -e sudo yazi
+      bind = $mainMod, Y, exec, $term yazi
+      bind = $mainMod SHIFT, Y, exec, $term sudo yazi
       bind = $mainMod, C, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
       bind = $mainMod, S, exec, screenshotmenu
       bind = $mainMod ALT, W, exec, wallsetter

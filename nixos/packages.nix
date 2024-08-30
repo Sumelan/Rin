@@ -57,6 +57,7 @@
       ]))
       yad
     # tools
+      cliphist
       file-roller
       networkmanagerapplet
     ## cli-programs
