@@ -3,6 +3,7 @@
   stylix = {
     enable = true;
     image = ../../home-manager/assets/rin-wallpaper.png;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
     polarity = "dark";
     opacity.terminal = 0.8;
     cursor.package = pkgs.bibata-cursors;
@@ -24,7 +25,7 @@
       sizes = {
         applications = 12;
         terminal = 12;
-        desktop = 11;
+        desktop = 12;
         popups = 12;
       };
     };

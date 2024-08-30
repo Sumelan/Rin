@@ -1,5 +1,5 @@
 .dash {
-  background: $bg;
+  background: $base;
   padding: 2rem;
   @include rounding;
 }
@@ -7,7 +7,7 @@
 .notifcenter {
   @include rounding;
   padding: 1rem;
-  background: rgba($bg-alt, 0.4);
+  background: rgba($surface0, 0.4);
 }
 
 .eon {
@@ -18,7 +18,7 @@
 
 .notification {
   font-family: Rubik;
-  background: rgba($bg-alt, 0.6);
+  background: rgba($surface0, 0.6);
   @include rounding;
 
   &-close {
@@ -31,7 +31,7 @@
 .notification-title {
   padding: 1rem;
   @include rounding;
-  background: $bg-alt;
+  background: $surface0;
 }
 
 .notification-body {
@@ -44,12 +44,12 @@
 }
 
 .dashgradient {
-  background-image: linear-gradient(to right, rgba($bg, 0.5) 30%, rgba($bg, 0.7));
+  background-image: linear-gradient(to right, rgba($base, 0.5) 30%, rgba($base, 0.7));
 }
 
 .dashtime {
   font-family: Rubik;
-  background: $bg-alt;
+  background: $surface0;
   @include rounding;
   padding: 1rem;
 }
@@ -68,11 +68,11 @@
 .stats {
   padding: 1rem;
   @include rounding;
-  background: rgba($bg-alt, 0.4);
+  background: rgba($surface0, 0.4);
 }
 
 .gridline {
-  background: $bg-alt;
+  background: $surface0;
   @include rounding;
 }
 
@@ -118,7 +118,7 @@
 
 .altstat {
   @include rounding;
-  background: rgba($bg-alt, 0.8);
+  background: rgba($surface0, 0.8);
   padding: 1rem 2rem;
 }
 
@@ -130,13 +130,13 @@
 
 .clabel {
   font-family: Iosevka Nerd Font;
-  color: $text-color;
+  color: $text;
 }
 
 
 .dashmusic {
   @include rounding;
-  background: rgba($bg-alt, 0.8);
+  background: rgba($surface0, 0.8);
   padding: 1rem;
 }
 
