@@ -58,7 +58,6 @@ in
         nvim-tree-lua
         telescope-fzf-native-nvim
         vim-tmux-navigator
-        yazi-nvim
       ];
       extraConfig = ''
         set noemoji

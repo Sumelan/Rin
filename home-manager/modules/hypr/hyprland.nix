@@ -133,6 +133,7 @@
       bind = $mainMod, T, exec, $fileManager
       bind = $mainMod, W, exec, $browser
       bind = $mainMod, Y, exec, kitty -e yazi
+      bind = $mainMod SHIFT, Y, exec, kitty -e sudo yazi
       bind = $mainMod, C, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
       bind = $mainMod, S, exec, screenshotmenu
       bind = $mainMod ALT, W, exec, wallsetter

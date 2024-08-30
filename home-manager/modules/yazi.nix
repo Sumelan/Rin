@@ -87,7 +87,7 @@
       manager.keymap = [
         # Custom command
         {
-          run = "shell 'dragon -x -i -T \"$1\"' --confirm";
+          run = "shell 'dragon -x -i -T \"$@\"' --confirm";
           desc = "Create a window for drag-and-drop";
           on = ["<A-d>"];
         }

@@ -23,8 +23,6 @@
       v = "nvim";
       se = "sudoedit";
       ff = "fastfetch";
-      # To run yazi as sudoers
-      sy = "sudo yazi";
     };
 
     history.size = 10000;
