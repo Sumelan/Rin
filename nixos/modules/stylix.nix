@@ -2,8 +2,10 @@
 {
   stylix = {
     enable = true;
+    base16Scheme = { 
+      yaml = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
+    };
     image = ../../home-manager/assets/rin-wallpaper.png;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
     polarity = "dark";
     opacity.terminal = 0.8;
     cursor.package = pkgs.bibata-cursors;

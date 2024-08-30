@@ -22,7 +22,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs, stylix, disko, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, stylix, home-manager, ... }@inputs:
 
     let
       system = "x86_64-linux";
@@ -30,8 +30,6 @@
       # User Variables
       hostname = "Rin";
       username = "bathys";
-      gitUsername = "bathys";
-      gitEmail = "bathys@proton.me";
     in
     {
       nixosConfigurations = {
@@ -40,20 +38,17 @@
             inherit system;
             inherit username;
             inherit hostname;
-            inherit gitUsername;
-            inherit gitEmail;
             inherit inputs;
           };
           modules = [
             ./nixos/configuration.nix
-            stylix.nixosModules.stylix
-            disko.nixosModules.disko
+            inputs.disko.nixosModules.disko
+            inputs.stylix.nixosModules.stylix
             home-manager.nixosModules.home-manager
               {
               home-manager.extraSpecialArgs = {
                 inherit username;
-                inherit gitEmail;
-                inherit gitUsername;
+                inherit hostname;
                 inherit inputs;
               };
               home-manager.useGlobalPkgs = true;

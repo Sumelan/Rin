@@ -1,4 +1,4 @@
-{ inputs, pkgs, spicetify-nix, ... }:
+{ inputs, pkgs, ... }:
 {
   # import the flake's module for your system
   imports = [ inputs.spicetify-nix.homeManagerModules.default ];

@@ -47,8 +47,8 @@
 
   # Styling Options
   stylix.targets = {
-    rofi.enable = false;
-    hyprland.enable = false;
+    rofi.enable = true;
+    hyprland.enable = true;
   };
   gtk = {
     iconTheme = {
