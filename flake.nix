@@ -32,7 +32,6 @@
       username = "bathys";
       gitUsername = "bathys";
       gitEmail = "bathys@proton.me";
-      theme = "catppuccin-macchiato";
     in
     {
       nixosConfigurations = {
@@ -55,7 +54,6 @@
                 inherit username;
                 inherit gitEmail;
                 inherit gitUsername;
-                inherit theme;
                 inherit inputs;
               };
               home-manager.useGlobalPkgs = true;

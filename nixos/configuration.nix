@@ -172,18 +172,19 @@
     };
     rpcbind.enable = false;
     nfs.server.enable = false;
-    ### Laptop
-    # thermald.enable = true;
-    # tlp.enable = true;
     logind.extraConfig = ''
       # don’t shutdown when power button is short-pressed
       HandlePowerKey=suspend
   	'';
   };
 
-  # Power management.
-  powerManagement = {
-	  enable = true;
+  # zram
+  zramSwap = {
+    enable = true;
+    algorithm = "zstd";
+    memoryPercent = 100;
+    priority = 100;
+   swapDevices = 1;
   };
 
   # Extra Module Options

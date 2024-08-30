@@ -5,104 +5,104 @@
   };
   environment.systemPackages = with pkgs; [
     # Desktop stuff
-      nautilus
-      nautilus-open-any-terminal
       dunst
       eww
-      rofi-wayland
-      wofi
-      swww
       hypridle
       hyprlock
       hyprpicker
-    ## audio
+      rofi-wayland
+      swww
+      wofi
+    # audio
       pamixer
       pavucontrol
       wireplumber
-    ## spotify stuff
-      spotify
+    # spotify stuff
       spicetify-cli
-    ## disocrd
+      spotify
+    # disocrd
       vesktop
-    ## browzer
+    # browzer
       brave
-    ## image-viewer
+    # image-viewer
       imv
       pqiv
-    ## image-mannipulator
+    # image-mannipulator
       gimp
       krita
-    ## video-viewer
+    # video-viewer
       vlc
-    ## video-editor
+    # video-editor
       kdenlive
-    ## video-capture
+    # video-capture
       obs-studio
-    ## text-editor
-      vim
+    # text-editor
       neovide
-    ## media
+      vim
+    # media
       mpv
-    ## terminal
+    # terminal
       kitty
-    ## game
+    # game
       lutris
       steam
-    ## developping
-      yad
-      ninja
+    # developping
       meson
+      ninja
       pkg-config
-    (python312.withPackages (ps: with ps; [
-      psutil
-      configargparse
-      sh
-    ]))
-    ## tools
-      networkmanagerapplet
+      (python312.withPackages (ps: with ps; [
+        psutil
+        configargparse
+        sh
+      ]))
+      yad
+    # tools
       file-roller
+      networkmanagerapplet
     ## cli-programs
-      cava
+      bat
       brightnessctl
-      htop
-      tree
-      grim
-      cowsay
+      cava
       cmatrix
+      cowsay
+      curl
+      duf
+      eza
       fastfetch
-      socat
-      slurp
+      fd
       ffmpeg
       ffmpegthumbnailer
-      wl-clipboard
-      fd
       file
       fzf
       gh
       git
-      lm_sensors
+      grim
+      grimblast
+      htop
+      inxi
+      jq
+      killall
       lazygit
       lolcat
-      bat
-      killall
-      eza
-      ncdu
-      duf
-      curl
-      wget
       lshw
-      inxi
-      playerctl
+      lm_sensors
+      ncdu
       nh
-      ripgrep
       pciutils
+      playerctl
+      ripgrep
+      slurp
+      socat
+      tree
       unar
       unrar
       unzip
-      yt-dlp
-      ydotool
+      wget
+      wl-clipboard
       xdragon
       yazi
+      ydotool
+      yt-dlp
       zoxide
     ## login
       greetd.tuigreet
@@ -116,10 +116,10 @@
     # vm
       appimage-run
       bottles
+      qemu
+      virt-viewer
       wine
       winetricks
-      virt-viewer
-      qemu
     ## other programs
       audiobookshelf
       tartube-yt-dlp
@@ -147,6 +147,13 @@
       dedicatedServer.openFirewall = true;
     };
     virt-manager.enable = true;
+    thunar = {
+      enable = true;
+      plugins = with pkgs.xfce; [
+        thunar-volman
+        thunar-media-tags-plugin
+      ];
+    };
     file-roller.enable = true;
     kdeconnect.enable = true;
   };
