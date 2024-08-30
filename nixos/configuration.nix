@@ -4,7 +4,7 @@
   imports = [
       ./hardware-configuration.nix
       ./driver/amd-drivers.nix
-      ./pkgs.nix
+      ./packages.nix
       ./fonts/fonts.nix
       ./modules/bundle.nix
       ./disko-config.nix

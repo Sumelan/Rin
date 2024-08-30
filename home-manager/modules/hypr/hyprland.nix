@@ -129,7 +129,7 @@
 
       # keybindings
       bind = $mainMod, Return, exec, $terminal
-      bind = $mainMod SHIFT, Return, exec, pkill rofi || rofi -show drun
+      bind = $mainMod, D, exec, pkill rofi || rofi -show drun
       bind = $mainMod, T, exec, $fileManager
       bind = $mainMod, W, exec, $browser
       bind = $mainMod, Y, exec, kitty -e yazi
