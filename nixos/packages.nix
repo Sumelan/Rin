@@ -63,6 +63,7 @@
     ## cli-programs
       bat
       brightnessctl
+      brillo
       cava
       cmatrix
       cowsay
@@ -157,4 +158,5 @@
     file-roller.enable = true;
     kdeconnect.enable = true;
   };
+  hardware.brillo.enable = true;
 }
