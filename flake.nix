@@ -3,9 +3,8 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
     stylix.url = "github:danth/stylix";
-    yazi.url = "github:sxyazi/yazi";
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -13,10 +12,6 @@
     fine-cmdline = {
       url = "github:VonHeikemen/fine-cmdline.nvim";
       flake = false;
-    };
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -30,7 +25,7 @@
 
       # User Variables
       hostname = "Rin";
-      username = "bathys";
+      username = "sumelan";
     in
     {
       nixosConfigurations = {
@@ -43,7 +38,6 @@
           };
           modules = [
             ./nixos/configuration.nix
-            inputs.disko.nixosModules.disko
             inputs.stylix.nixosModules.stylix
             home-manager.nixosModules.home-manager
               {

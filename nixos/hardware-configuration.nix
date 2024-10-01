@@ -14,18 +14,27 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = lib.mkDefault "UUID=6dd81528-acd9-4024-bca3-89964177202f";
-      fsType = "bcachefs";
+    { device = "zpool/root";
+      fsType = "zfs";
     };
 
-  fileSystems."/bin" =
-    { device = "/usr/bin";
-      fsType = "none";
-      options = [ "bind" ];
+  fileSystems."/nix" =
+    { device = "zpool/nix";
+      fsType = "zfs";
+    };
+
+  fileSystems."/var" =
+    { device = "zpool/var";
+      fsType = "zfs";
+    };
+
+  fileSystems."/home" =
+    { device = "zpool/home";
+      fsType = "zfs";
     };
 
   fileSystems."/boot" =
-    { device = lib.mkDefault "/dev/disk/by-uuid/8984-704F";
+    { device = "/dev/disk/by-uuid/38A0-1299";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };

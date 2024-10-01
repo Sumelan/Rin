@@ -27,7 +27,7 @@
     # image-viewer
       imv
       pqiv
-    # image-mannipulator
+    # image-manipulator
       gimp
       krita
     # video-viewer
@@ -43,9 +43,6 @@
       mpv
     # terminal
       kitty
-    # game
-      lutris
-      steam
     # developping
       meson
       ninja
@@ -102,11 +99,10 @@
       wget
       wl-clipboard
       xdragon
+      yazi
       ydotool
       yt-dlp
       zoxide
-    ## login
-      greetd.tuigreet
     # libs/frameworks
       libsForQt5.kdeconnect-kde
       libnotify
@@ -142,11 +138,6 @@
       enableSSHSupport = true;
     };
     nm-applet.enable = true;
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true;
-      dedicatedServer.openFirewall = true;
-    };
     virt-manager.enable = true;
     thunar = {
       enable = true;
