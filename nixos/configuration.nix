@@ -9,9 +9,6 @@
       ./modules/bundle.nix
   ];
 
-  # Define your hostname.
-  networking.hostName = "Rin";
-
   # Network.
   networking = {
     networkmanager.enable = true;
