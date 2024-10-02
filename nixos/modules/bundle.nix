@@ -4,7 +4,7 @@
     ./hardware.nix
     ./starship.nix
     ./stylix.nix
-    # Rin only 
+    ./zfs.nix
     ./audiobookshelf.nix
     ./borgbackup.nix
     ./nextcloud.nix
