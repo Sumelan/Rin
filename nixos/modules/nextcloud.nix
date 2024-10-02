@@ -17,7 +17,7 @@
     extraApps = with config.services.nextcloud.package.packages.apps; {
       # List of apps we want to install and are already packaged in
       # https://github.com/NixOS/nixpkgs/blob/master/pkgs/servers/nextcloud/packages/nextcloud-apps.json
-      inherit calendar contacts mail notes;
+      inherit calendar contacts mail notes tasks;
     };
     settings = {
       log_type = "file";
@@ -44,8 +44,8 @@
     };
     config = {
       dbtype = "pgsql";
-      adminuser = "bathys";
-      adminpassFile = "/var/nextcloud-admin-pass";
+      adminuser = "sumelan";
+      adminpassFile = "/etc/nextcloud-admin-pass";
     };
     phpOptions = {
       "opcache.interned_strings_buffer" = "16";

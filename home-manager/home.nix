@@ -8,8 +8,8 @@
   systemd.user.startServices = "sd-switch";
 
   home = {
-    username = "bathys";
-    homeDirectory = "/home/bathys";
+    username = "sumelan";
+    homeDirectory = "/home/sumelan";
   };
 
   # Programs
@@ -25,7 +25,7 @@
     };
     git = {
       enable = true;
-      userName  = "bathys";
+      userName  = "sumelan";
       userEmail = "bathys@proton.me";
     };
   };
@@ -87,5 +87,5 @@
     (writeShellScriptBin "changevolume" (builtins.readFile ./bin/notifs/changevolume.sh) )
   ];
 
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.05";
 }

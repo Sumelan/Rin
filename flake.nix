@@ -13,6 +13,7 @@
       url = "github:VonHeikemen/fine-cmdline.nvim";
       flake = false;
     };
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -39,6 +40,7 @@
           modules = [
             ./nixos/configuration.nix
             inputs.stylix.nixosModules.stylix
+	    inputs.chaotic.nixosModules.default
             home-manager.nixosModules.home-manager
               {
               home-manager.extraSpecialArgs = {

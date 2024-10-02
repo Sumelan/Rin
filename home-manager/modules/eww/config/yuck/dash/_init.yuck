@@ -121,7 +121,7 @@
                       :id {entry["id"]["data"]}
 										  :summary {entry["summary"]["data"]}
 										  :body {entry["body"]["data"]}
-                      :icon {(entry["icon_path"]["data"] ?: "/home/bathys/.config/eww/assets/notification.png")}
+                      :icon {(entry["icon_path"]["data"] ?: "/home/sumelan/.config/eww/assets/notification.png")}
 										  :reveal_close_icon "false"
 										  :is_ss {entry["appname"]["data"] == "Screenshot Tool" ? "true" : "false"}
 									  )
@@ -132,7 +132,7 @@
 
             (revealer :valign "center" :vexpand true :reveal {dunstcount <= 0} :transition "crossfade"
 							(box :orientation "v" :space-evenly "false" :spacing 10 :valign "center"
-                (image :image-height 200 :path "/home/bathys/.config/eww/assets/empty-notification.png")
+                (image :image-height 200 :path "/home/sumelan/.config/eww/assets/empty-notification.png")
 								(label :class "eon" 
 									:valign "center"
 									:text "No Notifications."

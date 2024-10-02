@@ -12,6 +12,18 @@
   # Define your hostname.
   networking.hostName = "Rin";
 
+  # Network.
+  networking = {
+    networkmanager.enable = true;
+    hostId = "a5bd07e9";
+    hostName = "Rin";
+    firewall = {
+      enable = true;
+      allowedUDPPorts = [];
+      allowedTCPPorts = [ 80 443 ];
+    };
+  };
+
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";
 
@@ -41,6 +53,7 @@
 
   # Shell
   programs.zsh.enable = true;
+
   # User
   users = {
     users.sumelan = {
@@ -53,28 +66,6 @@
   };
   # Enable automatic login for the user.
   services.getty.autologinUser = "sumelan";
-
-  # Network
-  networking.networkmanager.enable = true;
-  services.openssh = {
-    enable = true;
-  # Add your SSH public key(s) here, if you plan on using SSH to connect.
-  # authorizedKeys.keys = [ ];
-    settings = {
-      PermitRootLogin = "no";
-  # Change to false if you want to SSH using public key(s). (recommended)
-      PasswordAuthentication = true;
-    };
-  };
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    openFirewall = true;
-  };
-  networking.firewall = {
-    enable = true;
-    allowedTCPPorts = [ 80 443 ];
-  };
 
   # Security
   security = {
@@ -126,6 +117,21 @@
 
   # Services
   services = {
+    openssh = {
+      enable = true;
+      # Add your SSH public key(s) here, if you plan on using SSH to connect.
+      # authorizedKeys.keys = [ ];
+      settings = {
+        PermitRootLogin = "no";
+        # Change to false if you want to SSH using public key(s). (recommended)
+        PasswordAuthentication = true;
+      };
+    };
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      openFirewall = true;
+    };
     xserver = {
       enable = false;
       xkb = {
@@ -222,6 +228,9 @@
       pkgs.xdg-desktop-portal
     ];
   };
+
+  # Using linux-cachyos with sched-ext
+  chaotic.scx.enable = true; # by default uses scx_rustland scheduler
 
   # Automatic Garbage Collection
   nix.gc = {
