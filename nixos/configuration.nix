@@ -226,9 +226,6 @@
     ];
   };
 
-  # Using linux-cachyos with sched-ext
-  chaotic.scx.enable = true; # by default uses scx_rustland scheduler
-
   # Automatic Garbage Collection
   nix.gc = {
     automatic = true;
