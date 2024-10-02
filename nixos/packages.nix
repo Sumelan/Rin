@@ -122,7 +122,6 @@
     ## other programs
       audiobookshelf
       tartube-yt-dlp
-      lan-mouse_git
   ];
 
   # Options
@@ -153,5 +152,4 @@
     kdeconnect.enable = true;
   };
   hardware.brillo.enable = true;
-  chaotic.mesa-git.enable = true;
 }

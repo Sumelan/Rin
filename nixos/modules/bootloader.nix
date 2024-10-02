@@ -1,7 +1,7 @@
 {pkgs, config, ... }:
 {
   boot = {
-    kernelPackages = pkgs.linuxPackages_cachyos;
+    kernelPackages = pkgs.linuxPackages_latest;
     # This is for OBS Virtual Cam Support
     kernelModules = [ "v4l2loopback" ];
     extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ];
@@ -9,6 +9,7 @@
     kernel.sysctl = {
       "vm.max_map_count" = 2147483642;
     };
+    
     # Bootloader.
     loader.grub = {
       enable = true;
@@ -19,11 +20,13 @@
         { devices = [ "nodev"]; path = "/boot"; }
       ];
     };
+
     # Make /tmp a tmpfs
     tmp = {
       useTmpfs = false;
       tmpfsSize = "30%";
     };
+
     # Appimage Support
     binfmt.registrations.appimage = {
       wrapInterpreterInShell = false;
