@@ -6,6 +6,9 @@
       "/home"
     ];
     exclude = [
+      # Cache.
+      "/home/sumelan/.cache"
+
       # very large paths
       "/var/lib/docker"
       "/var/lib/systemd"
@@ -19,7 +22,7 @@
       "/home/*/go/bin"
       "/home/*/go/pkg"
     ];
-    repo = "mg3gwb6u@mg3gwb6u.repo.borgbase.com:repo";
+    repo = "ef79t855@ef79t855.repo.borgbase.com:repo";
     encryption = {
       mode = "repokey-blake2";
       passCommand = "cat /root/borgbackup/passphrase";
