@@ -10,13 +10,16 @@
       "/var/lib/docker"
       "/var/lib/systemd"
       "/var/lib/libvirt"
+
+      # NOT much frequently changed.
+      "/var/lib/audiobookshelf"
     
       # temporary files created by cargo and `go build`
       "**/target"
       "/home/*/go/bin"
       "/home/*/go/pkg"
     ];
-    repo = "px2v84h6@px2v84h6.repo.borgbase.com:repo";
+    repo = "p2o62psm@p2o62psm.repo.borgbase.com:repo";
     encryption = {
       mode = "repokey-blake2";
       passCommand = "cat /root/borgbackup/passphrase";
