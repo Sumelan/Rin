@@ -19,7 +19,7 @@
       "/home/*/go/bin"
       "/home/*/go/pkg"
     ];
-    repo = "p2o62psm@p2o62psm.repo.borgbase.com:repo";
+    repo = "mg3gwb6u@mg3gwb6u.repo.borgbase.com:repo";
     encryption = {
       mode = "repokey-blake2";
       passCommand = "cat /root/borgbackup/passphrase";
